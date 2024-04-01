@@ -1,7 +1,6 @@
-import Link from 'next/link'
-import React from 'react'
+import NavbarLink, { NavbarLinkProps } from './navbarLink/NavbarLink'
 
-const links = [
+const links: NavbarLinkProps[] = [
   {
     title: 'Home',
     path: '/',
@@ -21,8 +20,7 @@ const Navbar = () => {
     <div className='flex justify-around sticky bottom-0 p-5'>
       {
         links.map(link => (
-          <Link key={link.title} href={link.path}>{link.title}</Link>
-
+          <NavbarLink key={link.title} link={link} />
         ))
       }
     </div>
