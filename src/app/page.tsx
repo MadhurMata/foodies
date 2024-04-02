@@ -1,8 +1,8 @@
-const fetchRestaurants = async () => {
-  const restaurants = await fetch('../api/restaurantsApi/restaurants.json')
+const fetchRestaurants = async () => 
+   await fetch('../api/restaurantsApi/restaurants.json')
     .then((response) => response.json())
     .then((json) => console.log(json));
-}
+;
 
 export default function Home() {
   fetchRestaurants();
