@@ -1,30 +1,28 @@
-import NavbarLink, { NavbarLinkProps } from './navbarLink/NavbarLink'
+import NavbarLink, { NavbarLinkProps } from './navbarLink/NavbarLink';
 
 const links: NavbarLinkProps[] = [
   {
     title: 'Home',
-    path: '/',
+    path: '/'
   },
   {
     title: 'Map',
-    path: '/map',
+    path: '/map'
   },
   {
     title: 'Profile',
-    path: '/profile',
-  },
-]
+    path: '/profile'
+  }
+];
 
 const Navbar = () => {
   return (
-    <div className='flex justify-around sticky bottom-0 p-5'>
-      {
-        links.map(link => (
-          <NavbarLink key={link.title} link={link} />
-        ))
-      }
+    <div className="flex justify-around sticky bottom-0 p-5">
+      {links.map((link) => (
+        <NavbarLink key={link.title} link={link} />
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
