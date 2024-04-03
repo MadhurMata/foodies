@@ -14,9 +14,9 @@ export default async function Home() {
   return (
     <div>
       {
-      restaurants.map((restaurant) => {
+      restaurants.map((restaurant, i) => {
         return (
-          <div>
+          <div key={i}>
             <h1>{restaurant.name}</h1>
           </div>
         )
