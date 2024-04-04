@@ -1,4 +1,8 @@
+"use server";
+
 import { promises as fs } from 'fs';
+
+import Map from '@/components/map/Map';
 
 const fetchRestaurants = async () => {
   const file = await fs.readFile(process.cwd() + '/src/api/restaurantsApi/restaurants.json', 'utf8');
@@ -22,6 +26,7 @@ export default async function Home() {
         )
       })
       }
+      <Map />
     </div>
   );
 }
