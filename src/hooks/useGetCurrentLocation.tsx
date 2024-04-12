@@ -5,7 +5,7 @@ interface GeoLocation {
   longitude: number;
 }
 
-function useLocation() {
+function useGetCurrentLocation() {
   const [location, setLocation] = useState<GeoLocation | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -29,4 +29,4 @@ function useLocation() {
   return { location, error };
 }
 
-export default useLocation;
+export default useGetCurrentLocation;

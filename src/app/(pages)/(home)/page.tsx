@@ -1,7 +1,7 @@
 'use client';
 
 import Carousel from '@/components/carousel/Carousel';
-import useLocation from '@/hooks/useGetCurrentLocation';
+import useGetCurrentLocation from '@/hooks/useGetCurrentLocation';
 //import { promises as fs } from 'fs';
 
 // const fetchRestaurants = async () => {
@@ -14,7 +14,7 @@ import useLocation from '@/hooks/useGetCurrentLocation';
 
 export default function Home() {
   //const restaurants = await fetchRestaurants();
-  const { location, error } = useLocation();
+  const { location, error } = useGetCurrentLocation();
   console.log('location', location);
   console.log('error', error);
 
