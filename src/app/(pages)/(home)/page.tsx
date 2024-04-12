@@ -1,32 +1,36 @@
-"use server";
+'use client';
 
-import { promises as fs } from 'fs';
+import Carousel from '@/components/carousel/Carousel';
+import useLocation from '@/hooks/useGetCurrentLocation';
+//import { promises as fs } from 'fs';
 
-import Map from '@/components/map/Map';
+// const fetchRestaurants = async () => {
+//   const file = await fs.readFile(
+//     process.cwd() + '/src/api/restaurantsApi/restaurants.json',
+//     'utf8',
+//   );
+//   return JSON.parse(file).slice(0, 5);
+// };
 
-const fetchRestaurants = async () => {
-  const file = await fs.readFile(process.cwd() + '/src/api/restaurantsApi/restaurants.json', 'utf8');
-  return JSON.parse(file).slice(0, 5);
-}
-
-
-export default async function Home() {
-  const restaurants = await fetchRestaurants();
-  
-  if(!restaurants) return <h1>No data</h1>
+export default function Home() {
+  //const restaurants = await fetchRestaurants();
+  const { location, error } = useLocation();
+  console.log('location', location);
+  console.log('error', error);
 
   return (
-    <div>
-      {
-      restaurants.map((restaurant, i) => {
+    <div className="my-auto w-full">
+      {/* {restaurants.map((restaurant, i) => {
         return (
           <div key={i}>
             <h1>{restaurant.name}</h1>
           </div>
-        )
-      })
-      }
-      <Map />
+        );
+      })} */}
+      <Carousel />
+      <Carousel />
+      <Carousel />
+      <Carousel />
     </div>
   );
 }

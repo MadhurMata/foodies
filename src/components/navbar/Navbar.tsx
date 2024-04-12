@@ -17,7 +17,7 @@ const links: NavbarLinkProps[] = [
 
 const Navbar = () => {
   return (
-    <div className="sticky bottom-0 flex justify-around p-5">
+    <div className="bg-light sticky bottom-0 flex justify-around border-t p-5">
       {links.map((link) => (
         <NavbarLink key={link.title} link={link} />
       ))}

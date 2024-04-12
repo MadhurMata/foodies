@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import Script from "next/script";
-import React, { useState } from "react";
+import Script from 'next/script';
+import React, { useState } from 'react';
 import 'leaflet/dist/leaflet.css';
 
 export default function Map() {
   const [latLng, setLatLng] = useState({
-    lat: "",
-    lng: "",
+    lat: '',
+    lng: '',
   });
 
-     console.log(`lat: ${latLng.lat}, lng: ${latLng.lng}`);
+  console.log(`lat: ${latLng.lat}, lng: ${latLng.lng}`);
 
   return (
     <div>
@@ -21,24 +21,36 @@ export default function Map() {
         // src="/leaflet/leaflet.js"
         strategy="afterInteractive"
         onReady={() => {
-          var map = L.map("map").setView([51.505, -0.09], 13);
-          L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          const map = L.map('map').setView([11.8166, 122.0942], 8);
+          L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution:
               '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
           }).addTo(map);
 
           //   you can use any icon you want
-          var icon = L.icon({
-            iconUrl: "/leaflet/images/marker-icon.png",
-            shadowUrl: "/leaflet/images/marker-shadow.png",
+          const icon = L.icon({
+            iconUrl: '/static/penis.png',
             iconSize: [25, 41],
             iconAnchor: [12, 41],
             popupAnchor: [1, -34],
             tooltipAnchor: [16, -28],
           });
 
-          var marker = L.marker([51.5, -0.09], { icon: icon }).addTo(map);
+          const locations = [
+            ['LOCATION_1', 11.8166, 122.0942],
+            ['LOCATION_3', 10.7202, 122.5621],
+            ['LOCATION_4', 11.3889, 122.6277],
+            ['LOCATION_5', 10.5929, 122.6325],
+          ];
+
+          for (let i = 0; i < locations.length; i++) {
+            L.marker([locations[i][1], locations[i][2]], {
+              icon: icon,
+            })
+              .bindPopup(locations[i][0])
+              .addTo(map);
+          }
 
           //   var circle = L.circle([51.508, -0.11], {
           //     color: "red",
@@ -79,9 +91,8 @@ export default function Map() {
 
           //   map.on("click", onMapClick);
 
-          var marker = null;
-
           function onMapClick(e) {
+            let marker = null;
             // remove previous marker
             if (marker) {
               map.removeLayer(marker);
@@ -98,16 +109,15 @@ export default function Map() {
               .openPopup();
           }
 
-          map.on("click", onMapClick);
+          map.on('click', onMapClick);
         }}
       />
       <div id="map"></div>
-
-      {/* UNCOMENT THIS
-      <style jsx>{`
+      {/* <style jsx>{`
         #map {
           height: 600px;
           width: 100%;
+          min-width: 600px;
         }
       `}</style> */}
     </div>
