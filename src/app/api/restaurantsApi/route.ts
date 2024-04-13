@@ -1,7 +1,5 @@
-import { PrismaClient } from '@prisma/client/extension';
 import { NextResponse } from 'next/server';
-
-const prisma = new PrismaClient();
+import prisma from '../../../../prisma';
 
 export async function main() {
   try {
@@ -15,7 +13,7 @@ export const GET = async (req: Request, res: NextResponse) => {
   console.log('console', req, res);
   try {
     await main();
-    const restaurants = await prisma.restaurants.findMany();
+    const restaurants = await prisma.restaurant.findMany();
     return NextResponse.json(
       { message: 'Success', restaurants },
       { status: 200 },
@@ -33,7 +31,7 @@ export const POST = async (req: Request, res: NextResponse) => {
 
 export const CREATE = async (req: Request, res: NextResponse) => {
   try {
-    const restaurants = await prisma.restaurants.findMany();
+    const restaurants = await prisma.restaurant.findMany();
     return NextResponse.json(
       { message: 'Success', restaurants },
       { status: 200 },
