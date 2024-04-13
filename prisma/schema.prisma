@@ -1,0 +1,52 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  name String
+  nickName String @unique
+  email String @unique
+  resraurantsDiscovered Restaurant[]
+}
+
+model Restaurant {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  name String
+  rating Int
+  discovered Boolean @default(false)
+  dateDiscovered DateTime @default(now())
+  discoveredBy User @relation(fields: [id], references: [id])
+  location Location? @relation(fields: [id], references: [id])
+  adress Adress? @relation(fields: [id], references: [id])
+}
+
+model Adress {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  adress String
+  postalCode String
+  city String
+  country String
+  restaurant Restaurant?
+}
+
+model Location {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  coordinates Coordinates? @relation(fields: [id], references: [id])
+  type String
+  restaurant Restaurant?
+}
+
+model Coordinates {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  latitude  Float
+  longitude Float
+  location   Location?
+}
+
+
