@@ -22,8 +22,8 @@ model Restaurant {
   discovered Boolean @default(false)
   dateDiscovered DateTime @default(now())
   discoveredBy User @relation(fields: [id], references: [id])
-  location Location? @relation(fields: [id], references: [id])
-  adress Adress? @relation(fields: [id], references: [id])
+  location Location @relation(fields: [id], references: [id])
+  adress Adress @relation(fields: [id], references: [id])
 }
 
 model Adress {
