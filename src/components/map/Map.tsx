@@ -3,12 +3,22 @@
 import Script from 'next/script';
 import React, { useState } from 'react';
 import 'leaflet/dist/leaflet.css';
+import { IRestaurant } from '@/lib/models/Restaurants';
 
-export default function Map() {
-  const [latLng, setLatLng] = useState({
-    lat: '',
-    lng: '',
-  });
+import './Map.module.css';
+
+interface Location {
+  lat: number;
+  lng: number;
+}
+
+interface MapProps {
+  center: Location;
+  items: IRestaurant[];
+}
+
+export default function Map({ center, items }: MapProps) {
+  const [latLng, setLatLng] = useState({ lat: '', lng: '' });
 
   console.log(`lat: ${latLng.lat}, lng: ${latLng.lng}`);
 
@@ -21,7 +31,7 @@ export default function Map() {
         // src="/leaflet/leaflet.js"
         strategy="afterInteractive"
         onReady={() => {
-          const map = L.map('map').setView([11.8166, 122.0942], 8);
+          const map = L.map('map').setView([center.lng, center.lat], 12);
           L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution:
@@ -37,18 +47,17 @@ export default function Map() {
             tooltipAnchor: [16, -28],
           });
 
-          const locations = [
-            ['LOCATION_1', 11.8166, 122.0942],
-            ['LOCATION_3', 10.7202, 122.5621],
-            ['LOCATION_4', 11.3889, 122.6277],
-            ['LOCATION_5', 10.5929, 122.6325],
-          ];
-
-          for (let i = 0; i < locations.length; i++) {
-            L.marker([locations[i][1], locations[i][2]], {
-              icon: icon,
-            })
-              .bindPopup(locations[i][0])
+          for (let i = 0; i < items.length; i++) {
+            L.marker(
+              [
+                items[i].location.coordinates[1],
+                items[i].location.coordinates[0],
+              ],
+              {
+                icon: icon,
+              },
+            )
+              .bindPopup(items[i].name)
               .addTo(map);
           }
 
@@ -112,14 +121,10 @@ export default function Map() {
           map.on('click', onMapClick);
         }}
       />
-      <div id="map"></div>
-      {/* <style jsx>{`
-        #map {
-          height: 600px;
-          width: 100%;
-          min-width: 600px;
-        }
-      `}</style> */}
+      <div
+        id="map"
+        style={{ height: '600px', width: '100%', minWidth: '600px' }}
+      ></div>
     </div>
   );
 }

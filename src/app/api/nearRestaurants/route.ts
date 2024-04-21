@@ -29,7 +29,7 @@ export async function GET(req: NextRequest) {
           $maxDistance: parseFloat(radius as string) * 1000, // Radius in meters
         },
       },
-    }).limit(5);
+    });
 
     return NextResponse.json(restaurants);
   } catch (error: unknown) {

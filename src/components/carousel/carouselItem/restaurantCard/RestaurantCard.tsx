@@ -2,7 +2,6 @@ import React from 'react';
 import { IRestaurant } from '@/lib/models/Restaurants';
 
 const RestaurantCard = ({ item }: { item: IRestaurant }) => {
-  console.log('item', item);
   return (
     <div className="mt-2 block w-72 rounded-lg border bg-white">
       <div
