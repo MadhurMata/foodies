@@ -1,22 +1,21 @@
 'use client';
 
 import Carousel from '@/components/carousel/Carousel';
-import useLocation from '@/hooks/useGetCurrentLocation';
-//import { promises as fs } from 'fs';
-
-// const fetchRestaurants = async () => {
-//   const file = await fs.readFile(
-//     process.cwd() + '/src/api/restaurantsApi/restaurants.json',
-//     'utf8',
-//   );
-//   return JSON.parse(file).slice(0, 5);
-// };
+// import useLocation from '@/hooks/useGetCurrentLocation';
+import useGetNearRestaurants from './hooks/useGetNearRestaurants';
 
 export default function Home() {
-  //const restaurants = await fetchRestaurants();
-  const { location, error } = useLocation();
-  console.log('location', location);
-  console.log('error', error);
+  //const { location, error } = useLocation();
+
+  const {
+    data: restaurants = [],
+    isLoading,
+    error: fetchingError,
+  } = useGetNearRestaurants({
+    latitude: -73.856077,
+    longitude: 40.848447,
+    radius: 10000,
+  });
 
   return (
     <div className="my-auto w-full">
@@ -27,10 +26,17 @@ export default function Home() {
           </div>
         );
       })} */}
-      <Carousel />
-      <Carousel />
-      <Carousel />
-      <Carousel />
+      {isLoading ? (
+        <h1>Loading</h1>
+      ) : fetchingError ? (
+        <h1>Error {fetchingError.message}</h1>
+      ) : (
+        <Carousel items={restaurants} />
+      )}
+
+      {/* // <Carousel />
+      // <Carousel />
+      // <Carousel /> */}
     </div>
   );
 }
