@@ -19,13 +19,6 @@ export default function Home() {
 
   return (
     <div className="my-auto w-full">
-      {/* {restaurants.map((restaurant, i) => {
-        return (
-          <div key={i}>
-            <h1>{restaurant.name}</h1>
-          </div>
-        );
-      })} */}
       {isLoading ? (
         <h1>Loading</h1>
       ) : fetchingError ? (
@@ -33,10 +26,6 @@ export default function Home() {
       ) : (
         <Carousel items={restaurants} />
       )}
-
-      {/* // <Carousel />
-      // <Carousel />
-      // <Carousel /> */}
     </div>
   );
 }
