@@ -3,24 +3,33 @@
 import Script from 'next/script';
 import React, { useState } from 'react';
 import 'leaflet/dist/leaflet.css';
-import { IRestaurant } from '@/lib/models/Restaurants';
 
 import './Map.module.css';
+import useGetNearRestaurants from '@/app/(pages)/(home)/hooks/useGetNearRestaurants';
 
-interface Location {
-  lat: number;
-  lng: number;
-}
+export default function Map() {
+  const [mapCenter, setMapCenter] = useState({
+    lat: -73.856077,
+    lng: 40.848447,
+  });
+  const radius = 10000;
 
-interface MapProps {
-  center: Location;
-  items: IRestaurant[];
-}
+  console.log(`lat: ${mapCenter.lat}, lng: ${mapCenter.lng}`);
 
-export default function Map({ center, items }: MapProps) {
-  const [latLng, setLatLng] = useState({ lat: '', lng: '' });
+  const {
+    data: restaurants = [],
+    isLoading,
+    error,
+  } = useGetNearRestaurants({
+    latitude: mapCenter.lng,
+    longitude: mapCenter.lat,
+    radius,
+  });
 
-  console.log(`lat: ${latLng.lat}, lng: ${latLng.lng}`);
+  console.log(restaurants);
+
+  if (isLoading) console.log('loadingggg');
+  if (error) console.log('Errorrrr Handle me');
 
   return (
     <div>
@@ -31,7 +40,7 @@ export default function Map({ center, items }: MapProps) {
         // src="/leaflet/leaflet.js"
         strategy="afterInteractive"
         onReady={() => {
-          const map = L.map('map').setView([center.lng, center.lat], 12);
+          const map = L.map('map').setView([mapCenter.lng, mapCenter.lat], 12);
           L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution:
@@ -47,11 +56,11 @@ export default function Map({ center, items }: MapProps) {
             tooltipAnchor: [16, -28],
           });
 
-          for (let i = 0; i < items.length; i++) {
+          for (let i = 0; i < restaurants.length; i++) {
             L.marker(
               [
-                items[i].location.coordinates[1],
-                items[i].location.coordinates[0],
+                restaurants[i].location.coordinates[1],
+                restaurants[i].location.coordinates[0],
               ],
               {
                 icon: icon,
@@ -100,6 +109,19 @@ export default function Map({ center, items }: MapProps) {
 
           //   map.on("click", onMapClick);
 
+          const isMapCenterWithinArea = () => {
+            const newMapCenter = map.getCenter();
+
+            // Calculate distance
+            const distanceToCenter = L.latLngDistance(newMapCenter, mapCenter);
+
+            // Check if new center is outside the defined range
+            if (distanceToCenter >= radius) {
+              console.log('New center', newMapCenter);
+              setMapCenter(newMapCenter);
+            }
+          };
+
           function onMapClick(e) {
             let marker = null;
             // remove previous marker
@@ -119,6 +141,10 @@ export default function Map({ center, items }: MapProps) {
           }
 
           map.on('click', onMapClick);
+
+          map.on('dragend', function () {
+            isMapCenterWithinArea();
+          });
         }}
       />
       <div
