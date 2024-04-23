@@ -1,41 +1,54 @@
 'use client';
 
-import DynamicMap from '@/components/reactMap/Map';
-//import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import './styles.css';
+import MapComponent from '@/components/reactMap/Map';
 import { icon } from 'leaflet';
 import useGetNearRestaurants from '../(home)/hooks/useGetNearRestaurants';
+import { useGlobalContext } from '@/lib/globalContext';
+import { useEffect } from 'react';
+import './styles.css';
 
-const DEFAULT_CENTER = [40.848447, -73.856077];
-
+const DEFAULT_MAP_CENTER = {
+  lng: -73.856077,
+  lat: 40.848447,
+};
 const ICON = icon({
   iconUrl: '/static/penis.png',
   iconSize: [32, 32],
 });
 
 const Map = () => {
+  const { mapCenter, nearRestaurants, setNearRestaurants } = useGlobalContext();
+  const center = mapCenter.lat === 0 ? DEFAULT_MAP_CENTER : mapCenter;
+  const restaurants = nearRestaurants;
   const {
-    data: restaurants = [],
-    isLoading,
+    data = [],
     error,
+    refetch,
+    status,
   } = useGetNearRestaurants({
-    latitude: -73.856077,
-    longitude: 40.848447,
+    coordinates: center,
     radius: 10,
   });
 
-  console.log(restaurants);
+  useEffect(() => {
+    if (status === 'success') {
+      setNearRestaurants(data);
+      refetch();
+    }
+  }, [mapCenter, data, setNearRestaurants, refetch, status]);
 
-  if (isLoading) console.log('loadingggg');
+  // console.log(restaurants);
+  // console.log('mapCenter', mapCenter);
+
   if (error) console.log('Errorrrr Handle me');
 
   return (
     <div>
-      <DynamicMap
+      <MapComponent
         // className={styles.homeMap}
         width="800"
         height="400"
-        center={DEFAULT_CENTER}
+        center={[center.lat, center.lng]}
         zoom={12}
       >
         {({ TileLayer, Marker, Popup }) => (
@@ -44,9 +57,10 @@ const Map = () => {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             />
-            {restaurants?.map((restaurant) => (
+            {restaurants?.map((restaurant, i) => (
+              // Change i for restaurant ID (make ir unic)
               <Marker
-                key={restaurant.id}
+                key={i}
                 icon={ICON}
                 position={[
                   restaurant.location.coordinates[1],
@@ -58,7 +72,7 @@ const Map = () => {
             ))}
           </>
         )}
-      </DynamicMap>
+      </MapComponent>
     </div>
   );
 };

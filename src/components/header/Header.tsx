@@ -1,6 +1,15 @@
-import Image from 'next/image';
+'use client';
+import NavigateButton from '../navigateButton/NavigateButton';
+import { usePathname } from 'next/navigation';
 
-const header = () => {
+const Header = () => {
+  const pathName = usePathname();
+
+  const buttonProps =
+    pathName === '/'
+      ? { label: 'Map', href: '/map' }
+      : { label: 'Home', href: '/' };
+
   return (
     <>
       <div className=" sticky top-0 z-10 flex items-center justify-around bg-white px-6 pt-3.5">
@@ -36,15 +45,7 @@ const header = () => {
           </div>
         </div>
         <div className="align-middle	">
-          <button>
-            <Image
-              src="/static/penis.png"
-              alt="Map"
-              aria-hidden="true"
-              width={20}
-              height={20}
-            />
-          </button>
+          <NavigateButton label={buttonProps.label} href={buttonProps.href} />
         </div>
       </div>
       <div className="h-3 w-auto"></div>
@@ -52,4 +53,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;

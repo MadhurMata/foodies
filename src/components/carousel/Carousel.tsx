@@ -8,8 +8,9 @@ const Carousel = ({ items }: { items: IRestaurant[] }) => {
     <div className="p-auto m-auto flex flex-col bg-white">
       <div id="scrollbar" className="hide-scroll-bar flex py-5">
         <div className="ml-10 flex flex-nowrap md:ml-20 lg:ml-40 ">
-          {items.map((item) => (
-            <CarouselItem key={item.id} paddingY="px-3">
+          {items.map((item, i) => (
+            // CAmbiar KEY
+            <CarouselItem key={i} paddingY="px-3">
               <RestaurantCard item={item} />
             </CarouselItem>
           ))}
