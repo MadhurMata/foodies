@@ -1,0 +1,980 @@
+{
+  "country": "España",
+  "city": "Valencia",
+  "neighborhood": "Russafa",
+  "results": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer dels Vivons, 27, L'Eixample, 46006 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4602033,
+          "lng": -0.3719134
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46156367989273,
+            "lng": -0.3706054701072778
+          },
+          "southwest": {
+            "lat": 39.45886402010728,
+            "lng": -0.3733051298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "MAUI RUSSAFA",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2268,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101551023305912403518\">jocasgo</a>"
+          ],
+          "photo_reference": "ATplDJb0tGR4vhO5wburuKNUI0eLIxob14axcGnosBHJcHvZz1_2A9ent3qv--YFAc0aqPVpAQtMbIwSgZUpXsyJS1gtJt1XGDXSF4R904UVG7fbpMSOvOUQi_gt4mgaYcdY4W4wrUumb--I9p1O3yQdUCjizXPjNG3bqcZ8I0OQ9Un45-jV",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJBcYJhstIYA0Rbs2wnLTo6bs",
+      "plus_code": {
+        "compound_code": "FJ6H+36 Valencia",
+        "global_code": "8CFXFJ6H+36"
+      },
+      "price_level": 1,
+      "rating": 4.6,
+      "reference": "ChIJBcYJhstIYA0Rbs2wnLTo6bs",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 1220
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer de Sueca, 46, L'Eixample, 46006 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4606016,
+          "lng": -0.3746355
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46197957989273,
+            "lng": -0.3732193201072778
+          },
+          "southwest": {
+            "lat": 39.45927992010729,
+            "lng": -0.3759189798927223
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Dando Leña | Ruzafa",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109704749797624558434\">Weilun</a>"
+          ],
+          "photo_reference": "ATplDJbzarw2OJcFNZQUfwJBfOaLlMpInBC72N-SynBKjmFofF_vQy9iyRsaGBNpFFqg38hhe6hhTFeDMadWfC0ALx9kcqRfSfAqZjf-O02Vefe0CCxu9Q4I6eGzvvTJAs7OGBaFigNLKCHV_i0qZmpEzM8U06RdxyR6nkVjqEwjP0JwWm9x",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJM671TctIYA0RuXdkW_MrBko",
+      "plus_code": {
+        "compound_code": "FJ6G+65 Valencia",
+        "global_code": "8CFXFJ6G+65"
+      },
+      "price_level": 2,
+      "rating": 4.2,
+      "reference": "ChIJM671TctIYA0RuXdkW_MrBko",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 1257
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer de Sueca, 47, L'Eixample, 46006 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4608967,
+          "lng": -0.3745369
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46221882989272,
+            "lng": -0.3732485201072778
+          },
+          "southwest": {
+            "lat": 39.45951917010727,
+            "lng": -0.3759481798927223
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "El Rodamón de Russafa",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1181,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/106774839450659755640\">El Rodamón de Russafa</a>"
+          ],
+          "photo_reference": "ATplDJbsPWJRQ_vhhDDl2X21Guaf_GZfGnnz6WWZq7SK7rW2mCOMivY7MBl92xCmLb46LUxcu5BpKYe_TTlX5CfjYck_YnSKjC1mzVk6ke7cmKFtUw0TjmT_C42Q5-GbSRGVKBjV0phuNGgn8_7GtPPF1On6AehGGU3gwlqDO0kCrQEICU26",
+          "width": 1772
+        }
+      ],
+      "place_id": "ChIJrf8ZTMtIYA0RMiWZoS-mg-M",
+      "plus_code": {
+        "compound_code": "FJ6G+95 Valencia",
+        "global_code": "8CFXFJ6G+95"
+      },
+      "price_level": 2,
+      "rating": 4.3,
+      "reference": "ChIJrf8ZTMtIYA0RMiWZoS-mg-M",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 2878
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer de Mossèn Femenia, 16, L'Eixample, 46006 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4622617,
+          "lng": -0.3732323
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46355872989272,
+            "lng": -0.3716644701072777
+          },
+          "southwest": {
+            "lat": 39.46085907010728,
+            "lng": -0.3743641298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Restaurante El Camerino Ruzafa",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111868773124655271034\">El Camerino Taberna</a>"
+          ],
+          "photo_reference": "ATplDJbbGQ3x5EQIrwI9xLBRceF2okeshQAoRrXX1gQIqpsep0z9QvemMOM4KSWLVwA-ebWL5U1e6Ikn1wSmoBe451QznTqPryRlEmllyo5Ycb8u6I0gK9n0ikD1vdVY01pcalHLjhNgfuGXyHXeAViZTYIdNAoZvA4-FE6PXdRdwEhHQzW7",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJhWqbG8tIYA0RmmVXq3JlLX4",
+      "plus_code": {
+        "compound_code": "FJ6G+WP Valencia",
+        "global_code": "8CFXFJ6G+WP"
+      },
+      "price_level": 1,
+      "rating": 4.5,
+      "reference": "ChIJhWqbG8tIYA0RmmVXq3JlLX4",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 3259
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer de Mossèn Femenia, 12, L'Eixample, 46006 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.462231,
+          "lng": -0.3729108
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46354337989273,
+            "lng": -0.3715456701072777
+          },
+          "southwest": {
+            "lat": 39.46084372010728,
+            "lng": -0.3742453298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Restaurante en Ruzafa - BEIRUT",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109285141726697520027\">عبرالله التميمي</a>"
+          ],
+          "photo_reference": "ATplDJYl6Vjw708PtxY-CZrh-2n1E0fEp_ONxD14MPGXyp3Wj9HMMu0VZpF-AtXQ3kUtACAhcfk6QoTbPwB-_2cDYkENEsJBG8fP4Q2afxhdqNmrpVYNDFSayiko7T_Y0mFKHHCS-zOMDSzZrHPgN0R8AaV3qkDPlxJXPA74lOVtS_NUmU9-",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJIehlBMtIYA0RaG9Rl9efb-k",
+      "plus_code": {
+        "compound_code": "FJ6G+VR Valencia",
+        "global_code": "8CFXFJ6G+VR"
+      },
+      "price_level": 2,
+      "rating": 4.3,
+      "reference": "ChIJIehlBMtIYA0RaG9Rl9efb-k",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 1865
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer de Sant Valero, 4, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4642829,
+          "lng": -0.3720161
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46561947989272,
+            "lng": -0.3705797701072777
+          },
+          "southwest": {
+            "lat": 39.46291982010727,
+            "lng": -0.3732794298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Restaurante Russafa Fina Orient - Restaurante de cocina valenciana",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 900,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109957202999442067270\">A Google User</a>"
+          ],
+          "photo_reference": "ATplDJaVfDMfbXr7xSG14D0voQUwFFvI4oU-fiZnLGUP0sVCtdIL63TBQSDp7wkeKkvXt0UibTg0IlJ0DvazVzYHuw9Ck7smCm6PCvWGbuIVw7Wrk9KxVJZKQLWlEe62mZ99FkXnOSNgg31pw01j8-L32i7DPx8AuXnGK3hdSICQl8anhMle",
+          "width": 1600
+        }
+      ],
+      "place_id": "ChIJufOBtexJYA0R2Y6owoeiq-I",
+      "plus_code": {
+        "compound_code": "FJ7H+P6 Valencia",
+        "global_code": "8CFXFJ7H+P6"
+      },
+      "rating": 4.2,
+      "reference": "ChIJufOBtexJYA0R2Y6owoeiq-I",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 107
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "C/ de Cadis, 42, L'Eixample, 46004 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4621552,
+          "lng": -0.374037
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46354492989272,
+            "lng": -0.3725975701072778
+          },
+          "southwest": {
+            "lat": 39.46084527010728,
+            "lng": -0.3752972298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "La Taberna de Ruzafa",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100081781061210912036\">Fabienne CESTER</a>"
+          ],
+          "photo_reference": "ATplDJZ7A4icW358-u4XOeNP2lWTIu3UBmaIsBvdJy5sAbcSYifxHN2vTD6jQVJPHYABmAsTMBeuz7ejnQlnPsd16EUGsDzqSxX-8Uv6nZvkj_XYOxIkjtRv-oaSuIP8V9ser7DnvLOxp3vqNxVhhVCYkvJmTqF_rGFXMbtCrVlxsucyIKzA",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJzekLJMtIYA0Rl4QUFe5nGTo",
+      "plus_code": {
+        "compound_code": "FJ6G+V9 Valencia",
+        "global_code": "8CFXFJ6G+V9"
+      },
+      "rating": 4.3,
+      "reference": "ChIJzekLJMtIYA0Rl4QUFe5nGTo",
+      "types": [
+        "restaurant",
+        "bar",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 912
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer del Mestre Josep Serrano, 5, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4637144,
+          "lng": -0.3699923
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46506552989272,
+            "lng": -0.3686433201072778
+          },
+          "southwest": {
+            "lat": 39.46236587010728,
+            "lng": -0.3713429798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Canalla Bistro by Ricard Camarena",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 800,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/117683431685152482109\">Canalla Bistro by Ricard Camarena</a>"
+          ],
+          "photo_reference": "ATplDJY41qQYhmb0EmIhNMRVgL0BQqis0wsz36xNSsMutoCyxKKbtIbFFTLJINcOtHqkL5dwea6DDNbCuhmDvKkkzlX96oH5Uwfo-stToYGuDn9JgBs1VrzueA-uQ7s1m5cNPZViA2aMOjf3v-Km38KSZJb6KlMQA8i7O9BlUehUz7Tm084R",
+          "width": 1280
+        }
+      ],
+      "place_id": "ChIJVTlbislIYA0RF5hQbh8Y85Y",
+      "plus_code": {
+        "compound_code": "FJ7J+F2 Valencia",
+        "global_code": "8CFXFJ7J+F2"
+      },
+      "price_level": 2,
+      "rating": 4.4,
+      "reference": "ChIJVTlbislIYA0RF5hQbh8Y85Y",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 4498
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "C. de Puerto Rico, 15, L'Eixample, 46006 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4614023,
+          "lng": -0.3752873
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46279907989273,
+            "lng": -0.3739955701072778
+          },
+          "southwest": {
+            "lat": 39.46009942010728,
+            "lng": -0.3766952298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Cuinar-te Ruzafa",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2502,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113435495569780154644\">A Google User</a>"
+          ],
+          "photo_reference": "ATplDJZi-eFU9ObWxucngoKwFKUPK-DnUSgR5jFBQ6rC5oPBnVAp7xcs_Nr5nBF6CG4TY_FlhFb9QP7ELAtiswME_9LKBnBQyzxOgxgCF84IPnxK1Nwrmj_ZivAi-Oy-_YRmIpWOg-vD8zPYzsn6WTWBZV7fFJMQi9Vc2QTKGVUJn0bvd13P",
+          "width": 3576
+        }
+      ],
+      "place_id": "ChIJu45kyDRPYA0RNkpUVmm4VNk",
+      "plus_code": {
+        "compound_code": "FJ6F+HV Valencia",
+        "global_code": "8CFXFJ6F+HV"
+      },
+      "price_level": 1,
+      "rating": 4.1,
+      "reference": "ChIJu45kyDRPYA0RNkpUVmm4VNk",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 644
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer de Sueca, 41, L'Eixample, 46006 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4611397,
+          "lng": -0.3747057
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46246937989272,
+            "lng": -0.3734036201072778
+          },
+          "southwest": {
+            "lat": 39.45976972010727,
+            "lng": -0.3761032798927223
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "El Almacén",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 6936,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110123434458566297509\">shani</a>"
+          ],
+          "photo_reference": "ATplDJYHkiMdhlB2LGllzOh0nY49ODQQVMTo7pzpuLwIoNx6Br4CuBJALek_AAfkYC6hXT0o9HgAMj55os5YN3TuTYdLrxLh2hSjURK2_oYlgdXzLrwHCdhaq3i-SzVXWhEO7SXEk3K4dkIxeIk3Zq6P5WjWqLgTvER55-u_NBzq9XRhT3i4",
+          "width": 9248
+        }
+      ],
+      "place_id": "ChIJa4HHSstIYA0RVTbO-5WX19M",
+      "plus_code": {
+        "compound_code": "FJ6G+F4 Valencia",
+        "global_code": "8CFXFJ6G+F4"
+      },
+      "price_level": 2,
+      "rating": 4.2,
+      "reference": "ChIJa4HHSstIYA0RVTbO-5WX19M",
+      "types": [
+        "restaurant",
+        "bar",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 932
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "C/ de Cadis, 76, L'Eixample, 46006 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4602084,
+          "lng": -0.3725645
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46157027989273,
+            "lng": -0.3711889701072778
+          },
+          "southwest": {
+            "lat": 39.45887062010728,
+            "lng": -0.3738886298927223
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "La Casa Viva Ruzafa",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3456,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115816508826453901108\">Guillermo R</a>"
+          ],
+          "photo_reference": "ATplDJaDOcZb83uQmTFeW4GA19gsiNf5dqDTz0MUJNYR2EEBL5hXR9F-VgYwSnmVb2bdzb3I9ll622nMfFydmq89jdSvu2EQ9qDNZGYaaJnnO-9PdHlcYM7WHDMdHDKKI1UwH0NfnLIN74t_DOmWNL-NQXJBpKynEHO_JVNK14TsrVXroY94",
+          "width": 4608
+        }
+      ],
+      "place_id": "ChIJAQAcf8tIYA0R0TLLcCLChc4",
+      "plus_code": {
+        "compound_code": "FJ6G+3X Valencia",
+        "global_code": "8CFXFJ6G+3X"
+      },
+      "price_level": 2,
+      "rating": 4.7,
+      "reference": "ChIJAQAcf8tIYA0R0TLLcCLChc4",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 1346
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "C. de Puerto Rico, 34, L'Eixample, 46006 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4612507,
+          "lng": -0.3762867
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46254047989272,
+            "lng": -0.3749357701072777
+          },
+          "southwest": {
+            "lat": 39.45984082010728,
+            "lng": -0.3776354298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "La Flaca de Ruzafa",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1603,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108577171731123245859\">A Google User</a>"
+          ],
+          "photo_reference": "ATplDJYAtNrNBBBUGn70iPcwNzv-oX5RsXISp6fPZ-rm0lQB2uoPO0k9OozNNLTt0UgOsNuYXX6m0PC7Ywlq8s9zzyeOxEHt00Fj1P661MY1sYH8ZOujnzHVO93qapAWanr5oAZQwteDNNXeIenYDfMiKn_7RGp4gPhNiKTWlBlWrlHAbpHC",
+          "width": 2592
+        }
+      ],
+      "place_id": "ChIJ__-s7DRPYA0RQUDx3HX1J5o",
+      "plus_code": {
+        "compound_code": "FJ6F+GF Valencia",
+        "global_code": "8CFXFJ6F+GF"
+      },
+      "price_level": 2,
+      "rating": 4.2,
+      "reference": "ChIJ__-s7DRPYA0RQUDx3HX1J5o",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 1451
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "C/ de Sevilla, 20, L'Eixample, 46006 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4634906,
+          "lng": -0.3739627
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46482322989272,
+            "lng": -0.3725709201072778
+          },
+          "southwest": {
+            "lat": 39.46212357010727,
+            "lng": -0.3752705798927223
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Zalamero | Coquería Ruzafa",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3472,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102463964683331899059\">A Google User</a>"
+          ],
+          "photo_reference": "ATplDJYWmfURUxPPNm3OcD2vQvYG1NOJMskiYO3Tez3z-abHJQTAM6sO_hx-EJfhMoMB8K0SjzrJEP8zD9Bu7mxlaDOPoFa-45H4Bcm3oZ69PbU8rp4l9Gtn9JWDlZ8CYldhPruy-XTret-QzZudCBLjuf-y_wwWJZKelz9Ukt94VEaOBtTU",
+          "width": 3472
+        }
+      ],
+      "place_id": "ChIJ4e34w8pIYA0RyeOe87T1YDQ",
+      "plus_code": {
+        "compound_code": "FJ7G+9C Valencia",
+        "global_code": "8CFXFJ7G+9C"
+      },
+      "price_level": 1,
+      "rating": 4.5,
+      "reference": "ChIJ4e34w8pIYA0RyeOe87T1YDQ",
+      "types": [
+        "restaurant",
+        "bar",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 383
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer del Pare Perera, 5, L'Eixample, 46004 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.462568,
+          "lng": -0.3718189
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46391667989272,
+            "lng": -0.3705151201072777
+          },
+          "southwest": {
+            "lat": 39.46121702010727,
+            "lng": -0.3732147798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Doña Petrona",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103484966011253093767\">Juan Manuel de Simón Casuso</a>"
+          ],
+          "photo_reference": "ATplDJbyBTViqVqVdYqSwS18V7TXHQ2Bhp4cQbQa0AixCbMBJcBsBKJ20wcUNKi73dXRIfr_v7vc9AUSlJifvFgoTpywaNHyv26BTeuSwiEGPaJIaIXz7GaG5be5BpbNyVovaXTocAo3fyZgiGUrcM1hGk0xnhUnwIzWTAphsqa0gBDjbP7m",
+          "width": 4000
+        }
+      ],
+      "place_id": "ChIJAQMmTcpIYA0RxCk8YSsqnys",
+      "plus_code": {
+        "compound_code": "FJ7H+27 Valencia",
+        "global_code": "8CFXFJ7H+27"
+      },
+      "price_level": 2,
+      "rating": 3.9,
+      "reference": "ChIJAQMmTcpIYA0RxCk8YSsqnys",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 1563
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer del Literat Azorín, 13-A, L'Eixample, 46006 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.46042,
+          "lng": -0.3739489
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46169757989272,
+            "lng": -0.3727642201072778
+          },
+          "southwest": {
+            "lat": 39.45899792010728,
+            "lng": -0.3754638798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "La Cantina De Ruzafa",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109073381291672407635\">Miguel Angel Mata Garcia</a>"
+          ],
+          "photo_reference": "ATplDJZ1fRcCCWDhfF8O7NL41PT3i0tG5cQ5q-lLu4kdpKK2wu46L9WLE71dF9QXk6kJU0_ElMFumP9_YWyIw2EV0qKlS64nwF4grSGBFwjCaICqC_ht9dckE3JRrHOsmZVbaqNUzGhaN_83mNq7GwZBsyYqrjxMOqTenPgDrFqCJI8_8Xzt",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJGymosltJYA0Rtk3EZeAKqI8",
+      "plus_code": {
+        "compound_code": "FJ6G+5C Valencia",
+        "global_code": "8CFXFJ6G+5C"
+      },
+      "price_level": 1,
+      "rating": 4.5,
+      "reference": "ChIJGymosltJYA0Rtk3EZeAKqI8",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 1229
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer del Literat Azorín, 8, L'Eixample, 46006 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4607398,
+          "lng": -0.3735673
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46206857989272,
+            "lng": -0.3722233201072778
+          },
+          "southwest": {
+            "lat": 39.45936892010728,
+            "lng": -0.3749229798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Restaurante copenhagen",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108494428977040495197\">Sandeep Thukral</a>"
+          ],
+          "photo_reference": "ATplDJYWQxIQHACiVL5ggMyYCKVkGGrsYt_9JQLbEST12_0_GaUnVibnhRSMYmYpBP6UZiitHVyVWhrgc0wqj4Fx71bMwaCjOX7Ely-p-G1HHMt8vNgk0YHiOGyRO2_-HCFv_hcdW38pmE51npcGI8x4HCXxcp3hM3NrmEX7kRPqljPBMYwm",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJk78NaMtIYA0RTKtTy5plVDc",
+      "plus_code": {
+        "compound_code": "FJ6G+8H Valencia",
+        "global_code": "8CFXFJ6G+8H"
+      },
+      "price_level": 2,
+      "rating": 4.5,
+      "reference": "ChIJk78NaMtIYA0RTKtTy5plVDc",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 2366
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "C/ del Doctor Serrano, 11, L'Eixample, 46006 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4625059,
+          "lng": -0.3732517
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46389792989272,
+            "lng": -0.3718931201072778
+          },
+          "southwest": {
+            "lat": 39.46119827010727,
+            "lng": -0.3745927798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Sorsi e Morsi Ruzafa",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1362,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112286596389177325654\">Sorsi E Morsi</a>"
+          ],
+          "photo_reference": "ATplDJafNlLMf_g-uAHqWNlaNlbDH0-Cub7WAGMgL4eXcdlUD33Uj2IhTjvJgFfgqreIOOkSzgRbg0Qh5To_AcN7B24fmXv8l0Gx59CzW7zNoZqfe_-j3lI532HejSiXSA0M70aq0PhPYkIqPOJhe_YxWk9Y2uohgwHTm-T9gJptjIS1HFIU",
+          "width": 2048
+        }
+      ],
+      "place_id": "ChIJ6UykCLEcnhIRdk7bP97ypvY",
+      "plus_code": {
+        "compound_code": "FJ7G+2M Valencia",
+        "global_code": "8CFXFJ7G+2M"
+      },
+      "price_level": 2,
+      "rating": 4.3,
+      "reference": "ChIJ6UykCLEcnhIRdk7bP97ypvY",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 911
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "C. del Mestre Aguilar, 2, L'Eixample, 46006 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4616416,
+          "lng": -0.3706451
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46302927989272,
+            "lng": -0.3692372201072778
+          },
+          "southwest": {
+            "lat": 39.46032962010727,
+            "lng": -0.3719368798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "La Tasqueta del Mercat",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103281046775805400901\">ANTONIO PEREZ CRESPO</a>"
+          ],
+          "photo_reference": "ATplDJb8Ie3LtJrmziJ_F4s8qMU5752KxiydX06ZMBaGznwcuTiyUnth_7pOMeYZHMoQG__9dmyG0QAK7y6Go5944Lunixx54o99LoCeq7Qeu_wXshwXKUlgjqcL7hQgOyuVbAhKHhLJ1G0naGKZ-TqECRcv1F8N7Q6JyVZBpL-ybPHHCwp-",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJx3v4xMtIYA0RPi6c9H7p5JE",
+      "plus_code": {
+        "compound_code": "FJ6H+MP Valencia",
+        "global_code": "8CFXFJ6H+MP"
+      },
+      "price_level": 2,
+      "rating": 4.1,
+      "reference": "ChIJx3v4xMtIYA0RPi6c9H7p5JE",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 1587
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer de Sueca, 52, L'Eixample, 46004 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4600341,
+          "lng": -0.3742368
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46139987989272,
+            "lng": -0.3728503201072778
+          },
+          "southwest": {
+            "lat": 39.45870022010727,
+            "lng": -0.3755499798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+      "name": "La Bien Parida de Ruzafa",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1126,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114648949962019396028\">A Google User</a>"
+          ],
+          "photo_reference": "ATplDJaNPGtxYQ24qUbszWuuDpTa85BkeS8XyWGIF11ye-tYIlIbQuVgz9IYcu7cvLn6MPEdJCA_dTH8GMEjDfSauMgaWjUCTMHn4hR7PEyryH2JJgtppwJf_LiuJoBHVnDx26MJIkwaLjHw9pkTWuYRidI1IDjdTcY78Y8T2135wd3GSGrR",
+          "width": 2000
+        }
+      ],
+      "place_id": "ChIJ9QUeHg5JYA0R8JBRdb7rMAU",
+      "plus_code": {
+        "compound_code": "FJ6G+27 Valencia",
+        "global_code": "8CFXFJ6G+27"
+      },
+      "rating": 4.5,
+      "reference": "ChIJ9QUeHg5JYA0R8JBRdb7rMAU",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 530
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "C/ de Pere III el Gran, 11, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4625789,
+          "lng": -0.3692942
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46388677989272,
+            "lng": -0.3679152201072777
+          },
+          "southwest": {
+            "lat": 39.46118712010728,
+            "lng": -0.3706148798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Nozomi Sushi Bar",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 6936,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108540371284950832042\">Jose Lagares</a>"
+          ],
+          "photo_reference": "ATplDJazsAzLkAiJKU03GoNM78NpRqFOcTtRAIo-Es-8YGyMSdVOHtRqZHAQIuKGfm4wqpHi9oh1pNXdPPgoYG46di72ZsnB6JwfIeCazUWvwA5OGgxHTAjrLq4ZNeYZvZqhBU7_m-3vOhhNT1B924LRe4vDDPfWyGy017CakLSHRxp11LRE",
+          "width": 9248
+        }
+      ],
+      "place_id": "ChIJH_LOd8lIYA0RP9n06FkNBag",
+      "plus_code": {
+        "compound_code": "FJ7J+27 Valencia",
+        "global_code": "8CFXFJ7J+27"
+      },
+      "price_level": 3,
+      "rating": 4.7,
+      "reference": "ChIJH_LOd8lIYA0RP9n06FkNBag",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1554
+    }
+  ]
+}

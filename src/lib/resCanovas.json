@@ -1,0 +1,968 @@
+{
+  "country": "España",
+  "city": "Valencia",
+  "neighborhood": "Canovas",
+  "results": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Plaça de Cánovas del Castillo, 2, L'Eixample, 46004 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4685524,
+          "lng": -0.3662994
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46988742989272,
+            "lng": -0.3648922701072777
+          },
+          "southwest": {
+            "lat": 39.46718777010727,
+            "lng": -0.3675919298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Tony Roma's Cánovas",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2322,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/106572088948798409096\">Ivan Neri</a>"
+          ],
+          "photo_reference": "ATplDJZ1L4I3kfk5C-0s7ayS4w6pmcfm3kXpgBUXO0MIhKqy-MLSSiWDPNOtG90vQ5oVh8cDFoK0wpuJ7AYUrTAL-05MO3_Z7XUybRmmh2kh9tzjM35CTTah0D_5zQ4BUWUOvZOWG84yK1oWiVI_hheQrM2wJzKC1Mhe5KmDX8IU6NcEzQia",
+          "width": 4128
+        }
+      ],
+      "place_id": "ChIJNQsobrdIYA0Rp_TwAxXStK0",
+      "plus_code": {
+        "compound_code": "FJ9M+CF Valencia",
+        "global_code": "8CFXFJ9M+CF"
+      },
+      "price_level": 2,
+      "rating": 4.4,
+      "reference": "ChIJNQsobrdIYA0Rp_TwAxXStK0",
+      "types": [
+        "meal_delivery",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 2714
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Plaça de Cánovas del Castillo, 1, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.46868320000001,
+          "lng": -0.3661627
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.47001432989273,
+            "lng": -0.3647727701072777
+          },
+          "southwest": {
+            "lat": 39.46731467010729,
+            "lng": -0.3674724298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Restaurante La Tagliatella | Plaza Cánovas, Valencia",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112843190105205730255\">VIKTOR GOMEZ FERRER</a>"
+          ],
+          "photo_reference": "ATplDJZr_Nrbo6OyPCrJ1e6B_xwzSFWtDhmaT-jsrLNgzKOTPafMCRO2IQN_skURPth5_1wxeyriXxfQauuR9SDRt5ec7hyDbwVcIoRqW_FGRHHdN_uajNm_E1Ba1R-RbgziPotTX_9f8i1gu8tt72Nd_Quy_gTQCQJfRZ4iiH2fhwc0Zv12",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJt5nVaLdIYA0Rcdi_i5nFcm0",
+      "plus_code": {
+        "compound_code": "FJ9M+FG Valencia",
+        "global_code": "8CFXFJ9M+FG"
+      },
+      "price_level": 2,
+      "rating": 4.1,
+      "reference": "ChIJt5nVaLdIYA0Rcdi_i5nFcm0",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 690
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer de Ciscar, 10b, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4670717,
+          "lng": -0.3665288
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46843837989272,
+            "lng": -0.3651371201072777
+          },
+          "southwest": {
+            "lat": 39.46573872010728,
+            "lng": -0.3678367798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Número Uno Steakhouse",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 540,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109683452827400857644\">A Google User</a>"
+          ],
+          "photo_reference": "ATplDJYAtamlokocCCj3giunqIO51y_I91fuRD4VdLfec_NytToJxpeAM5jzckxgyyrjt18B8iWKQjdaZYRM67MQCvrCoPQ4KZpSJ3hssHQrNK5988PA6M0rUUrAlU2HJP5tHzJWlsNgRh_ANCCXjEYcFsR_ZfhwD1FGxmDd-h7zozkhHrSs",
+          "width": 720
+        }
+      ],
+      "place_id": "ChIJj6fkl7dIYA0RXqEmvP_gpus",
+      "plus_code": {
+        "compound_code": "FJ8M+R9 Valencia",
+        "global_code": "8CFXFJ8M+R9"
+      },
+      "rating": 4.4,
+      "reference": "ChIJj6fkl7dIYA0RXqEmvP_gpus",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 590
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer del Comte d'Altea, 44, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4669579,
+          "lng": -0.3655235
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46835302989272,
+            "lng": -0.3642102201072778
+          },
+          "southwest": {
+            "lat": 39.46565337010728,
+            "lng": -0.3669098798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Swagat",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 413,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105435202876262423310\">Miguel Azulay</a>"
+          ],
+          "photo_reference": "ATplDJapKs9q-GKBujYxFW6VsbyCADGP4g6r6_nJfWf720enFXcHrDTrEV9izJEiJ9y7gs-9w0b2V0HXwssEKMYTtb-h3DmiiQBE5UauZCTONU56CFOxddxxFwl2Z-yjfHoiEHk2sprhscirXeIaXD2QNWNvejWblBX7duobwaiF5MBVSaOZ",
+          "width": 550
+        }
+      ],
+      "place_id": "ChIJzeJRiLdIYA0Rmw-vKgfYvwI",
+      "plus_code": {
+        "compound_code": "FJ8M+QQ Valencia",
+        "global_code": "8CFXFJ8M+QQ"
+      },
+      "price_level": 2,
+      "rating": 4.6,
+      "reference": "ChIJzeJRiLdIYA0Rmw-vKgfYvwI",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 1553
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer de Salamanca, 18, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.466523,
+          "lng": -0.3647769
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46792812989271,
+            "lng": -0.3632996701072777
+          },
+          "southwest": {
+            "lat": 39.46522847010727,
+            "lng": -0.3659993298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Kathmandu Cánovas Indian Nepali Cuisine",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 6000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101316922905982204334\">A Google User</a>"
+          ],
+          "photo_reference": "ATplDJaKYc3XmVa8vHainidMiRDXaddr24TyLFfBnlamUhgAz8qunFgyjkX35b59g_i-wI2_F7J4xrmtjL09RUoz1Pocs7elwmV0uqPdzFc7dd-lwklUyuAWrScyHNMppJDNqIdu3Nwd_0RyegEVzrfXi5M1ycTcVhJoUZIrnituJMcOLe30",
+          "width": 4000
+        }
+      ],
+      "place_id": "ChIJZ9I1WcVJYA0R9fvjtUwwr9s",
+      "plus_code": {
+        "compound_code": "FJ8P+J3 Valencia",
+        "global_code": "8CFXFJ8P+J3"
+      },
+      "rating": 4.9,
+      "reference": "ChIJZ9I1WcVJYA0R9fvjtUwwr9s",
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 786
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer del Comte d'Altea, 37, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4670078,
+          "lng": -0.3658815
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46832177989272,
+            "lng": -0.3645097701072778
+          },
+          "southwest": {
+            "lat": 39.46562212010727,
+            "lng": -0.3672094298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "La Taska Sidrería",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1181,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102211478978153678943\">La Taska Sidrería</a>"
+          ],
+          "photo_reference": "ATplDJbgdiRflZ33u6nbmv9xsLfKqtp08Dyf-wXkreAGfzyGeNoM0hStuxehIhlEl949W54MF3fu73l-Dqb2AQbC4LIZR4L0d7Y9fBHZxpPCbDmNARM2su4EfSHyKzACPG06GeARrPfQYjJoFg8H72KiB24KIf5XyFX85XJS662uCHPGsmhf",
+          "width": 1772
+        }
+      ],
+      "place_id": "ChIJoemNiLdIYA0RlRXX_cgD51o",
+      "plus_code": {
+        "compound_code": "FJ8M+RJ Valencia",
+        "global_code": "8CFXFJ8M+RJ"
+      },
+      "price_level": 2,
+      "rating": 4.3,
+      "reference": "ChIJoemNiLdIYA0RlRXX_cgD51o",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 1385
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer Senda del Polvorí, Pobles de l'Oest, 46035 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.5021421,
+          "lng": -0.426269
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.50346842989272,
+            "lng": -0.4249975701072778
+          },
+          "southwest": {
+            "lat": 39.50076877010728,
+            "lng": -0.4276972298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Restaurante Valencia",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2184,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/117580858642755810719\">JUANMA BLASCO</a>"
+          ],
+          "photo_reference": "ATplDJaFL6zvz22nmzQtf9YDNp6rUDwRye0KYOLuRqahbp1uMxLelpNHDApAjOitOwCB4JfnSvsCenj9Jupu8LVJ-V45bCyChn26fatmnx4b4ooKj3JH-4Lsy1Nu8XM_fJgTftUqg2kDBQwyErtaTJ7lAIMU_D0DpA0XJkNKxi6BOMdnvgmm",
+          "width": 4608
+        }
+      ],
+      "place_id": "ChIJJxH-BGxFYA0RwSUzthBuuDc",
+      "plus_code": {
+        "compound_code": "GH2F+VF Valencia",
+        "global_code": "8CFXGH2F+VF"
+      },
+      "price_level": 1,
+      "rating": 4,
+      "reference": "ChIJJxH-BGxFYA0RwSUzthBuuDc",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 249
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer de Salamanca, 12, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4669627,
+          "lng": -0.3649198
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46827487989272,
+            "lng": -0.3634617201072777
+          },
+          "southwest": {
+            "lat": 39.46557522010728,
+            "lng": -0.3661613798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Ryukishin Cánovas - Restaurant de ramen a València",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107430972441956399773\">ina rin</a>"
+          ],
+          "photo_reference": "ATplDJa6NhGfN_Re8ztfAsMF4yjIbpVU_GkhlC5NrbxIV0jQXSn7c4zJaUrL5tnGI5l7S2QO2Nx95QA-CPscmEjBqotPi_GjBra88TN-owkoUDqhpKq5lql4uV4U-1FAxqu_rfZh4oP76_hHqvKOzpVovoEcPuEAQFW7xC7nE95tjVoXwObo",
+          "width": 4000
+        }
+      ],
+      "place_id": "ChIJVVVhJLhIYA0ReR7vFtdUe-E",
+      "plus_code": {
+        "compound_code": "FJ8P+Q3 Valencia",
+        "global_code": "8CFXFJ8P+Q3"
+      },
+      "price_level": 2,
+      "rating": 4.5,
+      "reference": "ChIJVVVhJLhIYA0ReR7vFtdUe-E",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 2573
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer del Comte d'Altea, 22, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4659906,
+          "lng": -0.367896
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46736347989273,
+            "lng": -0.3665628201072778
+          },
+          "southwest": {
+            "lat": 39.46466382010728,
+            "lng": -0.3692624798927223
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Sorsi e Morsi Cánovas",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3179,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110861232344926155902\">Sorsi e Morsi Cánovas</a>"
+          ],
+          "photo_reference": "ATplDJZcFK-SD8CgME11bKk3qyNaHLVkXhIY7xv5sRYPvFXXMHV8Ri4b4hb1dot9WvNAjeBXH6eiblcRWmR4k6tiruNjOrqAZXJgofKvTT1VWIWdhIr9zp5yGBz4bApkhL4Df-uZRQZMKgePXTXNEw7Vb4_9LR1WUm_pDFBgNoQZItMD5g9n",
+          "width": 4768
+        }
+      ],
+      "place_id": "ChIJjWwbM7ZIYA0R7dHvhebe5P8",
+      "plus_code": {
+        "compound_code": "FJ8J+9R Valencia",
+        "global_code": "8CFXFJ8J+9R"
+      },
+      "price_level": 2,
+      "rating": 4,
+      "reference": "ChIJjWwbM7ZIYA0R7dHvhebe5P8",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 821
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Plaça de Cánovas del Castillo, 8, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4679373,
+          "lng": -0.3652334
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46934077989273,
+            "lng": -0.3639476701072778
+          },
+          "southwest": {
+            "lat": 39.46664112010728,
+            "lng": -0.3666473298927223
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Terranova | Restaurante italiano Valencia",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1984,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112954466627911824919\">Juan Ramos</a>"
+          ],
+          "photo_reference": "ATplDJaLa7SpT3UZ4Z47EwzwumtklGPKMaCulJrmLmux41a8IVq4_qdDKt1Wd4iS8CeOhMe6QmcG6Flc_DjvO_jRaVgE4e78kd8_oO1Fj1gSS47yDFQWn2UohNjUvassBiISp1qCwluNApsThc-3E12liNhHOY9ycf8ZpneTFdnDa3Y4YsbH",
+          "width": 3968
+        }
+      ],
+      "place_id": "ChIJx61GLs5JYA0ROxFQftaYDMA",
+      "plus_code": {
+        "compound_code": "FJ9M+5W Valencia",
+        "global_code": "8CFXFJ9M+5W"
+      },
+      "rating": 4.8,
+      "reference": "ChIJx61GLs5JYA0ROxFQftaYDMA",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 997
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Plaça de Cánovas del Castillo, 1, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4687022,
+          "lng": -0.3662478
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.47001767989272,
+            "lng": -0.3648198701072777
+          },
+          "southwest": {
+            "lat": 39.46731802010728,
+            "lng": -0.3675195298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "El Marques",
+      "opening_hours": {
+        "open_now": false
+      },
+      "place_id": "ChIJidqD3rlIYA0RLdYzpc9L6R8",
+      "plus_code": {
+        "compound_code": "FJ9M+FG Valencia",
+        "global_code": "8CFXFJ9M+FG"
+      },
+      "rating": 3.4,
+      "reference": "ChIJidqD3rlIYA0RLdYzpc9L6R8",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 8
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Plaça de Cánovas del Castillo, 9, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4680575,
+          "lng": -0.3651587
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46943752989272,
+            "lng": -0.3639190201072777
+          },
+          "southwest": {
+            "lat": 39.46673787010727,
+            "lng": -0.3666186798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Miss Sushi Cánovas | Comida Japonesa",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108283279102222266133\">Edu Bernabeu</a>"
+          ],
+          "photo_reference": "ATplDJaPp438Zijv6eWnrxeWhhI-FbEaHpkf-WY1xpexEXDXlGeA8PsgZK5_EtBB6xSzetFxwag8BwTvzzlz595YckqeC708WjiEF2UhzuKW93z8MTS1tRVec0pF3Uoxa5Y5-EuIOVo5pXK7LJI6g0z0SW4PGvw1aGJi1yOod4hJFiCrFhJ2",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJr9xL1rlIYA0RUsBkh6LfHh8",
+      "plus_code": {
+        "compound_code": "FJ9M+6W Valencia",
+        "global_code": "8CFXFJ9M+6W"
+      },
+      "price_level": 2,
+      "rating": 3.9,
+      "reference": "ChIJr9xL1rlIYA0RUsBkh6LfHh8",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 1435
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Plaça de Cánovas del Castillo, 1, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4687022,
+          "lng": -0.3662478
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.47001767989272,
+            "lng": -0.3648198701072777
+          },
+          "southwest": {
+            "lat": 39.46731802010728,
+            "lng": -0.3675195298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Can Valear",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2048,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102449058767651731882\">Salacadula Swimwear</a>"
+          ],
+          "photo_reference": "ATplDJZM3E2hpmNf6IEtOslI5oUV5cN20cmQTXOrVQ9qEJ0fLTO_Ojf5IzYE4jgabDg5aV5JIwFHQ4KJHEhT3_os0Om2rUwxNlOJqkOTnri0m7xRzk93SpNQ7Adtpr1jNuGmF6qI1XSnVz4nn8ZimrjujtWqyxLiE0TESmK138s2pQg4TgVQ",
+          "width": 2048
+        }
+      ],
+      "place_id": "ChIJ7bx4M-lJYA0RTTLuIXqmSzQ",
+      "plus_code": {
+        "compound_code": "FJ9M+FG Valencia",
+        "global_code": "8CFXFJ9M+FG"
+      },
+      "rating": 4.8,
+      "reference": "ChIJ7bx4M-lJYA0RTTLuIXqmSzQ",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 106
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer de Ciscar, 13, Bajo Dcha, Ensanche, 46005 Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4670454,
+          "lng": -0.36621
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46832727989271,
+            "lng": -0.3648092201072777
+          },
+          "southwest": {
+            "lat": 39.46562762010727,
+            "lng": -0.3675088798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+      "name": "La Santa",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102028003845580037013\">Gert Stalpaert</a>"
+          ],
+          "photo_reference": "ATplDJb67XhzhbVj1VZscJCDMDIxV38i_1g8O7s7xF8rPGgR0n3Xw7Yk8xVaAG98UKqRGozXPxd99EyFGZIv-3DMJ3p90NmV-ILPoeb4YWuH8sA_5SvEOvxMMxUUiTj7wER8f_wblOdXXbaBgR-W1aPokqRX7qJRlJEYuyAOyfDI8oG51QY6",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJKbATkbdIYA0RptuosihIKOc",
+      "plus_code": {
+        "compound_code": "FJ8M+RG Valencia",
+        "global_code": "8CFXFJ8M+RG"
+      },
+      "price_level": 1,
+      "rating": 4.3,
+      "reference": "ChIJKbATkbdIYA0RptuosihIKOc",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 802
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer de Salamanca, 14, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4667906,
+          "lng": -0.3648261
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46818062989272,
+            "lng": -0.3634107201072777
+          },
+          "southwest": {
+            "lat": 39.46548097010728,
+            "lng": -0.3661103798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "LA PARRILLETA",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1960,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114616444926676336967\">Paula Ramón Olivert</a>"
+          ],
+          "photo_reference": "ATplDJZRduu_PYMCthf_rfamS0BWHycA6CL_a0sqKKJnuWA94J8bWE8d2L5A9yflEcL8Rhaxq2HPrlH1msUHfHw_gwHYoX4ckq1FWWFsojswdCO1zIlEZe5FTK16E0S2xLcGTnomvSKirA4QT-9R7vMFaAyTgrPpxmSf5BwnICtkVXGDyHF2",
+          "width": 2608
+        }
+      ],
+      "place_id": "ChIJW1D2p-xJYA0ReNBlgSH0BjI",
+      "plus_code": {
+        "compound_code": "FJ8P+P3 Valencia",
+        "global_code": "8CFXFJ8P+P3"
+      },
+      "price_level": 1,
+      "rating": 4.1,
+      "reference": "ChIJW1D2p-xJYA0ReNBlgSH0BjI",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 877
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Gran Via del Marqués del Túria, 76, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4679071,
+          "lng": -0.3658909
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46930762989273,
+            "lng": -0.3645388201072777
+          },
+          "southwest": {
+            "lat": 39.46660797010728,
+            "lng": -0.3672384798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+      "name": "El Cauce Bar & Tapas",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 853,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111401506213095243373\">A Google User</a>"
+          ],
+          "photo_reference": "ATplDJbxDU7t0xqyp8k4777XgVijzsEuu88uXazs7mFNF7egG_IgWJe-oH1oRVW0ZdYu0KC7zxqPvTmx2TWQZmHq--zfjj_Lt3qThp9hocpiouSkJwTmYN11amcTW1PMo6YUbN5IXZYfat40U8iNdKyA7CF6TfEeevWcabhVUbpOxzOYa-u6",
+          "width": 1280
+        }
+      ],
+      "place_id": "ChIJD7goerdIYA0Rg7PnHSRSazk",
+      "plus_code": {
+        "compound_code": "FJ9M+5J Valencia",
+        "global_code": "8CFXFJ9M+5J"
+      },
+      "price_level": 2,
+      "rating": 4.3,
+      "reference": "ChIJD7goerdIYA0Rg7PnHSRSazk",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1353
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer Serrano Morales, 3, L'Eixample, 46004 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4689874,
+          "lng": -0.365731
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.47030982989273,
+            "lng": -0.3643182701072777
+          },
+          "southwest": {
+            "lat": 39.46761017010729,
+            "lng": -0.3670179298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+      "name": "Ostrabar Valencia",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3456,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113549563910477356526\">malenasegura</a>"
+          ],
+          "photo_reference": "ATplDJZOz_qrDuKczn9KJDnWkzsTOkE3vJa6huJfquI_dz2g3u3O69wLI5FdDuAa814LMUTvKKVqCWb569OXgoP1N_A0cYZQD7P0kuJtiFQ5qXZRbQmF0OYBiOushBY_xQ0lC2zlLMiQJEYpBSbnqMOkRzNDEnc0LiV_9FKoWaTZLW_Hg84",
+          "width": 4608
+        }
+      ],
+      "place_id": "ChIJvduvYLdIYA0RclIjw8LmHnM",
+      "plus_code": {
+        "compound_code": "FJ9M+HP Valencia",
+        "global_code": "8CFXFJ9M+HP"
+      },
+      "price_level": 2,
+      "rating": 4.6,
+      "reference": "ChIJvduvYLdIYA0RclIjw8LmHnM",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 760
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer del Mestre Gozalbo, 12, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4655452,
+          "lng": -0.369732
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46691372989272,
+            "lng": -0.3683026201072777
+          },
+          "southwest": {
+            "lat": 39.46421407010727,
+            "lng": -0.3710022798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Labarra",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3040,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101460127352854789427\">Jose L</a>"
+          ],
+          "photo_reference": "ATplDJbqwkIWrKiPbhgeMk1F6XNPpcKA0RO-FBykx_nyuZTgp2LSzWBQuazjft7Zswj61hUAx7BJ4BkbSBoORdOPx4OzrSxcH8Z56_ECfnGZyGo1eZoaOmfcyT2npJY-F5_ikAUbcxdF7iLuMEqJUsbkRKoPAITbI5n4JLnkc8PXwu4COgli",
+          "width": 4056
+        }
+      ],
+      "place_id": "ChIJxUSUBLZIYA0RVItkq4Cl8uM",
+      "plus_code": {
+        "compound_code": "FJ8J+63 Valencia",
+        "global_code": "8CFXFJ8J+63"
+      },
+      "price_level": 2,
+      "rating": 4.3,
+      "reference": "ChIJxUSUBLZIYA0RVItkq4Cl8uM",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 781
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer del Comte d'Altea, 25, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4665142,
+          "lng": -0.3670532
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46782307989272,
+            "lng": -0.3656748201072778
+          },
+          "southwest": {
+            "lat": 39.46512342010728,
+            "lng": -0.3683744798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "100 Montaditos",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 467,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101135593268287657443\">Liko León</a>"
+          ],
+          "photo_reference": "ATplDJbINo4mDSu2e5lD5jPJ30tMEuMNrFEkkfQ-Mnf9tZEjf8di87n23OqVQPqZ5q_Z3e72NZjAF-xIoeIYxS6UNxAxyu615ZO1Zki2MA71ZOZs6LMYZnHhuE7Ro8kqDvHZduqjjXYRgtw9r4fD1bpE7pbuw96ja4VF_MISjvcJRoKU9jFl",
+          "width": 700
+        }
+      ],
+      "place_id": "ChIJHfxiuLdIYA0RL7YYh60FK14",
+      "plus_code": {
+        "compound_code": "FJ8M+J5 Valencia",
+        "global_code": "8CFXFJ8M+J5"
+      },
+      "price_level": 1,
+      "rating": 4,
+      "reference": "ChIJHfxiuLdIYA0RL7YYh60FK14",
+      "types": [
+        "restaurant",
+        "bar",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1289
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer del Comte d'Altea, 31, L'Eixample, 46005 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4666707,
+          "lng": -0.3666812
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.46802947989271,
+            "lng": -0.3652995701072778
+          },
+          "southwest": {
+            "lat": 39.46532982010727,
+            "lng": -0.3679992298927223
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Lambrusqueria Conde Altea",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3120,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101970947422262987087\">A Google User</a>"
+          ],
+          "photo_reference": "ATplDJbAqEK8vzVRLhVIPGcB3Or-a7mZrwYxoanvat2M7nE7v9AwDXjhTKQspQoFEq774lXtCWlWBW-8-qVraO01l_5t8bZe7CDvlp3DoSdxctKhnHlGG65j-J2QQVXUGaRHO3TbrTM2kGSkSSeKbgNL_iKy5xoexKzbMlRPCK-W3Lp0_CPs",
+          "width": 4160
+        }
+      ],
+      "place_id": "ChIJxdBrn7dIYA0R-7C0YUodgLs",
+      "plus_code": {
+        "compound_code": "FJ8M+M8 Valencia",
+        "global_code": "8CFXFJ8M+M8"
+      },
+      "price_level": 2,
+      "rating": 4.1,
+      "reference": "ChIJxdBrn7dIYA0R-7C0YUodgLs",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 3279
+    }
+  ]
+}

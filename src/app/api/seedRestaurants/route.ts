@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { seedDatabase } from '@/lib/scripts/resraturantSeed';
+import { seedDatabase } from '@/lib/scripts/neighborhoodResraturantSeed';
 
 export async function GET() {
   try {

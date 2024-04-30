@@ -11,10 +11,9 @@ const useGetNearRestaurants = ({
   coordinates,
   radius,
 }: useGetNearRestaurantsProps): UseQueryResult<IRestaurant[]> => {
-  console.log('gooooordinates', coordinates);
   const fetchRestaurants = async () => {
     const res = await fetch(
-      `http://localhost:3000/api/nearRestaurants?latitude=${coordinates.lng}&longitude=${coordinates.lat}&radius=${radius}`,
+      `http://localhost:3000/api/nearRestaurants?latitude=${coordinates.lat}&longitude=${coordinates.lng}&radius=${radius}`,
     );
     return await res.json().then((data) => data);
   };

@@ -3,18 +3,19 @@ import { IUser } from './User';
 
 export interface IRestaurant extends Document {
   name: string;
-  rating: number;
+  rating?: number;
+  numberRatings?: number;
   email?: string;
   discovered: boolean;
-  dateDiscovered: Date;
-  discoveredBy: IUser;
+  dateDiscovered?: Date;
+  discoveredBy?: IUser;
   location: ILocation;
   adress: IAdress;
 }
 
 export interface IAdress {
   adress: string;
-  postalCode: string;
+  postalCode?: string;
   city: string;
   country: string;
 }
@@ -43,21 +44,19 @@ const restaurantSchema = new mongoose.Schema({
   },
   rating: {
     type: Number,
-    requied: true,
+  },
+  numberRatings: {
+    type: Number,
   },
   email: {
     type: String,
-    requied: false,
   },
   discovered: {
     type: Boolean,
-    requied: true,
     default: false,
   },
   dateDiscovered: {
     type: Date,
-    requied: true,
-    default: Date.now,
   },
   discoveredBy: [
     {
@@ -70,11 +69,20 @@ const restaurantSchema = new mongoose.Schema({
     required: true,
     index: '2dsphere',
   },
-  adress: {
-    adress: String,
+  address: {
+    address: {
+      type: String,
+      required: true,
+    },
     postalCode: String,
-    city: String,
-    country: String,
+    city: {
+      type: String,
+      required: true,
+    },
+    neighborhood: {
+      type: String,
+      required: true,
+    },
   },
 });
 

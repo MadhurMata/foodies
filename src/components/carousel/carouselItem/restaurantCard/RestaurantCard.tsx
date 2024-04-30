@@ -2,6 +2,7 @@ import React from 'react';
 import { IRestaurant } from '@/lib/models/Restaurants';
 
 const RestaurantCard = ({ item }: { item: IRestaurant }) => {
+  const { name, rating, numberRatings } = item;
   return (
     <div className="mt-2 block w-72 rounded-lg border bg-white">
       <div
@@ -22,10 +23,10 @@ const RestaurantCard = ({ item }: { item: IRestaurant }) => {
       <div className="p-2">
         <div className="flex justify-between">
           <h5 className="mb-2 text-sm font-bold leading-tight text-neutral-800 dark:text-neutral-50">
-            {item.name}
+            {name}
           </h5>
           <h5 className="mb-2 flex align-middle text-sm font-bold leading-tight text-neutral-800 dark:text-neutral-50">
-            {item.rating}
+            {rating}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -40,7 +41,7 @@ const RestaurantCard = ({ item }: { item: IRestaurant }) => {
             </svg>
             <span>
               <p className="text-sm text-warn-400 dark:text-neutral-200">
-                (1340)
+                ({numberRatings || '0'})
               </p>
             </span>
           </h5>

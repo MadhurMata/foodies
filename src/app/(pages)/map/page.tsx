@@ -6,11 +6,8 @@ import useGetNearRestaurants from '../(home)/hooks/useGetNearRestaurants';
 import { useGlobalContext } from '@/lib/globalContext';
 import { useEffect } from 'react';
 import './styles.css';
+import { DEFAULT_MAP_CENTER } from '../(home)/page';
 
-const DEFAULT_MAP_CENTER = {
-  lng: -73.856077,
-  lat: 40.848447,
-};
 const ICON = icon({
   iconUrl: '/static/penis.png',
   iconSize: [32, 32],
@@ -27,7 +24,7 @@ const Map = () => {
     status,
   } = useGetNearRestaurants({
     coordinates: center,
-    radius: 10,
+    radius: 1,
   });
 
   useEffect(() => {
@@ -49,7 +46,7 @@ const Map = () => {
         width="800"
         height="400"
         center={[center.lat, center.lng]}
-        zoom={12}
+        zoom={16}
       >
         {({ TileLayer, Marker, Popup }) => (
           <>
@@ -63,8 +60,8 @@ const Map = () => {
                 key={i}
                 icon={ICON}
                 position={[
-                  restaurant.location.coordinates[1],
                   restaurant.location.coordinates[0],
+                  restaurant.location.coordinates[1],
                 ]}
               >
                 <Popup>{restaurant.name}</Popup>

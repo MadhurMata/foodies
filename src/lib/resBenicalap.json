@@ -1,0 +1,1000 @@
+{
+  "country": "España",
+  "city": "Valencia",
+  "neighborhood": "Benicalap",
+  "results": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer de Betxí, 13, Benicalap, 46025 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4950118,
+          "lng": -0.3950138
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.49633962989272,
+            "lng": -0.3936991201072778
+          },
+          "southwest": {
+            "lat": 39.49363997010728,
+            "lng": -0.3963987798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "A La Brasa",
+      "opening_hours": {
+        "open_now": true
+      },
+      "place_id": "ChIJsXOsa41FYA0RQx1qCrRjrSU",
+      "plus_code": {
+        "compound_code": "FJW3+2X Valencia",
+        "global_code": "8CFXFJW3+2X"
+      },
+      "price_level": 1,
+      "rating": 4.4,
+      "reference": "ChIJsXOsa41FYA0RQx1qCrRjrSU",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 11
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "C/ de Salvador Tusset, 10, Benicalap, 46025 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4950436,
+          "lng": -0.3950457
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.49633707989272,
+            "lng": -0.3936661701072777
+          },
+          "southwest": {
+            "lat": 39.49363742010728,
+            "lng": -0.3963658298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Restaurante Asador El Parque",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109016110480121839331\">Ivan Vedler</a>"
+          ],
+          "photo_reference": "ATplDJaEwKwsfcnWOr_2wFxBDoYkEa2AUf28tr6cjdOkeYIZINc17g0DJrT0bvIX9V7dfqAmrzSof0App6xG17IzB2JmlDTAO2bNszjgihlslsgqIjBvmjLFyALMqQeuVwdhyrO0Vf05xg_CjIxl8XOKA2-c3i-W4jK03Ut7ndwwY-i3QoPY",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJ-cv6a41FYA0R0CKmFat-cRY",
+      "plus_code": {
+        "compound_code": "FJW3+2X Valencia",
+        "global_code": "8CFXFJW3+2X"
+      },
+      "price_level": 1,
+      "rating": 4.3,
+      "reference": "ChIJ-cv6a41FYA0R0CKmFat-cRY",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 632
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "C/ de Miguel Servet, 28, local 12, Benicalap, 46015 Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4881171,
+          "lng": -0.3935562
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.48938487989272,
+            "lng": -0.3924036701072777
+          },
+          "southwest": {
+            "lat": 39.48668522010728,
+            "lng": -0.3951033298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+      "name": "El rincón de jessi",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111122997866530394263\">Pedro Valero</a>"
+          ],
+          "photo_reference": "ATplDJZmzBWMWZVa-iRUi3Eq9HwEcDejWxY0YLAAjqpcxQ8SXJhTwoeLpKuFXKDgOxyjX2rvBL7CjdaLUEagM52kGgDBSuUiqhisCsRabzvWjcW14gTzqiVw7wAZvqF9j8Gsf5HVQDodIltCKpldC5VI0DrXkUN3Bh_jPe9VLRL_3YMUGHnM",
+          "width": 4000
+        }
+      ],
+      "place_id": "ChIJ11_ePQBFYA0RHkeMNqAGBHw",
+      "plus_code": {
+        "compound_code": "FJQ4+6H Valencia",
+        "global_code": "8CFXFJQ4+6H"
+      },
+      "rating": 5,
+      "reference": "ChIJ11_ePQBFYA0RHkeMNqAGBHw",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 13
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Av. de les Corts Valencianes, 58, Pobles de l'Oest, 46015 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4962275,
+          "lng": -0.4010422
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.49757732989271,
+            "lng": -0.3996923701072777
+          },
+          "southwest": {
+            "lat": 39.49487767010727,
+            "lng": -0.4023920298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "ASADOR VILLAGODIO - Restaurante asador en Valencia - Chuleton a la brasa",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2252,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101068287913820939931\">imanol fuertes</a>"
+          ],
+          "photo_reference": "ATplDJbNWvFbHBrvwXsnuaxvmpAFzCyVOsiHCl2kHolVcL7PQpTnLC1kyLPHPiPZo0jSxnOdhC9zTn4knVasPCju7DwXBi4xTvOLbzKIHgxsultR2yMxoQeEtHBjTa7Tfl5MpkIE7cpNYdLSNdTDnBA2j7BSZ1xwL7wmft7Vepr05Hrkmp4",
+          "width": 4000
+        }
+      ],
+      "place_id": "ChIJ5aKtp49FYA0RJFSmbloeH3I",
+      "plus_code": {
+        "compound_code": "FHWX+FH Valencia",
+        "global_code": "8CFXFHWX+FH"
+      },
+      "price_level": 2,
+      "rating": 4.3,
+      "reference": "ChIJ5aKtp49FYA0RJFSmbloeH3I",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 232
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer del Periodista Gil Sumbiela, 38, BAJO, Benicalap, 46025 Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4918657,
+          "lng": -0.3868394
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.49317467989272,
+            "lng": -0.3854729201072778
+          },
+          "southwest": {
+            "lat": 39.49047502010728,
+            "lng": -0.3881725798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "LA TRUFATA",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2356,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110374734785983263887\">A Google User</a>"
+          ],
+          "photo_reference": "ATplDJZ7_K9BG8qvKrgMxlr7mpQBeD5MpSwRcqulccpiBtiqM241u9vfQS0PcdhquDYwB9Ab7aHEO5iSUsq0yXz5mGm9ybBp9LjhMJtosbJqBTa06Pm05PhkGMKvAIzn5irscah2yHPmHv7k2fi-bQARiX5wvaTPdE5DX7mkwvR-W8ArrGKw",
+          "width": 3385
+        }
+      ],
+      "place_id": "ChIJGe6q04dFYA0Rpe4nbvIx8_s",
+      "plus_code": {
+        "compound_code": "FJR7+P7 Valencia",
+        "global_code": "8CFXFJR7+P7"
+      },
+      "rating": 5,
+      "reference": "ChIJGe6q04dFYA0Rpe4nbvIx8_s",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 8
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Av. de Burjassot, 205, Benicalap, 46015 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.493314,
+          "lng": -0.3945142
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.49471917989272,
+            "lng": -0.3931988201072777
+          },
+          "southwest": {
+            "lat": 39.49201952010728,
+            "lng": -0.3958984798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+      "name": "Restaurante Aitana",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2736,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/117661042404759339621\">Fivesecon secon</a>"
+          ],
+          "photo_reference": "ATplDJZeaPMX5JRfSgBox4lpbrMovrjZF_ObvtYF56I1zwNwK_MYgyT17ja_g3-RHqlcqhblzoV7dYSwEQKhRtSvAXd8ieAQpLgPsBKHSCXpqYeRXGe96y6nNKCbNuDSLNk90-s4PW_20tIgtgNGjHAK0nAOY_E8LIKI8o4YWTLxMMRYWMaO",
+          "width": 3648
+        }
+      ],
+      "place_id": "ChIJ_YYm2YxFYA0RnMvOtRZ9uR4",
+      "plus_code": {
+        "compound_code": "FJV4+85 Valencia",
+        "global_code": "8CFXFJV4+85"
+      },
+      "price_level": 1,
+      "rating": 4.3,
+      "reference": "ChIJ_YYm2YxFYA0RnMvOtRZ9uR4",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 632
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Av. de Burjassot, 122, Benicalap, 46025 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4889802,
+          "lng": -0.3897546000000001
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.49030707989272,
+            "lng": -0.3884346201072778
+          },
+          "southwest": {
+            "lat": 39.48760742010727,
+            "lng": -0.3911342798927223
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Restaurante Castellar Brasas",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105908504980188831471\">Pilar Gaspar</a>"
+          ],
+          "photo_reference": "ATplDJZNFSZG-dQGU-qdrRxvhvrrIQecIF6UCVNvcYr34eDYFpHxx-26_pBwwnO7Px7Kd3zYJLjvoF4hd09RTGvvvRTjhHbp8i9BMuOmSnFLbdttLRaCTIyy4QcQTk9uv4x-l990Wik_pgrnuz3p6kMucXZbOsCQMQ6CHHkw1vkD0RfVgMkp",
+          "width": 4000
+        }
+      ],
+      "place_id": "ChIJ5x4BOvRFYA0RnYermNSy5xQ",
+      "plus_code": {
+        "compound_code": "FJQ6+J3 Valencia",
+        "global_code": "8CFXFJQ6+J3"
+      },
+      "price_level": 1,
+      "rating": 4.4,
+      "reference": "ChIJ5x4BOvRFYA0RnYermNSy5xQ",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 1475
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Calle de los Rosales, Carrer del Periodista Gil Sumbiela, 38, C, 46025 Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4918883,
+          "lng": -0.3868864
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.49320737989272,
+            "lng": -0.3854498701072777
+          },
+          "southwest": {
+            "lat": 39.49050772010727,
+            "lng": -0.3881495298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Sumbiela38",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 768,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102049841690621385814\">A Google User</a>"
+          ],
+          "photo_reference": "ATplDJYpE-jcR8pG3wbujPMPz5tTKv7W6HojZEJ-SMFQPVe2bnHtpthxiTVL5BK5x3K5mD0B4iTxoaoraoDMRoRq4ZSAB6H6vPlqcdOvN3DgMDwqdo2kXo6x11LgxhIamraW6o2i9V0Ja4k_zeeW7Xz-tuwHNdDu1QFw_YO4Dw3LmBqxHKT-",
+          "width": 1024
+        }
+      ],
+      "place_id": "ChIJR-XoGO1FYA0RQVFRB8L5130",
+      "plus_code": {
+        "compound_code": "FJR7+Q7 Valencia",
+        "global_code": "8CFXFJR7+Q7"
+      },
+      "price_level": 1,
+      "rating": 4.6,
+      "reference": "ChIJR-XoGO1FYA0RQVFRB8L5130",
+      "types": [
+        "cafe",
+        "bar",
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 41
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "C. de la Florista, 58, Benicalap, 46015 Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4926777,
+          "lng": -0.3943957
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.49389157989272,
+            "lng": -0.3930936701072777
+          },
+          "southwest": {
+            "lat": 39.49119192010728,
+            "lng": -0.3957933298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Restaurante LA TERRAZITA",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2448,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104377392383700363360\">Chema López Pérez</a>"
+          ],
+          "photo_reference": "ATplDJZ1mnOQ4C_EWjUwNHu8NA1wWfNsiwkkeUhOOE1D_x1tG2f27Ri0yyeCAJwOD2UwArWVn54KKI48bOPHx7yQwcm9dhGIXG42EzlSG0BbqJ6b0CzJiuYme8AIYuezSYuA6BpbSezye-cRMf8-sMj-ueQRqDfeDoI3gMhlx1UoSq56pzDa",
+          "width": 3264
+        }
+      ],
+      "place_id": "ChIJoQmyxYxFYA0RiszaBHjblvQ",
+      "plus_code": {
+        "compound_code": "FJV4+36 Valencia",
+        "global_code": "8CFXFJV4+36"
+      },
+      "price_level": 1,
+      "rating": 4.2,
+      "reference": "ChIJoQmyxYxFYA0RiszaBHjblvQ",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 338
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "C/ de Pere Cabanes, 104, Benicalap, 46025 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4936874,
+          "lng": -0.3814744
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.49499252989273,
+            "lng": -0.3800896701072778
+          },
+          "southwest": {
+            "lat": 39.49229287010728,
+            "lng": -0.3827893298927223
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Il Cortile - Pedro Cabanes",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 12000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109769840424566654255\">Carlos Juan</a>"
+          ],
+          "photo_reference": "ATplDJYH6LW2XCPddXpsVLT5ASlM-46lkUroE_B2UGT4rUAU9QCb4ZVye9z_JjeHLxqwB7HPWSW0Z6UO0ZtBwcwSbSQymSqZY7DK32aSEJkcpojW63YPrOJG7KH9-iJ19nxNoGQtZ0R9aSwA7h05Tpg1d73OFJFrNI5Lxl23CgKuBjdWJTPp",
+          "width": 9000
+        }
+      ],
+      "place_id": "ChIJGZ7LHc5FYA0RwWZZ4YDHis4",
+      "plus_code": {
+        "compound_code": "FJV9+FC Valencia",
+        "global_code": "8CFXFJV9+FC"
+      },
+      "rating": 4.7,
+      "reference": "ChIJGZ7LHc5FYA0RwWZZ4YDHis4",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 2137
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer de Castelló de Rugat, Benicalap, 46025 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4919767,
+          "lng": -0.3907323
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.49332472989272,
+            "lng": -0.3893832701072777
+          },
+          "southwest": {
+            "lat": 39.49062507010728,
+            "lng": -0.3920829298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+      "name": "Bar Sant Roc",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103711509640195641418\">Diego</a>"
+          ],
+          "photo_reference": "ATplDJYe1NMyVA-FbxPV5oOpmE9eEQIhgvd8TnFOMmaGr2TWAyz_ivh3TWS96Cnr1kyLtqGDMDNjOtH-_AzkHJbXDolV_TvhL1qxlLt2w4w5ka6h-3yuKOtlYaHk0neYBJF_JPpG5aJYFXaQCX-SHzevJaoMEBZvcCfwivc21uwkh9oE2jg_",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJBQtzRidFYA0RXO07GNxWY6M",
+      "plus_code": {
+        "compound_code": "FJR5+QP Valencia",
+        "global_code": "8CFXFJR5+QP"
+      },
+      "rating": 4.6,
+      "reference": "ChIJBQtzRidFYA0RXO07GNxWY6M",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 65
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer Amics del Corpus, 7, Benicalap, 46035 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4887791,
+          "lng": -0.3942506
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.48988062989272,
+            "lng": -0.3928361701072778
+          },
+          "southwest": {
+            "lat": 39.48718097010728,
+            "lng": -0.3955358298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "El Teu Lloc",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1960,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100666782460689602363\">Neserif Yula</a>"
+          ],
+          "photo_reference": "ATplDJZYMispFWe-PLxQ_pneRiCQdiNXTMy4kbBfX1oQTN62bW0WZ2bG-HJQ2JzaCp_EJq5oBebetTTZZZX-eTsG9Ua8uDfuRRtEZC6EGO8KZla-vYPnARoQsiLL6W3KOK2hAsSEJEVTFoVXptZoSKLE7EkCvcI1Q8vTZd4LnnPyQriSCeNM",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJk5XT5LdFYA0RKYY7Nzj1CgE",
+      "plus_code": {
+        "compound_code": "FJQ4+G7 Valencia",
+        "global_code": "8CFXFJQ4+G7"
+      },
+      "price_level": 1,
+      "rating": 4,
+      "reference": "ChIJk5XT5LdFYA0RKYY7Nzj1CgE",
+      "types": [
+        "restaurant",
+        "bar",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 304
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer de l'Horta Sud, 4, Benicalap, 46015 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.49321219999999,
+          "lng": -0.3998421
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.49450197989272,
+            "lng": -0.3984519201072778
+          },
+          "southwest": {
+            "lat": 39.49180232010728,
+            "lng": -0.4011515798927223
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+      "name": "Tintapea Nou Mestalla",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114180118355474932594\">manuel sampedro</a>"
+          ],
+          "photo_reference": "ATplDJZPA0BcJb3gkT7yDCZoedGlJmEzNTlMZa-zuVFkljOX7yVMYW1GxbygZkcsrPF5sV3iGNvAyJhAdRORqh1sLDAbJSQy1kbYGSllhC8bbzSVlNMn4w9x9ofINGROevyMFHMUz4HPJ7EgV93WZLuZNI9wmeyhelg8-g74bPArWc_h0r88",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJc0nq9I5FYA0RCooxmY1D71E",
+      "plus_code": {
+        "compound_code": "FJV2+73 Valencia",
+        "global_code": "8CFXFJV2+73"
+      },
+      "price_level": 1,
+      "rating": 4.2,
+      "reference": "ChIJc0nq9I5FYA0RCooxmY1D71E",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 2041
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Av. de les Corts Valencianes, 17, Campanar, 46015 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4889493,
+          "lng": -0.3991311
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.49035317989272,
+            "lng": -0.3976597701072778
+          },
+          "southwest": {
+            "lat": 39.48765352010728,
+            "lng": -0.4003594298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Paffuto (Cortes)",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101154014979540012670\">Erika Gélvez</a>"
+          ],
+          "photo_reference": "ATplDJaTcz2aqieuaKmHUOMLLtM1nr5DrXvABXAiLFWM5aJH_FHuF-qshzh3ZaDFz89jW2TguVv3tltt0tJjFTLZXzOkiK08tjs-FJGgwQS5XmgC1zv7ToeFst0PlGzrmtNP1xRduImKVQlydX7kMgztb5C7r9hzKqViOKTOqyURE0BNzHIM",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJabsMOKZFYA0Rk_aQa6MDyJ4",
+      "plus_code": {
+        "compound_code": "FJQ2+H8 Valencia",
+        "global_code": "8CFXFJQ2+H8"
+      },
+      "rating": 4.6,
+      "reference": "ChIJabsMOKZFYA0Rk_aQa6MDyJ4",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 653
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer del Periodista Gil Sumbiela, 41, Benicalap, 46025 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4919415,
+          "lng": -0.3875601
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.49332482989273,
+            "lng": -0.3861745201072777
+          },
+          "southwest": {
+            "lat": 39.49062517010728,
+            "lng": -0.3888741798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "La Rioja IV",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1530,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/118212716899230688276\">Maria Jose Cruz</a>"
+          ],
+          "photo_reference": "ATplDJYTFpzSAFpOQ5ht0JhEJLC297RP8QnbYB4edY8k67BtqbM-C9KuuU0C1luTKk4rl1RA4-fiJ4CFEWLv9iSim3qfpDnSEoLINXQHbgFtvCB82l61daZWByttu_UhcbB0ddBGA-hG8oGW6AAsKhN9G9yn4uXfLEjxC6zauFlRGt2tXaaf",
+          "width": 2040
+        }
+      ],
+      "place_id": "ChIJywzn981RYA0RaLfKq-jpHS0",
+      "plus_code": {
+        "compound_code": "FJR6+QX Valencia",
+        "global_code": "8CFXFJR6+QX"
+      },
+      "price_level": 1,
+      "rating": 3.9,
+      "reference": "ChIJywzn981RYA0RaLfKq-jpHS0",
+      "types": [
+        "restaurant",
+        "bar",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 590
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer del Periodista Gil Sumbiela, 71, Benicalap, 46025 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4929801,
+          "lng": -0.3904644
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.49430577989272,
+            "lng": -0.3890292701072778
+          },
+          "southwest": {
+            "lat": 39.49160612010728,
+            "lng": -0.3917289298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Sabor a leña",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114682244915597629877\">A Google User</a>"
+          ],
+          "photo_reference": "ATplDJaw1mdDzeGGTRToFVG7pQJVz-zj9DnvpVAH1CPtqwaA2tX8vCEAKUMkBvGcU5sP5EJqZG5iI8mybRl92R5K0pcZ1es7d8gr_vb5O54cnYdzg_v4P08YjS30ahxWVSnfCBctd-7WG9MHjCIwwX0qKZUzsCgUYQ2FK73GKYs6A8D5Meg9",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJ9diNzgVFYA0RG4RTrleUe1Y",
+      "plus_code": {
+        "compound_code": "FJV5+5R Valencia",
+        "global_code": "8CFXFJV5+5R"
+      },
+      "rating": 4.6,
+      "reference": "ChIJ9diNzgVFYA0RG4RTrleUe1Y",
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 112
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Carrer del Periodista Gil Sumbiela, 35, Benicalap, 46025 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4917015,
+          "lng": -0.3869076
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.49307717989272,
+            "lng": -0.3855710201072777
+          },
+          "southwest": {
+            "lat": 39.49037752010727,
+            "lng": -0.3882706798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+      "name": "Bodega La Viña",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 608,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105842054767455431467\">A Google User</a>"
+          ],
+          "photo_reference": "ATplDJZWqxFmEpexEYJijc4-1vsNG7DyEkMexcTde-XcuAqR8amVSlZSZ-l7QzohpHui83WOSdeXLUFbYnA4_BZnOPrIBGIB8fFNJRk2emY2yP8k1_pwZTEN0933_Du1U7wf3ugqokT7Wk4Oz5O7TiaKcwv3R5TDgmjRljVERb1f1u1AhdzC",
+          "width": 1080
+        }
+      ],
+      "place_id": "ChIJDXyk00BFYA0RBp1dT3fXJcQ",
+      "plus_code": {
+        "compound_code": "FJR7+M6 Valencia",
+        "global_code": "8CFXFJR7+M6"
+      },
+      "rating": 4.6,
+      "reference": "ChIJDXyk00BFYA0RBp1dT3fXJcQ",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 68
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "C. del Doctor Nicasi Benlloch, 62, Benicalap, 46015 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.49047540000001,
+          "lng": -0.3950533
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.49177087989273,
+            "lng": -0.3937604701072778
+          },
+          "southwest": {
+            "lat": 39.48907122010728,
+            "lng": -0.3964601298927223
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Nuevo Estadio",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3120,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111088340104842844347\">Fernando .</a>"
+          ],
+          "photo_reference": "ATplDJY8DFgmgO2g7huUbUbgMw2oOD6pj-qqir_X66ZaN-tWW0OjybyrN1MtLZSMEN77jwpE5-LaEtdhRFTbjc3UI-Q7Gjq9S1UNzku0Xsy5vyZqRhlymnD6r2qad0NCuWY8yd7jwl8ik2_6esD3gAxsHR5ZHg7cJ8FGWeI5qxLSbt_eXG7i",
+          "width": 4160
+        }
+      ],
+      "place_id": "ChIJw45fZotFYA0REd5BGYpMvZI",
+      "plus_code": {
+        "compound_code": "FJR3+5X Valencia",
+        "global_code": "8CFXFJR3+5X"
+      },
+      "rating": 4.2,
+      "reference": "ChIJw45fZotFYA0REd5BGYpMvZI",
+      "types": [
+        "restaurant",
+        "bar",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 329
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Av. de l'Equador, 69, Benicalap, 46025 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4941581,
+          "lng": -0.3912578
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.49555897989273,
+            "lng": -0.3899543201072778
+          },
+          "southwest": {
+            "lat": 39.49285932010728,
+            "lng": -0.3926539798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+      "name": "Taberna Jaizkibel",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104532117175757700481\">Taberna Jaizkibel</a>"
+          ],
+          "photo_reference": "ATplDJbNH-fEnnbTajJhe_ERw9o6-zDKlj_tmeNxyYIMDuqp5uOTbBdTfa71zvXpvVW8_oFITzy-CNdA1p39bvvTkIo_SXVDZq39jMqkL3acqHyq6r9WuvxpSHLdN45aSrbji9XzVhcdZB3WUI7nA8hL6q56Lttha5wucAcVpZW4trhAgcX5",
+          "width": 1500
+        }
+      ],
+      "place_id": "ChIJPardkPJFYA0RkwFWn6PzyQI",
+      "plus_code": {
+        "compound_code": "FJV5+JG Valencia",
+        "global_code": "8CFXFJV5+JG"
+      },
+      "price_level": 1,
+      "rating": 3.5,
+      "reference": "ChIJPardkPJFYA0RkwFWn6PzyQI",
+      "types": [
+        "cafe",
+        "liquor_store",
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 1083
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Av. de Burjassot, 172, Benicalap, 46025 València, Valencia, Spain",
+      "geometry": {
+        "location": {
+          "lat": 39.4918507,
+          "lng": -0.392719
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 39.49318187989272,
+            "lng": -0.3914014201072778
+          },
+          "southwest": {
+            "lat": 39.49048222010728,
+            "lng": -0.3941010798927223
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Bar Maxi",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2184,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111068760922249939813\">Jose martinez</a>"
+          ],
+          "photo_reference": "ATplDJYeGZL66myLhQLA19tUcYoDMQFEuSeLAlKcM6302MfWG5FWnpoZFOP8vu9g95nP1Yul3PNCVK3GhBmOC6-dVfTalgmm40CYcpF1-uxC5Ge4jn_kal03I8fyLX_g8hIZ9uCBwxnDhyuDzK5W4BNJ9KvLtCqLrKDB6Rg_UbVL8zs4OlVn",
+          "width": 4608
+        }
+      ],
+      "place_id": "ChIJ_dfACItFYA0RKLVf21oLP7E",
+      "plus_code": {
+        "compound_code": "FJR4+PW Valencia",
+        "global_code": "8CFXFJR4+PW"
+      },
+      "rating": 4.5,
+      "reference": "ChIJ_dfACItFYA0RKLVf21oLP7E",
+      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "user_ratings_total": 35
+    }
+  ]
+}

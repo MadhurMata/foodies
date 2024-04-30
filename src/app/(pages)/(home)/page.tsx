@@ -6,9 +6,9 @@ import useGetNearRestaurants from './hooks/useGetNearRestaurants';
 import { useGlobalContext } from '@/lib/globalContext';
 import { useEffect } from 'react';
 
-const DEFAULT_MAP_CENTER = {
-  lng: -73.856077,
-  lat: 40.848447,
+export const DEFAULT_MAP_CENTER = {
+  lat: 39.4950118,
+  lng: -0.3950138,
 };
 
 export default function Home() {
@@ -16,9 +16,6 @@ export default function Home() {
   const { mapCenter, nearRestaurants, setNearRestaurants } = useGlobalContext();
   const center = mapCenter.lat === 0 ? DEFAULT_MAP_CENTER : mapCenter;
   const restaurants = nearRestaurants;
-
-  console.log('nearRestaurants', nearRestaurants);
-  console.log('mapCenter', mapCenter);
 
   const {
     data = [],
@@ -28,12 +25,11 @@ export default function Home() {
     status,
   } = useGetNearRestaurants({
     coordinates: center,
-    radius: 10,
+    radius: 1,
   });
 
   useEffect(() => {
     if (status === 'success') {
-      console.log('status', status);
       setNearRestaurants(data);
       refetch();
     }
@@ -48,7 +44,7 @@ export default function Home() {
       ) : fetchingError ? (
         <h1>Error {fetchingError.message}</h1>
       ) : (
-        <Carousel items={restaurants} />
+        <Carousel items={restaurants.slice(0, 5)} />
       )}
     </div>
   );
