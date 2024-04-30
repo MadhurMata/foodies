@@ -1,16 +1,21 @@
 {
   "compilerOptions": {
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "noImplicitAny": true,
+    "removeComments": true,
+    "skipLibCheck": true,
+    "downlevelIteration": true,
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "sourceMap": true,
     "incremental": true,
     "plugins": [
       {
