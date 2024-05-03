@@ -35,8 +35,6 @@ export default function Home() {
     }
   }, [mapCenter, data, setNearRestaurants, refetch, status]);
 
-  console.log('Hooooomemmmee', restaurants);
-
   return (
     <div className="my-auto w-full">
       {isLoading ? (

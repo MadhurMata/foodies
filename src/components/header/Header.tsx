@@ -1,40 +1,66 @@
 'use client';
-import React from 'react';
-
-import NavigateButton from '../navigateButton/NavigateButton';
+import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
-import Searchbar from '../searchbar/Searchbar';
-import AutocompleteList from '../autocompleteList/AutocompleteList';
-import { useState } from 'react';
-import useOutsideHandler from '@/hooks/useOutsideHandler';
+import useSearchLocation from '@/hooks/useSearchLocation';
+import Searchbar from '@/components/searchbar/Searchbar';
+import AutocompleteList from '@/components/autocompleteList/AutocompleteList';
+import NavigateButton from '@/components/navigateButton/NavigateButton';
+import { formatedSearch } from '@/lib/utils/formatSearchLocation';
+import useDropdown from '@/hooks/useDropdown';
 
 const Header = () => {
   const pathName = usePathname();
   const [searchValue, setSearchValue] = useState('');
-  const [isOpen, setOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
+  // const dropdownRef = useRef();
 
   const buttonProps =
     pathName === '/'
       ? { label: 'Map', href: '/map' }
       : { label: 'Home', href: '/' };
 
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setOpen(true);
+  const { data: searchResults = [], refetch } = useSearchLocation({
+    searchInput: searchValue,
+  });
+
+  const formatedItems = formatedSearch(searchValue, searchResults);
+  console.log('formatedItems', formatedItems);
+  // console.log('searchREsults in header', searchResults);
+  const handleSearchChange = async (
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => {
     setSearchValue(event.target.value);
+    if (event.target.value) await refetch();
+    if (event.target.value) {
+      setIsOpen(true);
+    } else {
+      setIsOpen(false);
+    }
   };
 
-  const containerRef = useOutsideHandler(() => {
-    if (isOpen) {
-      setOpen(false);
-    }
-  }) as React.RefObject<HTMLDivElement>;
+  const {
+    dropdownRef,
+    // currentIndex,
+    isOpen,
+    setIsOpen,
+    // isUsingKeyboard,
+    // handleKeyDown,
+    // handleMouseOver,
+  } = useDropdown({
+    items: formatedItems,
+    onSelected: ({ item }) => console.log('item', item),
+  });
 
   return (
     <>
       <div className="sticky top-0 z-10 flex items-center justify-around bg-white px-6 pt-3.5">
         <div className="relative">
           <Searchbar value={searchValue} onChange={handleSearchChange} />
-          <AutocompleteList ref={containerRef} show={isOpen} />
+          <AutocompleteList
+            items={formatedItems}
+            ref={dropdownRef}
+            show={isOpen && !!formatedItems.length}
+          />
         </div>
         <div className="align-middle	">
           <NavigateButton label={buttonProps.label} href={buttonProps.href} />

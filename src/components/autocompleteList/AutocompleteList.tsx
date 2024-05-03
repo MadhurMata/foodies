@@ -1,35 +1,37 @@
-import { Ref, forwardRef } from 'react';
+import { BaseHTMLAttributes, Ref, forwardRef } from 'react';
 import ListItem from './listItem/ListItem';
-
-interface AutocompleteListProps {
+interface AutocompleteListProps extends BaseHTMLAttributes<HTMLUListElement> {
+  items: string[];
   show?: boolean;
 }
 
 const AutocompleteList = forwardRef(
-  ({ show = false }: AutocompleteListProps, ref: Ref<HTMLDivElement>) => {
+  (
+    { items, show = false }: AutocompleteListProps,
+    ref: Ref<HTMLUListElement>,
+  ) => {
     const getRestaurants = () => {
       console.log('get restaurants by location');
     };
+
     return (
       <>
         {show && (
-          <div
+          <ul
             ref={ref}
-            className="absolute left-0 top-20 w-full rounded-2xl border p-4 shadow-lg"
+            className="absolute left-0 top-20 w-full rounded-2xl border p-4 shadow-lg focus:border-neutral-500"
           >
-            <ul>
-              <ListItem
-                onClick={getRestaurants}
-                text="Component 1"
-                iconUrl="http://www.w3.org/2000/svg"
-              />
-              <ListItem
-                onClick={getRestaurants}
-                text="Component 2"
-                iconUrl="http://www.w3.org/2000/svg"
-              />
-            </ul>
-          </div>
+            {items?.map((item) => {
+              return (
+                <ListItem
+                  key={item}
+                  onClick={getRestaurants}
+                  text={item}
+                  iconUrl="http://www.w3.org/2000/svg"
+                />
+              );
+            })}
+          </ul>
         )}
       </>
     );
