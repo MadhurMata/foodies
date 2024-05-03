@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { KeyboardEvent, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import useSearchLocation from '@/hooks/useSearchLocation';
 import Searchbar from '@/components/searchbar/Searchbar';
@@ -11,8 +11,6 @@ import useDropdown from '@/hooks/useDropdown';
 const Header = () => {
   const pathName = usePathname();
   const [searchValue, setSearchValue] = useState('');
-  // const [isOpen, setIsOpen] = useState(false);
-  // const dropdownRef = useRef();
 
   const buttonProps =
     pathName === '/'
@@ -24,7 +22,7 @@ const Header = () => {
   });
 
   const formatedItems = formatedSearch(searchValue, searchResults);
-  console.log('formatedItems', formatedItems);
+  // console.log('formatedItems', formatedItems);
   // console.log('searchREsults in header', searchResults);
   const handleSearchChange = async (
     event: React.ChangeEvent<HTMLInputElement>,
@@ -38,26 +36,42 @@ const Header = () => {
     }
   };
 
+  const handleSearchSelected = (search: string) => {
+    setSearchValue(search);
+  };
+
   const {
     dropdownRef,
-    // currentIndex,
+    currentIndex,
     isOpen,
     setIsOpen,
     // isUsingKeyboard,
-    // handleKeyDown,
+    handleKeyDown,
     // handleMouseOver,
   } = useDropdown({
     items: formatedItems,
-    onSelected: ({ item }) => console.log('item', item),
+    onSelected: ({ item }) => handleSearchSelected(item),
   });
+
+  const handleTabKeyDown = (event: KeyboardEvent<HTMLElement>) => {
+    if (event.key === 'Tab') {
+      setIsOpen(false);
+    }
+    handleKeyDown(event);
+  };
 
   return (
     <>
       <div className="sticky top-0 z-10 flex items-center justify-around bg-white px-6 pt-3.5">
         <div className="relative">
-          <Searchbar value={searchValue} onChange={handleSearchChange} />
+          <Searchbar
+            value={searchValue}
+            onKeyDown={handleTabKeyDown}
+            onChange={handleSearchChange}
+          />
           <AutocompleteList
             items={formatedItems}
+            currentIndex={currentIndex}
             ref={dropdownRef}
             show={isOpen && !!formatedItems.length}
           />

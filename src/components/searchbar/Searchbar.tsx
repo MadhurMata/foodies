@@ -1,11 +1,16 @@
-import { ChangeEventHandler } from 'react';
+import { ChangeEventHandler, KeyboardEventHandler } from 'react';
 
 interface SearchbarProps {
   value: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
+  onKeyDown: KeyboardEventHandler<HTMLInputElement>;
 }
 
-const Searchbar: React.FC<SearchbarProps> = ({ value, onChange }) => {
+const Searchbar: React.FC<SearchbarProps> = ({
+  value,
+  onChange,
+  onKeyDown,
+}) => {
   return (
     <div className="max-w-md overflow-auto rounded-full border shadow-md">
       <div className="relative flex h-12 w-full items-center overflow-hidden rounded-lg bg-white p-2 focus-within:shadow-lg">
@@ -33,6 +38,7 @@ const Searchbar: React.FC<SearchbarProps> = ({ value, onChange }) => {
           placeholder="Search something.."
           value={value}
           onChange={onChange}
+          onKeyDown={onKeyDown}
         />
 
         <div>
