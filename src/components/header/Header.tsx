@@ -71,6 +71,11 @@ const Header = () => {
     setIsOpen(false);
   };
 
+  const selectItem = (index: number) => {
+    setSearchValue(formatedItems[index]);
+    setIsOpen(false);
+  };
+
   return (
     <>
       <div className="sticky top-0 z-10 flex items-center justify-around bg-white px-6 pt-3.5">
@@ -86,7 +91,8 @@ const Header = () => {
             currentIndex={currentIndex}
             ref={dropdownRef}
             show={isOpen && !!formatedItems.length}
-            onHandleMouseOver={(index: number) => handleMouseOver(index)}
+            onHandleMouseOver={handleMouseOver}
+            onSelectItem={selectItem}
           />
         </div>
         <div className="align-middle	">

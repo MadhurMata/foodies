@@ -5,6 +5,7 @@ interface AutocompleteListProps extends BaseHTMLAttributes<HTMLUListElement> {
   currentIndex: number;
   show?: boolean;
   onHandleMouseOver: (index: number) => void;
+  onSelectItem: (index: number) => void;
 }
 
 const AutocompleteList = forwardRef(
@@ -14,13 +15,10 @@ const AutocompleteList = forwardRef(
       currentIndex,
       show = false,
       onHandleMouseOver,
+      onSelectItem,
     }: AutocompleteListProps,
     ref: Ref<HTMLUListElement>,
   ) => {
-    const getRestaurants = () => {
-      console.log('get restaurants by location');
-    };
-
     return (
       <>
         {show && (
@@ -33,7 +31,7 @@ const AutocompleteList = forwardRef(
                 <ListItem
                   key={item}
                   isFocused={index === currentIndex}
-                  onClick={getRestaurants}
+                  onClick={() => onSelectItem(index)}
                   onMouseOver={() => onHandleMouseOver(index)}
                   text={item}
                   iconUrl="http://www.w3.org/2000/svg"
