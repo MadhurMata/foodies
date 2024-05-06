@@ -1,7 +1,8 @@
+import { ISearchLocation } from '@/lib/models/SearchLocation';
 import { ButtonHTMLAttributes } from 'react';
 
 interface ListItemProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  text: string;
+  item: ISearchLocation;
   iconUrl: string;
   isFocused: boolean;
   onClick: () => void;
@@ -9,14 +10,20 @@ interface ListItemProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const ListItem: React.FC<ListItemProps> = ({
-  text,
+  item,
   iconUrl,
   isFocused = false,
   onClick,
   onMouseOver,
 }) => {
-  // TO DO: chnahe this
+  // TO DO: check this
   const focusStyles = isFocused && 'bg-neutral-200';
+
+  const text = item.neighborhood
+    ? item.neighborhood + ', ' + item.city + ', ' + item.country
+    : item.city
+      ? item.city + ', ' + item.country
+      : item.country;
 
   return (
     <li

@@ -2,6 +2,7 @@ import { ChangeEventHandler, KeyboardEventHandler } from 'react';
 
 interface SearchbarProps {
   value: string;
+  buttonLabel: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
   onKeyDown: KeyboardEventHandler<HTMLInputElement>;
   onClick: () => void;
@@ -9,6 +10,7 @@ interface SearchbarProps {
 
 const Searchbar: React.FC<SearchbarProps> = ({
   value,
+  buttonLabel,
   onChange,
   onKeyDown,
   onClick,
@@ -47,7 +49,7 @@ const Searchbar: React.FC<SearchbarProps> = ({
           onClick={onClick}
           className="focus:brand-300 rounded-full px-2 py-1 font-medium text-white hover:bg-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2"
         >
-          <p className="text-md text-gray-400">Valencia</p>
+          <p className="text-md text-gray-400">{buttonLabel}</p>
         </button>
       </div>
     </div>

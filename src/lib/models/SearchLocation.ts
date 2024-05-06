@@ -2,7 +2,7 @@ import mongoose, { Document } from 'mongoose';
 
 export interface ISearchLocation extends Document {
   country: string;
-  city: string;
+  city?: string;
   neighborhood?: string;
 }
 
@@ -11,10 +11,7 @@ const searchLocationSchema = new mongoose.Schema({
     type: String,
     requied: true,
   },
-  city: {
-    type: String,
-    requied: true,
-  },
+  city: String,
   neighborhood: String,
 });
 

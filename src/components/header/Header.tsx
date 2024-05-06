@@ -5,8 +5,8 @@ import useSearchLocation from '@/hooks/useSearchLocation';
 import Searchbar from '@/components/searchbar/Searchbar';
 import AutocompleteList from '@/components/autocompleteList/AutocompleteList';
 import NavigateButton from '@/components/navigateButton/NavigateButton';
-import { formatedSearch } from '@/lib/utils/formatSearchLocation';
 import useDropdown from '@/hooks/useDropdown';
+import { ISearchLocation } from '@/lib/models/SearchLocation';
 
 export const FAVOURITE_LOCATION = {
   id: 'xxxx',
@@ -29,7 +29,42 @@ const Header = () => {
     searchInput: searchValue,
   });
 
-  const formatedItems = formatedSearch(searchValue, searchResults);
+  //const formatedItems = formatedSearch(searchValue, searchResults);
+  const filterSearch = (searchValue: string, items: ISearchLocation[]) => {
+    const formatedSerarch = searchValue.toLowerCase();
+
+    return items.filter((item) => {
+      if (
+        item.neighborhood &&
+        item.neighborhood.toLowerCase().includes(formatedSerarch)
+      ) {
+        return true;
+      } else if (
+        item.neighborhood &&
+        !item.neighborhood.toLowerCase().includes(formatedSerarch)
+      ) {
+        return false;
+      } else if (
+        item.city &&
+        item.city.toLowerCase().includes(formatedSerarch)
+      ) {
+        return true;
+      } else if (
+        item.city &&
+        !item.city.toLowerCase().includes(formatedSerarch)
+      ) {
+        return false;
+      } else if (
+        item.country &&
+        item.country.toLowerCase().includes(formatedSerarch)
+      ) {
+        return true;
+      }
+      return false;
+    });
+  };
+
+  const formatedItems = filterSearch(searchValue, searchResults);
 
   const handleSearchChange = async (
     event: React.ChangeEvent<HTMLInputElement>,
@@ -43,8 +78,14 @@ const Header = () => {
     }
   };
 
-  const handleSearchSelected = (search: string) => {
-    setSearchValue(search);
+  const handleSearchSelected = (item: ISearchLocation) => {
+    const text = item.neighborhood
+      ? item.neighborhood + ', ' + item.city + ', ' + item.country
+      : item.city
+        ? item.city + ', ' + item.country
+        : item.country;
+
+    setSearchValue(text);
   };
 
   const {
@@ -71,17 +112,13 @@ const Header = () => {
     setIsOpen(false);
   };
 
-  const selectItem = (index: number) => {
-    setSearchValue(formatedItems[index]);
-    setIsOpen(false);
-  };
-
   return (
     <>
       <div className="sticky top-0 z-10 flex items-center justify-around bg-white px-6 pt-3.5">
         <div className="relative">
           <Searchbar
             value={searchValue}
+            buttonLabel={FAVOURITE_LOCATION.buttonLabel}
             onKeyDown={handleTabKeyDown}
             onChange={handleSearchChange}
             onClick={handleClick}
@@ -90,9 +127,9 @@ const Header = () => {
             items={formatedItems}
             currentIndex={currentIndex}
             ref={dropdownRef}
-            show={isOpen && !!formatedItems.length}
+            show={isOpen && !!searchResults.length}
             onHandleMouseOver={handleMouseOver}
-            onSelectItem={selectItem}
+            onSelectItem={handleSearchSelected}
           />
         </div>
         <div className="align-middle	">

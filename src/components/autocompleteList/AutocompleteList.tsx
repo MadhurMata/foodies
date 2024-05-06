@@ -1,17 +1,18 @@
 import { BaseHTMLAttributes, Ref, forwardRef } from 'react';
 import ListItem from './listItem/ListItem';
+import { ISearchLocation } from '@/lib/models/SearchLocation';
 interface AutocompleteListProps extends BaseHTMLAttributes<HTMLUListElement> {
-  items: string[];
+  items: ISearchLocation[];
   currentIndex: number;
   show?: boolean;
   onHandleMouseOver: (index: number) => void;
-  onSelectItem: (index: number) => void;
+  onSelectItem: (item: ISearchLocation) => void;
 }
 
 const AutocompleteList = forwardRef(
   (
     {
-      items,
+      items = [],
       currentIndex,
       show = false,
       onHandleMouseOver,
@@ -26,18 +27,20 @@ const AutocompleteList = forwardRef(
             ref={ref}
             className="absolute left-0 top-20 w-full rounded-2xl border p-4 shadow-lg focus:border-neutral-500"
           >
-            {items?.map((item, index) => {
-              return (
-                <ListItem
-                  key={item}
-                  isFocused={index === currentIndex}
-                  onClick={() => onSelectItem(index)}
-                  onMouseOver={() => onHandleMouseOver(index)}
-                  text={item}
-                  iconUrl="http://www.w3.org/2000/svg"
-                />
-              );
-            })}
+            {items &&
+              items?.map((item, index) => {
+                return (
+                  <ListItem
+                    // TO Do: change for ID
+                    key={index}
+                    isFocused={index === currentIndex}
+                    onClick={() => onSelectItem(item)}
+                    onMouseOver={() => onHandleMouseOver(index)}
+                    item={item}
+                    iconUrl="http://www.w3.org/2000/svg"
+                  />
+                );
+              })}
           </ul>
         )}
       </>

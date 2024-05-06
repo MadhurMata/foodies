@@ -10,9 +10,9 @@ export async function GET(req: NextRequest) {
 
     const locations = await SearchLocation.find({
       $or: [
-        { country: { $regex: location, $options: 'i' } }, // Case-insensitive search for country
-        { city: { $regex: location, $options: 'i' } }, // Case-insensitive search for city
         { neighborhood: { $regex: location, $options: 'i' } }, // Case-insensitive search for neighborhood
+        { city: { $regex: location, $options: 'i' } }, // Case-insensitive search for city
+        { country: { $regex: location, $options: 'i' } }, // Case-insensitive search for country
       ],
     });
 
