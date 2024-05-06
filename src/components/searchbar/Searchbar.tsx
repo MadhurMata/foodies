@@ -4,12 +4,14 @@ interface SearchbarProps {
   value: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
   onKeyDown: KeyboardEventHandler<HTMLInputElement>;
+  onClick: () => void;
 }
 
 const Searchbar: React.FC<SearchbarProps> = ({
   value,
   onChange,
   onKeyDown,
+  onClick,
 }) => {
   return (
     <div className="max-w-md overflow-auto rounded-full border shadow-md">
@@ -41,9 +43,12 @@ const Searchbar: React.FC<SearchbarProps> = ({
           onKeyDown={onKeyDown}
         />
 
-        <div>
-          <h5 className="text-gray-400">Valencia</h5>
-        </div>
+        <button
+          onClick={onClick}
+          className="focus:brand-300 rounded-full px-2 py-1 font-medium text-white hover:bg-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2"
+        >
+          <p className="text-md text-gray-400">Valencia</p>
+        </button>
       </div>
     </div>
   );

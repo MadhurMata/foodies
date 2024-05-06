@@ -5,6 +5,7 @@ interface ListItemProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   iconUrl: string;
   isFocused: boolean;
   onClick: () => void;
+  onMouseOver: () => void;
 }
 
 const ListItem: React.FC<ListItemProps> = ({
@@ -12,13 +13,17 @@ const ListItem: React.FC<ListItemProps> = ({
   iconUrl,
   isFocused = false,
   onClick,
+  onMouseOver,
 }) => {
   // TO DO: chnahe this
-  const styles = isFocused
-    ? 'flex items-center justify-between rounded-lg p-2  bg-neutral-200'
-    : 'flex items-center justify-between rounded-lg p-2 hover:bg-neutral-200 focus:bg-neutral-200';
+  const focusStyles = isFocused && 'bg-neutral-200';
+
   return (
-    <li onClick={onClick} className={styles}>
+    <li
+      onMouseOver={onMouseOver}
+      onClick={onClick}
+      className={`flex items-center justify-between rounded-lg p-2 ${focusStyles}`}
+    >
       {/* <button
         className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 focus:outline-none"
         onClick={onClick}

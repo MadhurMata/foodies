@@ -4,11 +4,17 @@ interface AutocompleteListProps extends BaseHTMLAttributes<HTMLUListElement> {
   items: string[];
   currentIndex: number;
   show?: boolean;
+  onHandleMouseOver: (index: number) => void;
 }
 
 const AutocompleteList = forwardRef(
   (
-    { items, currentIndex, show = false }: AutocompleteListProps,
+    {
+      items,
+      currentIndex,
+      show = false,
+      onHandleMouseOver,
+    }: AutocompleteListProps,
     ref: Ref<HTMLUListElement>,
   ) => {
     const getRestaurants = () => {
@@ -28,6 +34,7 @@ const AutocompleteList = forwardRef(
                   key={item}
                   isFocused={index === currentIndex}
                   onClick={getRestaurants}
+                  onMouseOver={() => onHandleMouseOver(index)}
                   text={item}
                   iconUrl="http://www.w3.org/2000/svg"
                 />

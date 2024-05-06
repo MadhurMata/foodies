@@ -8,6 +8,14 @@ import NavigateButton from '@/components/navigateButton/NavigateButton';
 import { formatedSearch } from '@/lib/utils/formatSearchLocation';
 import useDropdown from '@/hooks/useDropdown';
 
+export const FAVOURITE_LOCATION = {
+  id: 'xxxx',
+  searchBy: 'city',
+  searchWord: 'Valencia',
+  buttonLabel: 'Valencia',
+  searchLabel: 'Valencia, España',
+};
+
 const Header = () => {
   const pathName = usePathname();
   const [searchValue, setSearchValue] = useState('');
@@ -22,8 +30,7 @@ const Header = () => {
   });
 
   const formatedItems = formatedSearch(searchValue, searchResults);
-  // console.log('formatedItems', formatedItems);
-  // console.log('searchREsults in header', searchResults);
+
   const handleSearchChange = async (
     event: React.ChangeEvent<HTMLInputElement>,
   ) => {
@@ -45,9 +52,8 @@ const Header = () => {
     currentIndex,
     isOpen,
     setIsOpen,
-    // isUsingKeyboard,
     handleKeyDown,
-    // handleMouseOver,
+    handleMouseOver,
   } = useDropdown({
     items: formatedItems,
     onSelected: ({ item }) => handleSearchSelected(item),
@@ -60,6 +66,11 @@ const Header = () => {
     handleKeyDown(event);
   };
 
+  const handleClick = () => {
+    setSearchValue(FAVOURITE_LOCATION.searchLabel);
+    setIsOpen(false);
+  };
+
   return (
     <>
       <div className="sticky top-0 z-10 flex items-center justify-around bg-white px-6 pt-3.5">
@@ -68,12 +79,14 @@ const Header = () => {
             value={searchValue}
             onKeyDown={handleTabKeyDown}
             onChange={handleSearchChange}
+            onClick={handleClick}
           />
           <AutocompleteList
             items={formatedItems}
             currentIndex={currentIndex}
             ref={dropdownRef}
             show={isOpen && !!formatedItems.length}
+            onHandleMouseOver={(index: number) => handleMouseOver(index)}
           />
         </div>
         <div className="align-middle	">
