@@ -2,42 +2,58 @@
 
 import React, { useState } from 'react';
 import { IRestaurant } from '../models/Restaurants';
-
 export interface CoordinatesProps {
   lat: number;
   lng: number;
 }
 
+export type TypeRestaurantsRequest = 'nearRestaurants' | 'searchLocation';
+
 interface IGlobalContextProps {
+  searchType: TypeRestaurantsRequest;
+  setSearchType: (searchType: TypeRestaurantsRequest) => void;
   mapCenter: CoordinatesProps;
-  nearRestaurants: IRestaurant[];
   setMapCenter: (mapCenter: CoordinatesProps) => void;
-  setNearRestaurants: (restaurants: IRestaurant[]) => void;
+  searchValue: IRestaurant | unknown;
+  setSearchValue: (value: IRestaurant) => void;
+  restaurants: IRestaurant[];
+  setRestaurants: (restaurants: IRestaurant[]) => void;
 }
 
 export const GlobalContext = React.createContext<IGlobalContextProps>({
+  searchType: 'nearRestaurants',
+  setSearchType: () => {},
   mapCenter: { lat: 0, lng: 0 },
-  nearRestaurants: [],
   setMapCenter: () => {},
-  setNearRestaurants: () => [],
+  searchValue: {},
+  setSearchValue: () => {},
+  restaurants: [],
+  setRestaurants: () => [],
 });
 
 export const GlobalContextProvider = (props) => {
+  const [currentSearchType, currentSetSearchType] =
+    useState<TypeRestaurantsRequest>('nearRestaurants');
   const [currentMapCenter, setCurrentMapCenter] = useState<CoordinatesProps>({
     lat: 0,
     lng: 0,
   });
-  const [currentNearRestaurants, setCurrentNearRestaurants] = useState<
-    IRestaurant[]
-  >([]);
+  const [currentSearchValue, setCurrentSearchValue] = useState({});
+  const [currentRestaurants, setCurrentRestaurants] = useState<IRestaurant[]>(
+    [],
+  );
 
   return (
     <GlobalContext.Provider
       value={{
+        searchType: currentSearchType,
+        setSearchType: currentSetSearchType,
         mapCenter: currentMapCenter,
-        nearRestaurants: currentNearRestaurants,
+        searchValue: currentSearchValue,
+        setSearchValue: setCurrentSearchValue,
+        restaurants: currentRestaurants,
         setMapCenter: setCurrentMapCenter,
-        setNearRestaurants: setCurrentNearRestaurants,
+        setRestaurants: setCurrentRestaurants,
       }}
     >
       {props.children}

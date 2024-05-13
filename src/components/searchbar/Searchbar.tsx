@@ -5,7 +5,7 @@ interface SearchbarProps {
   buttonLabel: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
   onKeyDown: KeyboardEventHandler<HTMLInputElement>;
-  onClick: () => void;
+  onSelectItem: () => void;
 }
 
 const Searchbar: React.FC<SearchbarProps> = ({
@@ -13,8 +13,9 @@ const Searchbar: React.FC<SearchbarProps> = ({
   buttonLabel,
   onChange,
   onKeyDown,
-  onClick,
+  onSelectItem,
 }) => {
+  const handleClick = () => onSelectItem();
   return (
     <div className="max-w-md overflow-auto rounded-full border shadow-md">
       <div className="relative flex h-12 w-full items-center overflow-hidden rounded-lg bg-white p-2 focus-within:shadow-lg">
@@ -46,7 +47,7 @@ const Searchbar: React.FC<SearchbarProps> = ({
         />
 
         <button
-          onClick={onClick}
+          onClick={handleClick}
           className="focus:brand-300 rounded-full px-2 py-1 font-medium text-white hover:bg-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2"
         >
           <p className="text-md text-gray-400">{buttonLabel}</p>

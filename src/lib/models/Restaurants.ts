@@ -1,28 +1,26 @@
 import mongoose, { Document, Schema } from 'mongoose';
 import { IUser } from './User';
+import { ILocation } from './SearchLocation';
 
 export interface IRestaurant extends Document {
   name: string;
+  discovered: boolean;
+  location: ILocation;
+  searchLocation?: Schema.Types.ObjectId; // Reference to Location model
+  address: IAdress;
   rating?: number;
   numberRatings?: number;
   email?: string;
-  discovered: boolean;
   dateDiscovered?: Date;
   discoveredBy?: IUser;
-  location: ILocation;
-  adress: IAdress;
 }
 
 export interface IAdress {
-  adress: string;
+  address: string;
   postalCode?: string;
+  neighborhood: string;
   city: string;
   country: string;
-}
-
-export interface ILocation {
-  type: string;
-  coordinates: number[];
 }
 
 const pointSchema = new mongoose.Schema({
@@ -69,6 +67,10 @@ const restaurantSchema = new mongoose.Schema({
     required: true,
     index: '2dsphere',
   },
+  searchLocation: {
+    type: Schema.Types.ObjectId,
+    ref: 'SearchLocation',
+  }, // Reference to Location model
   address: {
     address: {
       type: String,

@@ -1,8 +1,8 @@
 'use client';
 
 import Carousel from '@/components/carousel/Carousel';
+import useGetRestaurants from '@/hooks/useGetRestaurants';
 // import useLocation from '@/hooks/useGetCurrentLocation';
-import useGetNearRestaurants from './hooks/useGetNearRestaurants';
 import { useGlobalContext } from '@/lib/globalContext';
 import { useEffect } from 'react';
 
@@ -13,9 +13,8 @@ export const DEFAULT_MAP_CENTER = {
 
 export default function Home() {
   //const { location, error } = useLocation();
-  const { mapCenter, nearRestaurants, setNearRestaurants } = useGlobalContext();
+  const { mapCenter, restaurants, setRestaurants } = useGlobalContext();
   const center = mapCenter.lat === 0 ? DEFAULT_MAP_CENTER : mapCenter;
-  const restaurants = nearRestaurants;
 
   const {
     data = [],
@@ -23,17 +22,18 @@ export default function Home() {
     error: fetchingError,
     refetch,
     status,
-  } = useGetNearRestaurants({
+  } = useGetRestaurants({
+    typeRestaurantsRequest: 'nearRestaurants',
     coordinates: center,
     radius: 1,
   });
 
   useEffect(() => {
     if (status === 'success') {
-      setNearRestaurants(data);
+      setRestaurants(data);
       refetch();
     }
-  }, [mapCenter, data, setNearRestaurants, refetch, status]);
+  }, [mapCenter, data, setRestaurants, refetch, status]);
 
   return (
     <div className="my-auto w-full">

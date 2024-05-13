@@ -1,19 +1,7 @@
-import connectDB from '@/lib/connectDB';
 import Restaurant, { IRestaurant } from '@/lib/models/Restaurants';
 import SearchLocation from '@/lib/models/SearchLocation';
-import { NextResponse } from 'next/server';
 
-export async function GET() {
-  await connectDB();
-
-  // try {
-  //   const restaurants = await Restaurant.find({});
-  //   return NextResponse.json(restaurants);
-  // } catch (error: unknown) {
-  //   if (error instanceof Error) {
-  //     return NextResponse.json({ error: error.message });
-  //   }
-  // }
+export async function updateSearchLocationRestaurants() {
   try {
     // Obtener todos los restaurantes
     const restaurants: IRestaurant[] = await Restaurant.find();
@@ -21,7 +9,7 @@ export async function GET() {
     // Iterar sobre cada restaurante
     for (const restaurant of restaurants) {
       // Obtener el vecindario del restaurante
-      const neighborhood = restaurant.address.neighborhood;
+      const neighborhood = restaurant.address.neighborhood.toLowerCase();
 
       // Encontrar la ubicación de búsqueda correspondiente al vecindario
       const searchLocation = await SearchLocation.findOne({
@@ -36,7 +24,6 @@ export async function GET() {
           (id: string) => id === restaurant._id,
         );
 
-        console.log('restaurant exist', restaurantExists);
         // Si el restaurante no está en la lista, añadirlo
         if (!restaurantExists) {
           searchLocation.restaurants.push(restaurant._id);
@@ -48,10 +35,8 @@ export async function GET() {
         await restaurant.save();
       }
     }
+
     console.log('Actualización de ubicaciones de búsqueda exitosa.');
-    return await NextResponse.json(
-      'Actualización de ubicaciones de búsqueda exitosa.',
-    );
   } catch (error) {
     console.error('Error al actualizar ubicaciones de búsqueda:', error);
   }

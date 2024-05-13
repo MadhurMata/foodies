@@ -1,5 +1,5 @@
 'use client';
-import React, { KeyboardEvent, useState } from 'react';
+import React, { KeyboardEvent, useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import useSearchLocation from '@/hooks/useSearchLocation';
 import Searchbar from '@/components/searchbar/Searchbar';
@@ -7,18 +7,32 @@ import AutocompleteList from '@/components/autocompleteList/AutocompleteList';
 import NavigateButton from '@/components/navigateButton/NavigateButton';
 import useDropdown from '@/hooks/useDropdown';
 import { ISearchLocation } from '@/lib/models/SearchLocation';
+import useGetRestaurants from '@/hooks/useGetRestaurants';
+import { useGlobalContext } from '@/lib/globalContext';
 
+// Esto lo trae el User como favorita
 export const FAVOURITE_LOCATION = {
-  id: 'xxxx',
-  searchBy: 'city',
-  searchWord: 'Valencia',
-  buttonLabel: 'Valencia',
-  searchLabel: 'Valencia, España',
+  id: '663b9d7f3f2db9062b96998c',
+  buttonLabel: 'Russafa',
+  searchLabel: 'Russafa, Valencia, España',
+  location: {
+    lng: -0.3736955089500449,
+    lat: 39.46119052871859,
+  },
 };
 
 const Header = () => {
+  const { setSearchType, setMapCenter, setRestaurants } = useGlobalContext();
   const pathName = usePathname();
   const [searchValue, setSearchValue] = useState('');
+  const [isEnabled, setIsEnabled] = useState(false);
+
+  const { data: newRestaurants = [], refetch: refetchGetRestaurants } =
+    useGetRestaurants({
+      typeRestaurantsRequest: 'searchLocation',
+      searchLocationId: FAVOURITE_LOCATION.id,
+      enable: isEnabled,
+    });
 
   const buttonProps =
     pathName === '/'
@@ -29,35 +43,11 @@ const Header = () => {
     searchInput: searchValue,
   });
 
-  //const formatedItems = formatedSearch(searchValue, searchResults);
   const filterSearch = (searchValue: string, items: ISearchLocation[]) => {
-    const formatedSerarch = searchValue.toLowerCase();
-
+    const formatedSerarch = searchValue?.toLowerCase();
     return items.filter((item) => {
-      if (
-        item.neighborhood &&
-        item.neighborhood.toLowerCase().includes(formatedSerarch)
-      ) {
-        return true;
-      } else if (
-        item.neighborhood &&
-        !item.neighborhood.toLowerCase().includes(formatedSerarch)
-      ) {
-        return false;
-      } else if (
-        item.city &&
-        item.city.toLowerCase().includes(formatedSerarch)
-      ) {
-        return true;
-      } else if (
-        item.city &&
-        !item.city.toLowerCase().includes(formatedSerarch)
-      ) {
-        return false;
-      } else if (
-        item.country &&
-        item.country.toLowerCase().includes(formatedSerarch)
-      ) {
+      const hasKey = item.type && item.type in item;
+      if (hasKey && item[item.type]?.toLowerCase().includes(formatedSerarch)) {
         return true;
       }
       return false;
@@ -76,16 +66,6 @@ const Header = () => {
     } else {
       setIsOpen(false);
     }
-  };
-
-  const handleSearchSelected = (item: ISearchLocation) => {
-    const text = item.neighborhood
-      ? item.neighborhood + ', ' + item.city + ', ' + item.country
-      : item.city
-        ? item.city + ', ' + item.country
-        : item.country;
-
-    setSearchValue(text);
   };
 
   const {
@@ -107,10 +87,32 @@ const Header = () => {
     handleKeyDown(event);
   };
 
-  const handleClick = () => {
-    setSearchValue(FAVOURITE_LOCATION.searchLabel);
+  const handleSearchSelected = async (item?: ISearchLocation) => {
+    setSearchType('searchLocation');
+    setIsEnabled(true);
+    refetchGetRestaurants();
     setIsOpen(false);
+
+    if (item) {
+      const text = item.neighborhood
+        ? item.neighborhood + ', ' + item.city + ', ' + item.country
+        : item.city
+          ? item.city + ', ' + item.country
+          : item.country;
+
+      setSearchValue(text);
+    } else {
+      setSearchValue(FAVOURITE_LOCATION.searchLabel);
+    }
   };
+
+  useEffect(() => {
+    if (isEnabled && newRestaurants) {
+      setRestaurants(newRestaurants);
+      setMapCenter(FAVOURITE_LOCATION.location);
+      setIsEnabled(false);
+    }
+  }, [newRestaurants, isEnabled, setMapCenter, setRestaurants]);
 
   return (
     <>
@@ -121,7 +123,7 @@ const Header = () => {
             buttonLabel={FAVOURITE_LOCATION.buttonLabel}
             onKeyDown={handleTabKeyDown}
             onChange={handleSearchChange}
-            onClick={handleClick}
+            onSelectItem={handleSearchSelected}
           />
           <AutocompleteList
             items={formatedItems}

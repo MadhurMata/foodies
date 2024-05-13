@@ -8,17 +8,27 @@ export const seedDatabase = async () => {
 
   try {
     // Loop through each neighborhood array in the JSON data
-    for (const neighborhood of searchLocations.neighborhoods) {
+    for (const searchItem of searchLocations) {
       // Create a new searchLocation document based on the schema
       const newSearchLocation = new SearchLocation({
-        country: searchLocations.country,
-        city: searchLocations.city,
-        neighborhood,
+        location: {
+          type: 'Point',
+          coordinates: [searchItem.location?.lat, searchItem.location?.lng],
+        },
+        geometry: {
+          type: searchItem.geometry?.type || 'Polygon',
+          coordinates: searchItem.geometry?.coordinates,
+        },
+        type: searchItem.type,
+        country: searchItem.country,
+        city: searchItem.city,
+        neighborhood: searchItem.neighborhood,
       });
 
       // Save the restaurant document to the database
+      const seedNumber = 0;
       await newSearchLocation.save();
-      console.log(`Restaurant "${neighborhood}" seeded successfully.`);
+      console.log(`Restaurant "${seedNumber + 1}" seeded successfully.`);
     }
   } catch (error) {
     console.error('Error seeding database:', error);

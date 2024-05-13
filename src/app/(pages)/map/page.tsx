@@ -2,11 +2,11 @@
 
 import MapComponent from '@/components/reactMap/Map';
 import { icon } from 'leaflet';
-import useGetNearRestaurants from '../(home)/hooks/useGetNearRestaurants';
 import { useGlobalContext } from '@/lib/globalContext';
 import { useEffect } from 'react';
 import './styles.css';
 import { DEFAULT_MAP_CENTER } from '../(home)/page';
+import useGetRestaurants from '@/hooks/useGetRestaurants';
 
 const ICON = icon({
   iconUrl: '/static/penis.png',
@@ -14,25 +14,27 @@ const ICON = icon({
 });
 
 const Map = () => {
-  const { mapCenter, nearRestaurants, setNearRestaurants } = useGlobalContext();
+  const { mapCenter, restaurants, setRestaurants } = useGlobalContext();
   const center = mapCenter.lat === 0 ? DEFAULT_MAP_CENTER : mapCenter;
-  const restaurants = nearRestaurants;
+
   const {
     data = [],
     error,
     refetch,
     status,
-  } = useGetNearRestaurants({
+  } = useGetRestaurants({
+    typeRestaurantsRequest: 'nearRestaurants',
     coordinates: center,
     radius: 1,
+    enable: !!restaurants,
   });
 
   useEffect(() => {
-    if (status === 'success') {
-      setNearRestaurants(data);
+    if (status === 'success' && !!restaurants) {
+      setRestaurants(data);
       refetch();
     }
-  }, [mapCenter, data, setNearRestaurants, refetch, status]);
+  }, [mapCenter, data, setRestaurants, refetch, status, restaurants]);
 
   // console.log(restaurants);
   // console.log('mapCenter', mapCenter);
