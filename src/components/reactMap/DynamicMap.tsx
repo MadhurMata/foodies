@@ -15,7 +15,8 @@ const Map = ({ children, ...rest }) => {
   // fetchSearch().then((data) => console.log('resultssss', data));
   return (
     <MapContainer
-      style={{ height: '600px', width: '100%', minWidth: '600px' }}
+      // style={{ height: '600px', width: '100%', minWidth: '600px' }}
+      style={{ height: 'calc(100vh - 143px)', width: '100vw' }}
       {...rest}
     >
       <>

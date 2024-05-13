@@ -29,13 +29,13 @@ const ListItem: React.FC<ListItemProps> = ({
     <li
       onMouseOver={onMouseOver}
       onClick={onClick}
-      className={`flex items-center justify-between rounded-lg p-2 ${focusStyles}`}
+      className={`flex items-center rounded-lg p-2 ${focusStyles}`}
     >
       {/* <button
         className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 focus:outline-none"
         onClick={onClick}
       > */}
-      <div className="rounded-md bg-neutral-200 p-2">
+      <div className="m-2 rounded-md bg-neutral-200 p-2">
         {/* <svg
             xmlns={iconUrl}
             className="h-8 w-8"
@@ -63,7 +63,7 @@ const ListItem: React.FC<ListItemProps> = ({
           />
         </svg>
       </div>
-      <p className=" text-base font-medium leading-5 text-neutral ">{text}</p>
+      <p className="text-base font-medium leading-5 text-neutral">{text}</p>
       {/* </button> */}
     </li>
   );
