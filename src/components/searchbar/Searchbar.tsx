@@ -2,7 +2,7 @@ import { ChangeEventHandler, KeyboardEventHandler } from 'react';
 
 interface SearchbarProps {
   value: string;
-  buttonLabel: string;
+  buttonLabel?: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
   onKeyDown: KeyboardEventHandler<HTMLInputElement>;
   onSelectItem: () => void;
@@ -10,7 +10,7 @@ interface SearchbarProps {
 
 const Searchbar: React.FC<SearchbarProps> = ({
   value,
-  buttonLabel,
+  buttonLabel = 'Busqueda Favorita',
   onChange,
   onKeyDown,
   onSelectItem,

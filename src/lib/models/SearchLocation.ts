@@ -1,7 +1,7 @@
 import mongoose, { Document, Schema } from 'mongoose';
 
 export interface ISearchLocation extends Document {
-  location?: ILocation;
+  location: ILocation;
   geometry?: {
     type: string;
     coordinates: number[][][];
