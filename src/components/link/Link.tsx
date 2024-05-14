@@ -10,7 +10,7 @@ export interface LinkComponentProps {
 
 const LinkComponent = ({ styles, path, title }: LinkComponentProps) => {
   return (
-    <Link className={` ${styles}`} href={path}>
+    <Link className={`${styles}`} href={path}>
       {title}
     </Link>
   );
