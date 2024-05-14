@@ -1,10 +1,9 @@
 import React from 'react';
 import { IRestaurant } from '@/lib/models/Restaurants';
 import heartSvg from '@/lib/icons/heart.svg';
-import Svg from 'react-inlinesvg';
+import Icon from '@/components/icon/Icon';
 
 function RestaurantCard({ restaurant }: { restaurant: IRestaurant }) {
-  console.log('heartSvg', heartSvg);
   return (
     <div className="flex w-full p-4">
       <div
@@ -20,12 +19,10 @@ function RestaurantCard({ restaurant }: { restaurant: IRestaurant }) {
             {restaurant.rating}{' '}
             <span className="text-sm text-neutral-500">(1567)</span>
           </p>
-          <Svg
-            src={heartSvg.src}
-            width={20}
-            height="auto"
-            title="React"
-            stroke="red"
+          <Icon
+            path={heartSvg.src}
+            size={20}
+            strokeColor="red"
             strokeWidth="1.5"
           />
         </div>
