@@ -31,8 +31,7 @@ const AutocompleteList = forwardRef(
               items?.map((item, index) => {
                 return (
                   <ListItem
-                    // TO Do: change for ID
-                    key={index}
+                    key={item._id}
                     isFocused={index === currentIndex}
                     onClick={() => onSelectItem(item)}
                     onMouseOver={() => onHandleMouseOver(index)}

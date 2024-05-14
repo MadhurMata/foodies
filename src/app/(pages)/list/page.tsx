@@ -54,8 +54,8 @@ const List = () => {
         {!toggleView ? (
           <div>
             {restaurants &&
-              restaurants?.map((restaurant, i) => (
-                <RestaurantCard key={i} restaurant={restaurant} />
+              restaurants?.map((restaurant) => (
+                <RestaurantCard key={restaurant._id} restaurant={restaurant} />
               ))}
           </div>
         ) : (
@@ -72,10 +72,9 @@ const List = () => {
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                   attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 />
-                {restaurants?.map((restaurant, i) => (
-                  // Change i for restaurant ID (make ir unic)
+                {restaurants?.map((restaurant) => (
                   <Marker
-                    key={i}
+                    key={restaurant._id}
                     icon={ICON}
                     position={[
                       restaurant.location.coordinates[0],

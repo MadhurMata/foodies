@@ -6,8 +6,8 @@ const links: NavbarLinkProps[] = [
     path: '/',
   },
   {
-    title: 'Map',
-    path: '/map',
+    title: 'List',
+    path: '/list',
   },
   {
     title: 'Profile',
@@ -17,7 +17,7 @@ const links: NavbarLinkProps[] = [
 
 const Navbar = () => {
   return (
-    <div className="bg-light sticky bottom-0 flex justify-around border-t p-5">
+    <div className="sticky bottom-0 flex justify-around border-t bg-light p-5">
       {links.map((link) => (
         <NavbarLink key={link.title} link={link} />
       ))}
