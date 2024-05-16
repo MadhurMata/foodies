@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import ReactQueryProvider from '@/lib/queryProvider/ReactQueryProvider';
-import { GlobalContextProvider } from '@/lib/globalContext/GlobalContext';
+import { Providers } from '@/app/providers';
 import Navbar from '@/components/navbar/Navbar';
-import './globals.css';
 import Header from '@/components/header/Header';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,15 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ReactQueryProvider>
-          <GlobalContextProvider>
-            <Header />
-            <main className="flex min-h-screen flex-col items-center justify-between">
-              {children}
-            </main>
-            <Navbar />
-          </GlobalContextProvider>
-        </ReactQueryProvider>
+        <Providers>
+          <Header />
+          <main className="flex min-h-screen flex-col items-center justify-between">
+            {children}
+          </main>
+          <Navbar />
+        </Providers>
       </body>
     </html>
   );
