@@ -7,30 +7,29 @@ import { useGlobalContext } from '@/lib/globalContext';
 import Carousel from '@/components/carousel/Carousel';
 import CarouselItem from '@/components/carousel/carouselItem/CarouselItem';
 import RestaurantCard from '@/components/carousel/carouselItem/restaurantCard/RestaurantCard';
-import heartSvg from '@/lib/icons/heart.svg';
 import FoodTypeCard from '@/components/carousel/carouselItem/restaurantCard/FoodTypeCard';
 import LinkComponent from '@/components/link/Link';
 
 const FOOD_TYPE = [
   {
     type: 'Mierda pura',
-    src: heartSvg,
+    src: '/icons/heart.svg',
   },
   {
     type: 'Japonesa',
-    src: heartSvg,
+    src: '/icons/heart.svg',
   },
   {
     type: 'Italiana',
-    src: heartSvg,
+    src: '/icons/heart.svg',
   },
   {
     type: 'Mejicana',
-    src: heartSvg,
+    src: '/icons/heart.svg',
   },
   {
     type: 'Mediterranea',
-    src: heartSvg,
+    src: '/icons/heart.svg',
   },
 ];
 
@@ -75,7 +74,7 @@ export default function Home() {
             <Carousel>
               {FOOD_TYPE.map((item) => (
                 <CarouselItem key={item.type} paddingY="px-3">
-                  <FoodTypeCard type={item.type} path={heartSvg.src} />
+                  <FoodTypeCard type={item.type} path={item.src} />
                 </CarouselItem>
               ))}
             </Carousel>

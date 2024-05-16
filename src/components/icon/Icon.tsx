@@ -5,9 +5,17 @@ export interface IconProps extends Omit<Props, 'src'> {
   size?: number;
   strokeColor?: string;
   strokeWidth?: string;
+  styles?: string;
 }
 
-const Icon = ({ path, size, strokeColor, strokeWidth, ...rest }: IconProps) => (
+const Icon = ({
+  path,
+  size,
+  strokeColor,
+  strokeWidth,
+  styles,
+  ...rest
+}: IconProps) => (
   <Svg
     {...rest}
     focusable="false"
@@ -17,7 +25,7 @@ const Icon = ({ path, size, strokeColor, strokeWidth, ...rest }: IconProps) => (
     height={size}
     stroke={strokeColor}
     strokeWidth={strokeWidth}
+    className={styles}
   />
 );
-
 export default Icon;
