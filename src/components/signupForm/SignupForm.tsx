@@ -1,8 +1,47 @@
 'use client';
 
-import { Button, Checkbox, Input, Link } from '@nextui-org/react';
-import Icon from '../icon/Icon';
 import { useState } from 'react';
+import { Button, Checkbox, Input, Link } from '@nextui-org/react';
+import Icon from '@/components/icon/Icon';
+import { z } from 'zod';
+import validator from 'validator';
+
+const FormSchema = z
+  .object({
+    firstName: z
+      .string()
+      .min(2, 'El nombre tiene que tener al menos 2 caracteres')
+      .max(45, 'El nombre tiene que tener menos de 45 caracteres')
+      .regex(new RegExp("^[a-zA-Z]+$', 'Caracteres especiales no permitidos")),
+    lastName: z
+      .string()
+      .min(2, 'Los apellidos tienen que tener al menos 2 caracteres')
+      .max(45, 'Los apellidos tienen que tener menos de 45 caracteres')
+      .regex(new RegExp("^[a-zA-Z]+$', 'Caracteres especiales no permitidos")),
+    email: z.string().email('Porfavor añade una dirección de correo valida'),
+    phone: z.string().refine(validator.isMobilePhone),
+    password: z
+      .string()
+      .min(6, 'La contraseña tiene que tener al menos 6 caracteres')
+      .max(50, 'La contraseña tiene que tener menos de 50 caracteres')
+      .refine(validator.isMobilePhone, 'Porfavor añade un telefono valido'),
+    confirmPassword: z
+      .string()
+      .min(6, 'La contraseña tiene que tener al menos 6 caracteres')
+      .max(50, 'La contraseña tiene que tener menos de 50 caracteres')
+      .refine(validator.isMobilePhone, 'Porfavor añade un telefono valido'),
+    accepted: z.literal(true, {
+      errorMap: () => ({
+        message: 'Porfavor acepta las condiciones',
+      }),
+    }),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: 'Contraseña y Confirmar Contraseña tienen que ser iguales',
+    path: ['password', 'confirmPassword'],
+  });
+
+console.log(FormSchema);
 
 function SignupForm() {
   const [isVisiblePass, setIsVisiblePass] = useState(false);
