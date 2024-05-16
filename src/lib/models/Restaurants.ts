@@ -1,18 +1,24 @@
 import mongoose, { Document, Schema } from 'mongoose';
-import { IUser } from './User';
 import { ILocation } from './SearchLocation';
 
 export interface IRestaurant extends Document {
   name: string;
-  discovered: boolean;
-  location: ILocation;
-  searchLocation?: Schema.Types.ObjectId; // Reference to Location model
-  address: IAdress;
+  profilePhoto?: string;
   rating?: number;
+  ratings?: Schema.Types.ObjectId[];
   numberRatings?: number;
+  location: ILocation;
+  searchLocation?: Schema.Types.ObjectId;
+  mainSearchlocation?: Schema.Types.ObjectId;
+  foodType: string;
+  address: IAdress;
+  discovered: boolean;
+  dateDiscovered?: Schema.Types.ObjectId;
+  discoveredBy?: Schema.Types.ObjectId;
+  plan: string;
+  following?: Schema.Types.ObjectId[];
+  wantToGoUsers?: Schema.Types.ObjectId[];
   email?: string;
-  dateDiscovered?: Date;
-  discoveredBy?: IUser;
 }
 
 export interface IAdress {
@@ -40,28 +46,10 @@ const restaurantSchema = new mongoose.Schema({
     type: String,
     requied: true,
   },
-  rating: {
-    type: Number,
-  },
-  numberRatings: {
-    type: Number,
-  },
-  email: {
-    type: String,
-  },
-  discovered: {
-    type: Boolean,
-    default: false,
-  },
-  dateDiscovered: {
-    type: Date,
-  },
-  discoveredBy: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'User',
-    },
-  ],
+  profilePhoto: String,
+  rating: Number,
+  ratings: [{ type: Schema.Types.ObjectId, ref: 'Rating' }],
+  numberRatings: Number,
   location: {
     type: pointSchema,
     required: true,
@@ -70,7 +58,12 @@ const restaurantSchema = new mongoose.Schema({
   searchLocation: {
     type: Schema.Types.ObjectId,
     ref: 'SearchLocation',
-  }, // Reference to Location model
+  },
+  mainSearchlocation: {
+    type: Schema.Types.ObjectId,
+    ref: 'SearchLocation',
+  },
+  foodType: String,
   address: {
     address: {
       type: String,
@@ -90,6 +83,23 @@ const restaurantSchema = new mongoose.Schema({
       required: true,
     },
   },
+  discovered: {
+    type: Boolean,
+    requied: true,
+    default: false,
+  },
+  dateDiscovered: {
+    type: Date,
+  },
+  discoveredBy: { type: Schema.Types.ObjectId, ref: 'User' },
+  plan: {
+    type: String,
+    requied: true,
+    default: 'basic',
+  },
+  following: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+  wantToGoUsers: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+  email: String,
 });
 
 const Restaurant =

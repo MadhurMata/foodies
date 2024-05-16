@@ -2,15 +2,13 @@ import mongoose, { Document, Schema } from 'mongoose';
 
 export interface ISearchLocation extends Document {
   location: ILocation;
-  geometry?: {
-    type: string;
-    coordinates: number[][][];
-  };
   restaurants?: Schema.Types.ObjectId[];
   type: SearchLocationtype;
   country: string;
   city?: string;
   neighborhood?: string;
+  neighborhoods?: Schema.Types.ObjectId[];
+  cities?: Schema.Types.ObjectId[];
 }
 
 export type SearchLocationtype = 'neighborhood' | 'city' | 'country';
@@ -30,16 +28,6 @@ const pointSchema = new mongoose.Schema({
   },
 });
 
-const polygonSchema = new mongoose.Schema({
-  type: {
-    type: String,
-    enum: ['Polygon'],
-  },
-  coordinates: {
-    type: [[[Number]]], // Array of arrays of arrays of numbers
-  },
-});
-
 const searchLocationSchema = new mongoose.Schema({
   type: String,
   country: String,
@@ -49,11 +37,9 @@ const searchLocationSchema = new mongoose.Schema({
     type: pointSchema,
     index: '2dsphere',
   },
-  geometry: {
-    type: polygonSchema,
-    index: '2dsphere',
-  },
   restaurants: [{ type: Schema.Types.ObjectId, ref: 'Restaurant' }],
+  neighborhoods: [{ type: Schema.Types.ObjectId, ref: 'SearchLocation' }],
+  cities: [{ type: Schema.Types.ObjectId, ref: 'SearchLocation' }],
 });
 
 const SearchLocation =

@@ -15,10 +15,6 @@ export const seedDatabase = async () => {
           type: 'Point',
           coordinates: [searchItem.location?.lat, searchItem.location?.lng],
         },
-        geometry: {
-          type: searchItem.geometry?.type || 'Polygon',
-          coordinates: searchItem.geometry?.coordinates,
-        },
         type: searchItem.type,
         country: searchItem.country,
         city: searchItem.city,
@@ -26,10 +22,9 @@ export const seedDatabase = async () => {
       });
 
       // Save the restaurant document to the database
-      const seedNumber = 0;
       await newSearchLocation.save();
-      console.log(`Restaurant "${seedNumber + 1}" seeded successfully.`);
     }
+    console.log(`Restaurant seeded successfully.`);
   } catch (error) {
     console.error('Error seeding database:', error);
   } finally {

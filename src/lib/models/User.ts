@@ -1,20 +1,21 @@
 import mongoose, { Document, Schema } from 'mongoose';
 
 export interface IUser extends Document {
-  name: string;
-  surname: string;
+  firstName: string;
+  lastName: string;
   nickName: string;
   email: string;
+  emailVerified?: string;
   password: string;
   phoneNumber?: string;
-  thumnail?: string;
+  profilePhoto?: string;
   bio?: string;
-  savedLocation?: string;
+  savedLocation?: Schema.Types.ObjectId;
   favouriteRestaurants?: Schema.Types.ObjectId[];
   wantToGoRestaurants?: Schema.Types.ObjectId[];
   discoveredRestaurants?: Schema.Types.ObjectId[];
   following?: Schema.Types.ObjectId[];
-  Followers?: Schema.Types.ObjectId[];
+  followers?: Schema.Types.ObjectId[];
   privacy: {
     openProfile: boolean;
   };
@@ -24,11 +25,11 @@ export interface IUser extends Document {
 }
 
 const userSchema = new mongoose.Schema({
-  name: {
+  firstName: {
     type: String,
     requied: true,
   },
-  surname: {
+  lastName: {
     type: String,
     requied: true,
   },
@@ -40,19 +41,20 @@ const userSchema = new mongoose.Schema({
     type: String,
     requied: true,
   },
+  emailVerified: Date,
   password: {
     type: String,
     requied: true,
   },
   phoneNumber: String,
-  thumnail: String,
+  profilePhoto: String,
   bio: String,
-  savedLocation: String,
+  savedLocation: { type: Schema.Types.ObjectId, ref: 'SearchLocation' },
   favouriteRestaurants: [{ type: Schema.Types.ObjectId, ref: 'Restaurant' }],
   wantToGoRestaurants: [{ type: Schema.Types.ObjectId, ref: 'Restaurant' }],
   discoveredRestaurants: [{ type: Schema.Types.ObjectId, ref: 'Restaurant' }],
   following: [{ type: Schema.Types.ObjectId, ref: 'User' }],
-  Followers: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+  followers: [{ type: Schema.Types.ObjectId, ref: 'User' }],
   privacy: {
     openProfile: Boolean,
     requied: true,
