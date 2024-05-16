@@ -4,7 +4,9 @@ import { useState } from 'react';
 import { Button, Checkbox, Input, Link } from '@nextui-org/react';
 import Icon from '@/components/icon/Icon';
 import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
 import validator from 'validator';
+import { useForm, SubmitHandler } from 'react-hook-form';
 
 const FormSchema = z
   .object({
@@ -12,24 +14,22 @@ const FormSchema = z
       .string()
       .min(2, 'El nombre tiene que tener al menos 2 caracteres')
       .max(45, 'El nombre tiene que tener menos de 45 caracteres')
-      .regex(new RegExp("^[a-zA-Z]+$', 'Caracteres especiales no permitidos")),
+      .regex(new RegExp('^[a-zA-Z]+$'), 'Caracteres especiales no permitidos'),
     lastName: z
       .string()
       .min(2, 'Los apellidos tienen que tener al menos 2 caracteres')
       .max(45, 'Los apellidos tienen que tener menos de 45 caracteres')
-      .regex(new RegExp("^[a-zA-Z]+$', 'Caracteres especiales no permitidos")),
+      .regex(new RegExp('^[a-zA-Z]+$'), 'Caracteres especiales no permitidos'),
     email: z.string().email('Porfavor añade una dirección de correo valida'),
     phone: z.string().refine(validator.isMobilePhone),
     password: z
       .string()
       .min(6, 'La contraseña tiene que tener al menos 6 caracteres')
-      .max(50, 'La contraseña tiene que tener menos de 50 caracteres')
-      .refine(validator.isMobilePhone, 'Porfavor añade un telefono valido'),
+      .max(50, 'La contraseña tiene que tener menos de 50 caracteres'),
     confirmPassword: z
       .string()
       .min(6, 'La contraseña tiene que tener al menos 6 caracteres')
-      .max(50, 'La contraseña tiene que tener menos de 50 caracteres')
-      .refine(validator.isMobilePhone, 'Porfavor añade un telefono valido'),
+      .max(50, 'La contraseña tiene que tener menos de 50 caracteres'),
     accepted: z.literal(true, {
       errorMap: () => ({
         message: 'Porfavor acepta las condiciones',
@@ -38,18 +38,33 @@ const FormSchema = z
   })
   .refine((data) => data.password === data.confirmPassword, {
     message: 'Contraseña y Confirmar Contraseña tienen que ser iguales',
-    path: ['password', 'confirmPassword'],
+    path: ['confirmPassword'],
   });
 
-console.log(FormSchema);
+type InputType = z.infer<typeof FormSchema>;
 
 function SignupForm() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<InputType>({
+    resolver: zodResolver(FormSchema),
+  });
   const [isVisiblePass, setIsVisiblePass] = useState(false);
 
   const toggleVisiblePass = () => setIsVisiblePass((prev) => !prev);
+
+  const saveUser: SubmitHandler<InputType> = async (data) => console.log(data);
   return (
-    <form className="grid grid-cols-2 gap-3 rounded-md border p-2 shadow">
+    <form
+      onSubmit={handleSubmit(saveUser)}
+      className="grid grid-cols-2 gap-3 rounded-md border p-2 shadow"
+    >
       <Input
+        errorMessage={errors.firstName?.message}
+        isInvalid={!!errors.firstName}
+        {...register('firstName')}
         label="Nombre"
         startContent={
           <Icon
@@ -61,6 +76,9 @@ function SignupForm() {
         }
       />
       <Input
+        errorMessage={errors.lastName?.message}
+        isInvalid={!!errors.lastName}
+        {...register('lastName')}
         label="Apellidos"
         startContent={
           <Icon
@@ -72,6 +90,9 @@ function SignupForm() {
         }
       />
       <Input
+        errorMessage={errors.email?.message}
+        isInvalid={!!errors.email}
+        {...register('email')}
         className="col-span-2"
         label="Email"
         startContent={
@@ -84,6 +105,9 @@ function SignupForm() {
         }
       />
       <Input
+        errorMessage={errors.phone?.message}
+        isInvalid={!!errors.phone}
+        {...register('phone')}
         className="col-span-2"
         label="Teléfono"
         type="number"
@@ -97,6 +121,9 @@ function SignupForm() {
         }
       />
       <Input
+        errorMessage={errors.password?.message}
+        isInvalid={!!errors.password}
+        {...register('password')}
         className="col-span-2"
         label="Contraseña"
         type={isVisiblePass ? 'text' : 'password'}
@@ -131,6 +158,9 @@ function SignupForm() {
         }
       />
       <Input
+        errorMessage={errors.confirmPassword?.message}
+        isInvalid={!!errors.confirmPassword}
+        {...register('confirmPassword')}
         className="col-span-2"
         label="Confirmar Contraseña"
         type="password"
@@ -143,9 +173,17 @@ function SignupForm() {
           />
         }
       />
-      <Checkbox className="col-span-2">
+      <Checkbox
+        isInvalid={!!errors.accepted}
+        {...register('accepted')}
+        className="col-span-2"
+      >
         Acepto las <Link href="/terms">condiciones</Link>{' '}
       </Checkbox>
+      {errors.accepted && (
+        <p className="text-red-500">{errors.accepted?.message}</p>
+      )}
+
       <div className="col-span-2 flex justify-center">
         <Button className="w-48 bg-brand" type="submit">
           Enviar
