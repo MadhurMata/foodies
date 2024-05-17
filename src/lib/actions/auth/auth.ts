@@ -1,13 +1,16 @@
 'use server';
 
 import { SignupFormFields } from '@/components/signupForm/SignupForm';
+import * as bcrypt from 'bcrypt';
 import connectDB from '@/lib/connectDB';
 import User from '@/lib/models/User';
 
-export const registerUser = async (formData: SignupFormFields) => {
+export const registerUser = async (
+  user: Omit<SignupFormFields, 'accepted' | 'confirmPassword'>,
+) => {
   try {
     await connectDB();
-    const { firstName, lastName, email, password, phoneNumber } = formData;
+    const { firstName, lastName, email, password, phoneNumber } = user;
     if (!firstName || !lastName || !email || !password) {
       return;
     }
@@ -16,7 +19,7 @@ export const registerUser = async (formData: SignupFormFields) => {
       firstName,
       lastName,
       email,
-      password,
+      password: await bcrypt.hash(user.password, 10),
       phoneNumber,
     });
   } catch (e) {

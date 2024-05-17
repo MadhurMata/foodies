@@ -9,7 +9,7 @@ export const authOptions: AuthOptions = {
     CredentialsProvider({
       name: 'Credentials',
       credentials: {
-        username: {
+        firstName: {
           label: 'User Name',
           type: 'text',
           placeholder: 'Your User Name',
@@ -21,7 +21,7 @@ export const authOptions: AuthOptions = {
       },
       async authorize(credentials) {
         const user = await User.findOne({
-          email: credentials?.username,
+          email: credentials?.firstName,
         });
 
         if (!user) throw new Error('User name or password is not correct');
@@ -42,6 +42,17 @@ export const authOptions: AuthOptions = {
       },
     }),
   ],
+
+  callbacks: {
+    async jwt({ token, user }) {
+      if (user) token.user = user;
+      return token;
+    },
+    async session({ token, session }) {
+      session.user = token.user;
+      return session;
+    },
+  },
 };
 
 const handler = NextAuth(authOptions);

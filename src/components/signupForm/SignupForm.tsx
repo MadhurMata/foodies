@@ -57,7 +57,10 @@ function SignupForm() {
   const toggleVisiblePass = () => setIsVisiblePass((prev) => !prev);
 
   const saveUser: SubmitHandler<SignupFormFields> = async (data) => {
-    await registerUser(data);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { accepted, confirmPassword, ...user } = data;
+
+    await registerUser(user);
   };
 
   return (
