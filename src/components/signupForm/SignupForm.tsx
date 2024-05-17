@@ -7,6 +7,7 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import validator from 'validator';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { registerUser } from '@/lib/actions/auth/auth';
 
 const FormSchema = z
   .object({
@@ -21,7 +22,7 @@ const FormSchema = z
       .max(45, 'Los apellidos tienen que tener menos de 45 caracteres')
       .regex(new RegExp('^[a-zA-Z]+$'), 'Caracteres especiales no permitidos'),
     email: z.string().email('Porfavor añade una dirección de correo valida'),
-    phone: z.string().refine(validator.isMobilePhone),
+    phoneNumber: z.string().refine(validator.isMobilePhone),
     password: z
       .string()
       .min(6, 'La contraseña tiene que tener al menos 6 caracteres')
@@ -41,21 +42,24 @@ const FormSchema = z
     path: ['confirmPassword'],
   });
 
-type InputType = z.infer<typeof FormSchema>;
+export type SignupFormFields = z.infer<typeof FormSchema>;
 
 function SignupForm() {
+  const [isVisiblePass, setIsVisiblePass] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<InputType>({
+  } = useForm<SignupFormFields>({
     resolver: zodResolver(FormSchema),
   });
-  const [isVisiblePass, setIsVisiblePass] = useState(false);
 
   const toggleVisiblePass = () => setIsVisiblePass((prev) => !prev);
 
-  const saveUser: SubmitHandler<InputType> = async (data) => console.log(data);
+  const saveUser: SubmitHandler<SignupFormFields> = async (data) => {
+    await registerUser(data);
+  };
+
   return (
     <form
       onSubmit={handleSubmit(saveUser)}
@@ -105,9 +109,9 @@ function SignupForm() {
         }
       />
       <Input
-        errorMessage={errors.phone?.message}
-        isInvalid={!!errors.phone}
-        {...register('phone')}
+        errorMessage={errors.phoneNumber?.message}
+        isInvalid={!!errors.phoneNumber}
+        {...register('phoneNumber')}
         className="col-span-2"
         label="Teléfono"
         type="number"

@@ -16,9 +16,9 @@ export interface IUser extends Document {
   discoveredRestaurants?: Schema.Types.ObjectId[];
   following?: Schema.Types.ObjectId[];
   followers?: Schema.Types.ObjectId[];
-  privacy: {
-    openProfile: boolean;
-  };
+  // privacy: {
+  //   openProfile?: boolean;
+  // };
   ratings?: Schema.Types.ObjectId[];
   averageRating?: number;
   userLevel?: string;
@@ -55,11 +55,10 @@ const userSchema = new mongoose.Schema({
   discoveredRestaurants: [{ type: Schema.Types.ObjectId, ref: 'Restaurant' }],
   following: [{ type: Schema.Types.ObjectId, ref: 'User' }],
   followers: [{ type: Schema.Types.ObjectId, ref: 'User' }],
-  privacy: {
-    openProfile: Boolean,
-    requied: true,
-    default: false,
-  },
+  // privacy: {
+  //   openProfile: Boolean,
+  //   default: false,
+  // },
   ratings: [{ type: Schema.Types.ObjectId, ref: 'Rating' }],
   averageRating: Number,
   userLevel: String,
