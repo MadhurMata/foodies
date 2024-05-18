@@ -3,13 +3,17 @@ import CredentialsProvider from 'next-auth/providers/credentials';
 import User from '@/lib/models/User';
 import * as bcrypt from 'bcrypt';
 import NextAuth from 'next-auth/next';
+import connectDB from '@/lib/connectDB';
 
 export const authOptions: AuthOptions = {
+  pages: {
+    signIn: '/auth/signin',
+  },
   providers: [
     CredentialsProvider({
       name: 'Credentials',
       credentials: {
-        firstName: {
+        username: {
           label: 'User Name',
           type: 'text',
           placeholder: 'Your User Name',
@@ -20,8 +24,9 @@ export const authOptions: AuthOptions = {
         },
       },
       async authorize(credentials) {
+        await connectDB();
         const user = await User.findOne({
-          email: credentials?.firstName,
+          email: credentials?.username,
         });
 
         if (!user) throw new Error('User name or password is not correct');
@@ -32,7 +37,7 @@ export const authOptions: AuthOptions = {
           credentials.password,
           user.password,
         );
-
+        console.log('isPasswordCorrect', isPasswordCorrect);
         if (!isPasswordCorrect)
           throw new Error('User name or password is not correct');
 

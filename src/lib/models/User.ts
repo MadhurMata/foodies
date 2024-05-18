@@ -3,7 +3,7 @@ import mongoose, { Document, Schema } from 'mongoose';
 export interface IUser extends Document {
   firstName: string;
   lastName: string;
-  nickName: string;
+  userName: string;
   email: string;
   emailVerified?: string;
   password: string;
@@ -33,7 +33,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     requied: true,
   },
-  nickName: {
+  userName: {
     type: String,
     requied: true,
   },

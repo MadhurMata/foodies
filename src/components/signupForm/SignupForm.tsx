@@ -5,7 +5,6 @@ import { Button, Checkbox, Input, Link } from '@nextui-org/react';
 import Icon from '@/components/icon/Icon';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import validator from 'validator';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { registerUser } from '@/lib/actions/auth/auth';
 
@@ -15,14 +14,17 @@ const FormSchema = z
       .string()
       .min(2, 'El nombre tiene que tener al menos 2 caracteres')
       .max(45, 'El nombre tiene que tener menos de 45 caracteres')
-      .regex(new RegExp('^[a-zA-Z]+$'), 'Caracteres especiales no permitidos'),
+      .regex(new RegExp('^[a-zA-Z ]+$'), 'Caracteres especiales no permitidos'),
     lastName: z
       .string()
       .min(2, 'Los apellidos tienen que tener al menos 2 caracteres')
       .max(45, 'Los apellidos tienen que tener menos de 45 caracteres')
-      .regex(new RegExp('^[a-zA-Z]+$'), 'Caracteres especiales no permitidos'),
+      .regex(new RegExp('^[a-zA-Z ]+$'), 'Caracteres especiales no permitidos'),
     email: z.string().email('Porfavor añade una dirección de correo valida'),
-    phoneNumber: z.string().refine(validator.isMobilePhone),
+    userName: z
+      .string()
+      .min(2, 'El nombre de usuario tiene que tener al menos 2 caracteres')
+      .max(45, 'El nombre de usuario tiene que tener menos de 45 caracteres'),
     password: z
       .string()
       .min(6, 'La contraseña tiene que tener al menos 6 caracteres')
@@ -112,15 +114,14 @@ function SignupForm() {
         }
       />
       <Input
-        errorMessage={errors.phoneNumber?.message}
-        isInvalid={!!errors.phoneNumber}
-        {...register('phoneNumber')}
+        errorMessage={errors.userName?.message}
+        isInvalid={!!errors.userName}
+        {...register('userName')}
         className="col-span-2"
-        label="Teléfono"
-        type="number"
+        label="Nombre de Usuario"
         startContent={
           <Icon
-            path="/icons/phone.svg"
+            path="/icons/user.svg"
             size={20}
             strokeColor="black"
             strokeWidth="1.5"
@@ -193,7 +194,7 @@ function SignupForm() {
 
       <div className="col-span-2 flex justify-center">
         <Button className="w-48 bg-brand" type="submit">
-          Enviar
+          Registrate
         </Button>
       </div>
     </form>

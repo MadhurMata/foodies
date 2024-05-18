@@ -10,7 +10,7 @@ export const registerUser = async (
 ) => {
   try {
     await connectDB();
-    const { firstName, lastName, email, password, phoneNumber } = user;
+    const { firstName, lastName, email, password, userName } = user;
     if (!firstName || !lastName || !email || !password) {
       return;
     }
@@ -20,7 +20,7 @@ export const registerUser = async (
       lastName,
       email,
       password: await bcrypt.hash(user.password, 10),
-      phoneNumber,
+      userName,
     });
   } catch (e) {
     return { error: e };
