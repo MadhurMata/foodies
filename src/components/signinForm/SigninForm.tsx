@@ -51,6 +51,7 @@ function SigninForm({ callbackUrl }: SigninFormProps) {
         errorMessage={errors.email?.message}
         isInvalid={!!errors.email}
         {...register('email')}
+        autoComplete="on"
         className="col-span-2"
         label="Email"
         startContent={
@@ -66,6 +67,7 @@ function SigninForm({ callbackUrl }: SigninFormProps) {
         errorMessage={errors.password?.message}
         isInvalid={!!errors.password}
         {...register('password')}
+        autoComplete="on"
         className="col-span-2"
         label="Contraseña"
         type={isVisiblePass ? 'text' : 'password'}

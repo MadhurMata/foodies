@@ -75,6 +75,7 @@ function SignupForm() {
         isInvalid={!!errors.firstName}
         {...register('firstName')}
         label="Nombre"
+        autoComplete="on"
         startContent={
           <Icon
             path="/icons/user.svg"
@@ -87,6 +88,7 @@ function SignupForm() {
       <Input
         errorMessage={errors.lastName?.message}
         isInvalid={!!errors.lastName}
+        autoComplete="on"
         {...register('lastName')}
         label="Apellidos"
         startContent={
@@ -102,6 +104,7 @@ function SignupForm() {
         errorMessage={errors.email?.message}
         isInvalid={!!errors.email}
         {...register('email')}
+        autoComplete="on"
         className="col-span-2"
         label="Email"
         startContent={
@@ -117,6 +120,7 @@ function SignupForm() {
         errorMessage={errors.userName?.message}
         isInvalid={!!errors.userName}
         {...register('userName')}
+        autoComplete="on"
         className="col-span-2"
         label="Nombre de Usuario"
         startContent={
@@ -132,6 +136,7 @@ function SignupForm() {
         errorMessage={errors.password?.message}
         isInvalid={!!errors.password}
         {...register('password')}
+        autoComplete="on"
         className="col-span-2"
         label="Contraseña"
         type={isVisiblePass ? 'text' : 'password'}
@@ -169,6 +174,7 @@ function SignupForm() {
         errorMessage={errors.confirmPassword?.message}
         isInvalid={!!errors.confirmPassword}
         {...register('confirmPassword')}
+        autoComplete="on"
         className="col-span-2"
         label="Confirmar Contraseña"
         type="password"
