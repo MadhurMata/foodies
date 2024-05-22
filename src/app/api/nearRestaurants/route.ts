@@ -1,5 +1,5 @@
 import connectDB from '@/lib/connectDB';
-import Restaurant from '@/lib/models/Restaurants';
+import Restaurant from '@/lib/models/Restaurant';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(req: NextRequest) {

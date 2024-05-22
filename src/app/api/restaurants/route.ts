@@ -1,5 +1,5 @@
 import connectDB from '@/lib/connectDB';
-import Restaurant, { IRestaurant } from '@/lib/models/Restaurants';
+import Restaurant, { IRestaurant } from '@/lib/models/Restaurant';
 import SearchLocation from '@/lib/models/SearchLocation';
 import { NextResponse } from 'next/server';
 

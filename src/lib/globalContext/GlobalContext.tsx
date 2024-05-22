@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { IRestaurant } from '../models/Restaurants';
+import { IRestaurant } from '../models/Restaurant';
 export interface CoordinatesProps {
   lat: number;
   lng: number;

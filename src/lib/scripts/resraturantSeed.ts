@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import connectDB from '../connectDB';
-import Restaurant from '../models/Restaurants';
+import Restaurant from '../models/Restaurant';
 import restaurantData from '../hundredRestaurants.json';
 
 export const seedDatabase = async () => {

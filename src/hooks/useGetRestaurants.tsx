@@ -2,7 +2,7 @@ import {
   CoordinatesProps,
   TypeRestaurantsRequest,
 } from '@/lib/globalContext/GlobalContext';
-import { IRestaurant } from '@/lib/models/Restaurants';
+import { IRestaurant } from '@/lib/models/Restaurant';
 import { UseQueryResult, useQuery } from '@tanstack/react-query';
 
 interface useGetRestaurantsProps {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IRestaurant } from '@/lib/models/Restaurants';
+import { IRestaurant } from '@/lib/models/Restaurant';
 
 const RestaurantCard = ({ item }: { item: IRestaurant }) => {
   const { name, rating, numberRatings } = item;

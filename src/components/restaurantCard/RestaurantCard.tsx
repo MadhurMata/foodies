@@ -1,6 +1,5 @@
 import React from 'react';
-import { IRestaurant } from '@/lib/models/Restaurants';
-import heartSvg from '@/lib/icons/heart.svg';
+import { IRestaurant } from '@/lib/models/Restaurant';
 import Icon from '@/components/icon/Icon';
 
 function RestaurantCard({ restaurant }: { restaurant: IRestaurant }) {
@@ -20,7 +19,7 @@ function RestaurantCard({ restaurant }: { restaurant: IRestaurant }) {
             <span className="text-sm text-neutral-500">(1567)</span>
           </p>
           <Icon
-            path={heartSvg.src}
+            path="/icons/heart.svg"
             size={20}
             strokeColor="red"
             strokeWidth="1.5"

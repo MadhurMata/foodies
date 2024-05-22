@@ -1,4 +1,4 @@
-import Restaurant, { IRestaurant } from '@/lib/models/Restaurants';
+import Restaurant, { IRestaurant } from '';
 import SearchLocation from '@/lib/models/SearchLocation';
 
 export async function updateSearchLocationRestaurants() {

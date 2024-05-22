@@ -1,5 +1,5 @@
 import { UseQueryResult, useQuery } from '@tanstack/react-query';
-import { IRestaurant } from '@/lib/models/Restaurants';
+import { IRestaurant } from '@/lib/models/Restaurant';
 
 const useFetchRestaurantsBySearch = (
   searchLocationId: string,
