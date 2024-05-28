@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import useGetRestaurants from '@/hooks/useGetRestaurants';
 import { icon } from 'leaflet';
 import { useGlobalContext } from '@/lib/globalContext';
@@ -16,31 +16,15 @@ const ICON = icon({
 });
 
 const List = () => {
-  const { mapCenter, restaurants, setRestaurants } = useGlobalContext();
+  const { mapCenter } = useGlobalContext();
   const [toggleView, setToggleView] = useState(false);
   const center = mapCenter.lat === 0 ? DEFAULT_MAP_CENTER : mapCenter;
 
-  const {
-    data = [],
-    error,
-    refetch,
-    status,
-  } = useGetRestaurants({
+  const { data: restaurants, error } = useGetRestaurants({
     typeRestaurantsRequest: 'nearRestaurants',
     coordinates: center,
     radius: 1,
-    enable: !!restaurants,
   });
-
-  useEffect(() => {
-    if (status === 'success' && !!restaurants) {
-      setRestaurants(data);
-      refetch();
-    }
-  }, [mapCenter, data, setRestaurants, refetch, status, restaurants]);
-
-  // console.log(restaurants);
-  // console.log('mapCenter', mapCenter);
 
   const buttonLabel = toggleView ? 'List' : 'Map';
 

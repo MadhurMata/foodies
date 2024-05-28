@@ -32,7 +32,7 @@ const useGetRestaurants = ({
     return await res.json().then((data) => data);
   };
   return useQuery({
-    queryKey: ['restaurants'],
+    queryKey: ['restaurants', coordinates, radius, searchLocationId],
     queryFn: fetchRestaurants,
     enabled: enable,
   });

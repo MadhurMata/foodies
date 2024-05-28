@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
 import useGetRestaurants from '@/hooks/useGetRestaurants';
 import { useGlobalContext } from '@/lib/globalContext';
 // import useLocation from '@/hooks/useGetCurrentLocation';
@@ -40,27 +39,18 @@ export const DEFAULT_MAP_CENTER = {
 
 export default function Home() {
   //const { location, error } = useLocation();
-  const { mapCenter, restaurants, setRestaurants } = useGlobalContext();
+  const { mapCenter } = useGlobalContext();
   const center = mapCenter.lat === 0 ? DEFAULT_MAP_CENTER : mapCenter;
 
   const {
-    data = [],
+    data: restaurants,
     isLoading,
     error: fetchingError,
-    refetch,
-    status,
   } = useGetRestaurants({
     typeRestaurantsRequest: 'nearRestaurants',
     coordinates: center,
     radius: 1,
   });
-
-  useEffect(() => {
-    if (status === 'success') {
-      setRestaurants(data);
-      refetch();
-    }
-  }, [mapCenter, data, setRestaurants, refetch, status]);
 
   return (
     <div className=" w-full pl-10 md:pl-20 lg:pl-40 ">
@@ -86,7 +76,7 @@ export default function Home() {
               styles="pl-3 text-sm text-neutral-600"
             />
             <Carousel>
-              {restaurants.slice(0, 5).map((item) => (
+              {restaurants?.slice(0, 5).map((item) => (
                 // CAmbiar KEY
                 <CarouselItem key={item._id} paddingY="px-3">
                   <RestaurantCard item={item} />
@@ -97,7 +87,7 @@ export default function Home() {
           <div className="py-3">
             <p className="pl-3 text-sm text-neutral-600">Lista Completa</p>
             <Carousel>
-              {restaurants.slice(0, 5).map((item) => (
+              {restaurants?.slice(0, 5).map((item) => (
                 <CarouselItem key={item._id} paddingY="px-3">
                   <RestaurantCard item={item} />
                 </CarouselItem>
