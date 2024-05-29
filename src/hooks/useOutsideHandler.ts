@@ -34,7 +34,7 @@ const useOutsideHandler = <T extends Node = HTMLElement>(
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [handler, parentScrollableElement]);
+  }, [handler, parentScrollableElement, extraRefs]);
 
   return ref;
 };

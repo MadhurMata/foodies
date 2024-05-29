@@ -1,5 +1,6 @@
-import { ISearchLocation } from '@/lib/models/SearchLocation';
 import { ButtonHTMLAttributes } from 'react';
+import { ISearchLocation } from '@/lib/models/SearchLocation';
+import { fortmatSearchLocationItemText } from '@/lib/utils/fotmatSearchLocationItemText';
 
 interface ListItemProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   item: ISearchLocation;
@@ -19,12 +20,7 @@ const ListItem: React.FC<ListItemProps> = ({
   // TO DO: check this
   const focusStyles = isFocused && 'bg-neutral-200';
 
-  const text = item.neighborhood
-    ? item.neighborhood + ', ' + item.city + ', ' + item.country
-    : item.city
-      ? item.city + ', ' + item.country
-      : item.country;
-
+  const text = fortmatSearchLocationItemText(item);
   return (
     <li
       onMouseOver={onMouseOver}

@@ -6,7 +6,7 @@ export const formatedSearch = (
 ) => {
   const formatedSerarch = searchValue.toLowerCase();
   const result = [{}];
-  for (let item of items) {
+  for (const item of items) {
     if (item.country && item.country.toLowerCase().includes(formatedSerarch)) {
       if (!result.includes(item.country)) {
         result.push({ country: item.country });

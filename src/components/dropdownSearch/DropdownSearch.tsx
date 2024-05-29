@@ -1,4 +1,4 @@
-import React, { KeyboardEvent, useState } from 'react';
+import React, { KeyboardEvent, useEffect, useState } from 'react';
 import { useGlobalContext } from '@/lib/globalContext';
 import useDropdown from '@/hooks/useDropdown';
 import useSearchLocation from '@/hooks/useSearchLocation';
@@ -6,6 +6,7 @@ import useSearchLocation from '@/hooks/useSearchLocation';
 import Searchbar from '@/components/searchbar/Searchbar';
 import AutocompleteList from '@/components/autocompleteList/AutocompleteList';
 import { ISearchLocation } from '@/lib/models/SearchLocation';
+import { fortmatSearchLocationItemText } from '@/lib/utils/fotmatSearchLocationItemText';
 
 // Esto lo trae el User como favorita
 export const FAVOURITE_LOCATION: ISearchLocation = {
@@ -22,7 +23,8 @@ export const FAVOURITE_LOCATION: ISearchLocation = {
 
 function DropdownSearch() {
   const [searchValue, setSearchValue] = useState('');
-  const { setSearchType, setMapCenter } = useGlobalContext();
+  const { searchLocation, setSearchLocation, setMapCenter } =
+    useGlobalContext();
 
   const { data: searchResults = [], refetch } = useSearchLocation({
     searchInput: searchValue,
@@ -66,18 +68,14 @@ function DropdownSearch() {
   });
 
   const handleSearchSelected = async (item: ISearchLocation) => {
-    setSearchType('searchLocation');
+    setSearchLocation(item._id);
     setMapCenter({
       lat: item.location.coordinates[0],
       lng: item.location.coordinates[1],
     });
     setIsOpen(false);
 
-    const text = item.neighborhood
-      ? item.neighborhood + ', ' + item.city + ', ' + item.country
-      : item.city
-        ? item.city + ', ' + item.country
-        : item.country;
+    const text = fortmatSearchLocationItemText(item);
 
     setSearchValue(text);
   };
@@ -88,6 +86,12 @@ function DropdownSearch() {
     }
     handleKeyDown(event);
   };
+
+  useEffect(() => {
+    if (!searchLocation) {
+      setSearchValue('');
+    }
+  }, [searchLocation, setSearchValue]);
 
   return (
     <div className="relative">

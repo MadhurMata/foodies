@@ -25,7 +25,7 @@ const AutocompleteList = forwardRef(
         {show && (
           <ul
             ref={ref}
-            className="absolute left-0 top-20 z-10 w-full rounded-2xl border bg-white p-4 shadow-lg focus:border-neutral-500"
+            className="absolute left-0 top-20 z-20 w-full rounded-2xl border bg-white p-4 shadow-lg focus:border-neutral-500"
           >
             {items &&
               items?.map((item, index) => {

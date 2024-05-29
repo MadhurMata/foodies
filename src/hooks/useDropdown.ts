@@ -24,9 +24,11 @@ const useDropdown = <T>({
   const [isUsingKeyboard, setIsUsingKeyboard] = useState(false);
   const hasNoMatches = !isLoading && !items?.length;
 
+  const stringifiedItems = JSON.stringify(items);
+
   useEffect(
     () => setCurrentIndex(selectedIndexOnOpen),
-    [JSON.stringify(items), isOpen],
+    [stringifiedItems, isOpen, selectedIndexOnOpen],
   );
 
   const handleClose = () => {
@@ -42,7 +44,9 @@ const useDropdown = <T>({
       if (isOpen && items?.length) {
         event.preventDefault();
         event.stopPropagation();
-        onSelected({ item: items[currentIndex], index: currentIndex });
+        console.log(items, currentIndex);
+        const adjustIndex = currentIndex === -1 ? 0 : currentIndex;
+        onSelected({ item: items[adjustIndex], index: adjustIndex });
         setIsOpen(false);
       }
     },

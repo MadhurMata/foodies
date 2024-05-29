@@ -1,12 +1,8 @@
-import {
-  CoordinatesProps,
-  TypeRestaurantsRequest,
-} from '@/lib/globalContext/GlobalContext';
+import { CoordinatesProps } from '@/lib/globalContext/GlobalContext';
 import { IRestaurant } from '@/lib/models/Restaurant';
 import { UseQueryResult, useQuery } from '@tanstack/react-query';
 
 interface useGetRestaurantsProps {
-  typeRestaurantsRequest: TypeRestaurantsRequest;
   enable?: boolean;
   coordinates?: CoordinatesProps;
   radius?: number;
@@ -14,26 +10,29 @@ interface useGetRestaurantsProps {
 }
 
 const useGetRestaurants = ({
-  typeRestaurantsRequest,
   enable = true,
   coordinates,
   radius,
   searchLocationId,
 }: useGetRestaurantsProps): UseQueryResult<IRestaurant[]> => {
-  const params =
-    typeRestaurantsRequest === 'nearRestaurants'
-      ? `latitude=${coordinates?.lat}&longitude=${coordinates?.lng}&radius=${radius}`
-      : searchLocationId;
-
   const fetchRestaurants = async () => {
     const res = await fetch(
-      `http://localhost:3000/api/nearRestaurants?type=${typeRestaurantsRequest}&${params}`,
+      `http://localhost:3000/api/nearRestaurants?latitude=${coordinates?.lat}&longitude=${coordinates?.lng}&radius=${radius}`,
+    );
+    return await res.json().then((data) => data);
+  };
+
+  const fetchRestaurantsBySearch = async (searchLocationId: string) => {
+    const res = await fetch(
+      `http://localhost:3000/api/restaurantsBySearch?searchLocation=${searchLocationId}`,
     );
     return await res.json().then((data) => data);
   };
   return useQuery({
-    queryKey: ['restaurants', coordinates, radius, searchLocationId],
-    queryFn: fetchRestaurants,
+    queryKey: ['restaurants', searchLocationId, coordinates],
+    queryFn: searchLocationId
+      ? () => fetchRestaurantsBySearch(searchLocationId)
+      : fetchRestaurants,
     enabled: enable,
   });
 };

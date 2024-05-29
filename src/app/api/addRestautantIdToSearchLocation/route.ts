@@ -4,17 +4,8 @@ import SearchLocation from '@/lib/models/SearchLocation';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  await connectDB();
-
-  // try {
-  //   const restaurants = await Restaurant.find({});
-  //   return NextResponse.json(restaurants);
-  // } catch (error: unknown) {
-  //   if (error instanceof Error) {
-  //     return NextResponse.json({ error: error.message });
-  //   }
-  // }
   try {
+    await connectDB();
     // Obtener todos los restaurantes
     const restaurants: IRestaurant[] = await Restaurant.find();
 

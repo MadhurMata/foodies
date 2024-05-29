@@ -28,10 +28,11 @@ const Map = ({ children, ...rest }) => {
 };
 
 const MapCenterLocation = () => {
-  const { setMapCenter } = useGlobalContext();
+  const { setMapCenter, setSearchLocation } = useGlobalContext();
 
   useMapEvents({
     dragend: (e) => {
+      setSearchLocation('');
       setMapCenter(e.target.getCenter());
     },
   });

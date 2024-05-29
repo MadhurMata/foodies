@@ -1,8 +1,9 @@
 'use client';
 import { useState } from 'react';
-import useGetRestaurants from '@/hooks/useGetRestaurants';
-import { icon } from 'leaflet';
+import { LatLngExpression, icon } from 'leaflet';
+import { useMap } from 'react-leaflet';
 import { useGlobalContext } from '@/lib/globalContext';
+import useGetRestaurants from '@/hooks/useGetRestaurants';
 
 import MapComponent from '@/components/reactMap/Map';
 import ToggleButton from '@/components/toggleButton/toggleButton';
@@ -16,12 +17,12 @@ const ICON = icon({
 });
 
 const List = () => {
-  const { mapCenter } = useGlobalContext();
+  const { mapCenter, searchLocation } = useGlobalContext();
   const [toggleView, setToggleView] = useState(false);
   const center = mapCenter.lat === 0 ? DEFAULT_MAP_CENTER : mapCenter;
 
   const { data: restaurants, error } = useGetRestaurants({
-    typeRestaurantsRequest: 'nearRestaurants',
+    searchLocationId: searchLocation,
     coordinates: center,
     radius: 1,
   });
@@ -29,6 +30,13 @@ const List = () => {
   const buttonLabel = toggleView ? 'List' : 'Map';
 
   const handleToggleView = () => setToggleView(!toggleView);
+
+  function SetViewOnClick({ coords }: { coords: LatLngExpression }) {
+    const map = useMap();
+    map.setView(coords, map.getZoom());
+
+    return null;
+  }
 
   if (error) console.log('Errorrrr Handle me');
 
@@ -56,6 +64,8 @@ const List = () => {
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                   attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 />
+                <SetViewOnClick coords={[center.lat, center.lng]} />
+
                 {restaurants?.map((restaurant) => (
                   <Marker
                     key={restaurant._id}

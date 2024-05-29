@@ -2,7 +2,6 @@
 
 import useGetRestaurants from '@/hooks/useGetRestaurants';
 import { useGlobalContext } from '@/lib/globalContext';
-// import useLocation from '@/hooks/useGetCurrentLocation';
 import Carousel from '@/components/carousel/Carousel';
 import CarouselItem from '@/components/carousel/carouselItem/CarouselItem';
 import RestaurantCard from '@/components/carousel/carouselItem/restaurantCard/RestaurantCard';
@@ -37,9 +36,10 @@ export const DEFAULT_MAP_CENTER = {
   lng: -0.3950138,
 };
 
+export const DEFAULT_SEARCH_LOCATION_ID = '663b9d7f3f2db9062b969990';
+
 export default function Home() {
-  //const { location, error } = useLocation();
-  const { mapCenter } = useGlobalContext();
+  const { mapCenter, searchLocation } = useGlobalContext();
   const center = mapCenter.lat === 0 ? DEFAULT_MAP_CENTER : mapCenter;
 
   const {
@@ -47,7 +47,7 @@ export default function Home() {
     isLoading,
     error: fetchingError,
   } = useGetRestaurants({
-    typeRestaurantsRequest: 'nearRestaurants',
+    searchLocationId: searchLocation,
     coordinates: center,
     radius: 1,
   });
@@ -69,7 +69,7 @@ export default function Home() {
               ))}
             </Carousel>
           </div>
-          <div className="py-3">
+          <div className="z-0 py-3">
             <LinkComponent
               title="Lista Completa"
               path="/list"
@@ -84,7 +84,7 @@ export default function Home() {
               ))}
             </Carousel>
           </div>
-          <div className="py-3">
+          <div className="z-0 py-3">
             <p className="pl-3 text-sm text-neutral-600">Lista Completa</p>
             <Carousel>
               {restaurants?.slice(0, 5).map((item) => (

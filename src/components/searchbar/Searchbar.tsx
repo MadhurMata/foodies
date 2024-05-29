@@ -4,7 +4,7 @@ interface SearchbarProps {
   value: string;
   buttonLabel?: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
-  onKeyDown: KeyboardEventHandler<HTMLInputElement>;
+  onKeyDown?: KeyboardEventHandler<HTMLInputElement>;
   onSelectItem: () => void;
 }
 
