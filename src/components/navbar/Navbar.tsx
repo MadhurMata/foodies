@@ -11,13 +11,13 @@ const links: NavbarLinkProps[] = [
   },
   {
     title: 'Profile',
-    path: '/userName',
+    path: '/profile',
   },
 ];
 
 const Navbar = () => {
   return (
-    <div className="sticky bottom-0 flex justify-around border-t bg-light p-5">
+    <div className="fixed bottom-0 flex w-screen justify-around border-t bg-light p-5">
       {links.map((link) => (
         <NavbarLink key={link.title} link={link} />
       ))}
