@@ -11,7 +11,7 @@ const links: NavbarLinkProps[] = [
   },
   {
     title: 'Profile',
-    path: '/profile',
+    path: '/userName',
   },
 ];
 
