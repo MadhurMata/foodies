@@ -53,7 +53,7 @@ export default function Home() {
   });
 
   return (
-    <div className=" w-full pl-10 md:pl-20 lg:pl-40 ">
+    <div className=" w-full pl-10 sm:pl-20 lg:pl-40 ">
       {isLoading ? (
         <h1>Loading</h1>
       ) : fetchingError ? (
@@ -69,7 +69,7 @@ export default function Home() {
               ))}
             </Carousel>
           </div>
-          <div className="z-0 py-3">
+          <div className="z-0 flex flex-col gap-2 py-3">
             <LinkComponent
               title="Lista Completa"
               path="/list"
@@ -77,15 +77,18 @@ export default function Home() {
             />
             <Carousel>
               {restaurants?.slice(0, 5).map((item) => (
-                // CAmbiar KEY
                 <CarouselItem key={item._id} paddingY="px-3">
                   <RestaurantCard item={item} />
                 </CarouselItem>
               ))}
             </Carousel>
           </div>
-          <div className="z-0 py-3">
-            <p className="pl-3 text-sm text-neutral-600">Lista Completa</p>
+          <div className="z-0 flex flex-col gap-2 py-3">
+            <LinkComponent
+              title="Lista Completa"
+              path="/list"
+              styles="pl-3 text-sm text-neutral-600"
+            />{' '}
             <Carousel>
               {restaurants?.slice(0, 5).map((item) => (
                 <CarouselItem key={item._id} paddingY="px-3">
