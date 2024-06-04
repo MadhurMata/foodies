@@ -18,17 +18,17 @@ const NavbarLink = ({ link }: { link: NavbarLinkProps }) => {
 
   const userName = session?.user._doc.firstName;
   const linkPath = link.path === '/profile' ? `/${userName}` : link.path;
+
+  const strokeColor = isActive ? 'text-blue-500' : 'text-black';
   return (
-    <Link
-      className={`${isActive ? 'text-blue-500' : 'text-black'}`}
-      href={linkPath}
-    >
+    <Link className={`${strokeColor} flex gap-2`} href={linkPath}>
       <Icon
         path={link.icon}
         size={30}
         strokeColor="grey"
         strokeWidth={isActive ? '3' : '1.5'}
       />
+      <h3 className="hidden lg:block">{link.title}</h3>
     </Link>
   );
 };

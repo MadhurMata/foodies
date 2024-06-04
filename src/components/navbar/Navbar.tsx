@@ -26,7 +26,7 @@ const Navbar = () => {
           <NavbarLink key={link.title} link={link} />
         ))}
       </div>
-      <div className="sidebar fixed bottom-0 top-0 z-20 hidden overflow-y-auto border-r bg-white p-5 pt-20 text-center sm:block lg:left-0">
+      <div className="sm:sidebar fixed bottom-0 z-20 hidden border-r bg-white p-5 sm:top-0 sm:block sm:overflow-y-auto sm:pt-20 sm:text-center lg:left-0">
         {links.map((link) => (
           <NavbarLink key={link.title} link={link} />
         ))}

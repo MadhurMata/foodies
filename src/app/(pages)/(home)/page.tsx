@@ -53,7 +53,7 @@ export default function Home() {
   });
 
   return (
-    <div className=" w-full pl-10 sm:pl-20 lg:pl-40 ">
+    <div className=" w-full pl-10 sm:pl-20 lg:pl-40">
       {isLoading ? (
         <h1>Loading</h1>
       ) : fetchingError ? (
