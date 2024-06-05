@@ -24,7 +24,7 @@ const useGetRestaurants = ({
 
   const fetchRestaurantsBySearch = async (searchLocationId: string) => {
     const res = await fetch(
-      `http://localhost:3000/api/restaurantsBySearch?searchLocation=${searchLocationId}`,
+      `http://localhost:3000/api/restaurants/restaurantsBySearch?searchLocation=${searchLocationId}`,
     );
     return await res.json().then((data) => data);
   };

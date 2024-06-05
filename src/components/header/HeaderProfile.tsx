@@ -1,8 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-import { Navbar, Link } from '@nextui-org/react';
-import styles from './headerProfile.module.css';
+import Link from 'next/link';
 import Icon from '@/components/icon/Icon';
+import styles from './headerProfile.module.css';
 
 const HeaderProfile = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -26,21 +26,18 @@ const HeaderProfile = () => {
   const class2 = isNavOpen ? ' rotate-45' : ' -translate-y-1.5';
   const class3 = isNavOpen ? ' -rotate-45' : ' translate-y-1.5';
   return (
-    <Navbar>
-      <div className="flex w-screen items-center">
-        <div className="justify-start">
-          <button
-            className="relative h-10 w-10 rounded focus:outline-none"
-            onClick={() => setIsNavOpen((prev) => !prev)}
-          >
-            <div className="absolute left-5 top-1/2 block w-5   -translate-x-1/2  -translate-y-1/2 transform">
-              <span className={class1 + class2}></span>
-              <span className={class1 + ' opacity-0'}></span>
-              <span className={class1 + class3}></span>
-            </div>
-          </button>
-        </div>
-        <div className="flex w-full justify-center pr-6">{'Madhur'}</div>
+    <div className="fixed top-0 z-20 w-full bg-white p-2">
+      <div className="flex w-screen justify-end pr-6">
+        <button
+          className="relative h-10 w-10 rounded focus:outline-none"
+          onClick={() => setIsNavOpen((prev) => !prev)}
+        >
+          <div className="absolute left-5 top-1/2 block w-5   -translate-x-1/2  -translate-y-1/2 transform">
+            <span className={class1 + class2}></span>
+            <span className={class1 + ' opacity-0'}></span>
+            <span className={class1 + class3}></span>
+          </div>
+        </button>
       </div>
       {isNavOpen && (
         <div className={isNavOpen ? styles.showMenuNav : styles.hideMenuNav}>
@@ -59,7 +56,6 @@ const HeaderProfile = () => {
                     : 'text-neutral-500 hover:text-neutral-700'
                 }`}
                 href="#"
-                size="lg"
               >
                 {item}
               </Link>
@@ -67,7 +63,7 @@ const HeaderProfile = () => {
           ))}
         </div>
       )}
-    </Navbar>
+    </div>
   );
 };
 
