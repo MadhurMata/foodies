@@ -48,35 +48,43 @@ const UserProfile = ({ params }: { params: { userName: string } }) => {
               </div>
               <div className="flex justify-between sm:hidden">
                 <span className="text-sm">
-                  Media <span className="text-brand">6,3</span>
+                  Media <span className="text-brand lg:text-lg">6,3</span>
                 </span>
               </div>
               <div className="mb-2 hidden w-full justify-around sm:flex">
                 <div className="flex w-20 flex-col items-center text-center">
-                  <span className="text-xs">Nivel Usuario</span>
-                  <span className="text-sm text-brand">2</span>
+                  <span className="text-sm">Nivel Usuario</span>
+                  <span className="text-sm text-brand lg:text-lg">2</span>
                 </div>
                 <div className="flex w-20 flex-col items-center text-center">
-                  <span className="text-xs">Comida Favorita</span>
-                  <span className="text-sm text-brand">Asiatica</span>
+                  <span className="text-sm">Comida Favorita</span>
+                  <span className="text-sm text-brand lg:text-lg">
+                    Asiatica
+                  </span>
                 </div>
                 <div className="flex w-20 flex-col items-center text-center">
-                  <span className="text-xs">Media Calificaciones</span>
-                  <span className="text-sm text-brand">6,3</span>
+                  <span className="text-sm">Media Calificaciones</span>
+                  <span className="text-sm text-brand lg:text-lg">6,3</span>
                 </div>
               </div>
               <div className="hidden w-full justify-around sm:flex">
                 <div className="flex w-20 flex-col items-center text-center">
-                  <p className="align-middle text-sm text-brand">127</p>
-                  <p className="text-xs">Restaurantes calificados</p>
+                  <p className="align-middle text-sm text-brand lg:text-lg">
+                    127
+                  </p>
+                  <p className="text-sm">Restaurantes calificados</p>
                 </div>
                 <div className="flex w-20 flex-col items-center">
-                  <p className="align-middle text-sm text-brand">1027</p>
-                  <p className="text-xs">Seguidores</p>
+                  <p className="align-middle text-sm text-brand lg:text-lg">
+                    1027
+                  </p>
+                  <p className="text-sm">Seguidores</p>
                 </div>
                 <div className="flex w-20 flex-col items-center">
-                  <p className="align-middle text-sm text-brand">897</p>
-                  <p className="text-xs">Siguiendo</p>
+                  <p className="align-middle text-sm text-brand lg:text-lg">
+                    897
+                  </p>
+                  <p className="text-sm">Siguiendo</p>
                 </div>
               </div>
             </div>
@@ -97,7 +105,7 @@ const UserProfile = ({ params }: { params: { userName: string } }) => {
           </div>
           <div className=" flex border-b pb-4">
             <ul className="flex	w-full justify-around">
-              <li>Tipo comida</li>
+              <li className="">Tipo comida</li>
               <li>Quiero ir</li>
               <li>Votado</li>
             </ul>
