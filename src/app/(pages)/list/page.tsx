@@ -53,8 +53,8 @@ const List = () => {
         ) : (
           <MapComponent
             // className={styles.homeMap}
-            width="100%"
-            height="100%"
+            width="100vw"
+            height="calc(100vh - 78px)"
             center={[center.lat, center.lng]}
             zoom={16}
           >

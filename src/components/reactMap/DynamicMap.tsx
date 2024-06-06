@@ -8,7 +8,8 @@ import { useGlobalContext } from '@/lib/globalContext';
 //const provider = new OpenStreetMapProvider();
 const { MapContainer, useMapEvents } = ReactLeaflet;
 
-const Map = ({ children, ...rest }) => {
+const Map = ({ children, height, width, ...rest }) => {
+  console.log('height', height);
   // const fetchSearch = async () => {
   //   return await provider.search({ query: 'VAlencia' });
   // };
@@ -16,7 +17,7 @@ const Map = ({ children, ...rest }) => {
   return (
     <MapContainer
       // style={{ height: '600px', width: '100%', minWidth: '600px' }}
-      style={{ height: 'calc(100vh - 143px)', width: '100vw', zIndex: 1 }}
+      style={{ height, width, zIndex: 1 }}
       {...rest}
     >
       <>

@@ -4,17 +4,17 @@ const links: NavbarLinkProps[] = [
   {
     title: 'Home',
     path: '/',
-    icon: '/icons/heart.svg',
+    icon: '/icons/home.svg',
   },
   {
     title: 'List',
     path: '/list',
-    icon: '/icons/heart.svg',
+    icon: '/icons/list.svg',
   },
   {
     title: 'Profile',
     path: '/profile',
-    icon: '/icons/heart.svg',
+    icon: '/icons/user.svg',
   },
 ];
 

@@ -60,7 +60,7 @@ export default function Home() {
         <h1>Error {fetchingError.message}</h1>
       ) : (
         <>
-          <div className="sticky left-0 top-[78px] z-10">
+          <div className="sticky left-0 top-[78px] z-10 bg-white">
             <Carousel>
               {FOOD_TYPE.map((item) => (
                 <CarouselItem key={item.type} paddingY="px-3">
